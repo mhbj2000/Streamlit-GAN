@@ -4,6 +4,9 @@ import streamlit.components.v1 as components
 
 st.set_page_config(page_title="GANS Demonstration", layout="wide")
 
+img_0 = Image.open("discriminator.png")
+img_1 = Image.open("generator.png")
+
 
 with st.container():
     col1, col2, col3, col4, col5, col6 = st.columns(6)
@@ -25,9 +28,9 @@ with st.container():
         st.button('Clear Input')
         st.button('Stop')
     with col3:
-        st.image("./generator.png")
+        st.image(img_1)
     with col4:
-        st.image("./discriminator.png")
+        st.image(img_0)
 
 with st.container():
     st.subheader("---")
