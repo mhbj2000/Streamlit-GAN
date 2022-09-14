@@ -25,9 +25,9 @@ with st.container():
         st.button('Clear Input')
         st.button('Stop')
     with col3:
-        st.image("generator.png")
+        st.image("./generator.png")
     with col4:
-        st.image("discriminator.png")
+        st.image("./discriminator.png")
 
 with st.container():
     st.subheader("---")
