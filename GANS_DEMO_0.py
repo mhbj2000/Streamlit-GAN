@@ -4,8 +4,8 @@ import streamlit.components.v1 as components
 
 st.set_page_config(page_title="GANS Demonstration", layout="wide")
 
-img_0 = Image.open("discriminator.png")
-img_1 = Image.open("generator.png")
+img_0 = Image.open("discriminator.PNG")
+img_1 = Image.open("generator.PNG")
 
 
 with st.container():
