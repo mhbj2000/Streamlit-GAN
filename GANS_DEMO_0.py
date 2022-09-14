@@ -25,9 +25,9 @@ with st.container():
         st.button('Clear Input')
         st.button('Stop')
     with col3:
-        st.image("./generator.png")
+        st.image("generator.png")
     with col4:
-        st.image("./discriminator.png")
+        st.image("discriminator.png")
 
 with st.container():
     st.subheader("---")
@@ -36,7 +36,7 @@ with st.container():
     with st.expander("Metrics and Results"):
         col1, col2 = st.columns(2)
         with col1:
-            st.image("https://static.streamlit.io/examples/dice.jpg")
+            #st.image("https://static.streamlit.io/examples/dice.jpg")
             
         with col2:
             st.subheader("Metrics")
