@@ -1,6 +1,21 @@
 import streamlit as st
 from PIL import Image
 import streamlit.components.v1 as components
+import random
+
+picResult = []
+
+def rando(gStop):
+    fileName = "Pic/Test_"
+    fileTypeName = ".png"
+    newsize = (200, 200)
+    picTest = []
+    k = random.sample(range(1,31), gStop)
+    for i in range(1,gStop):
+        imgTest = Image.open(fileName+str(k[i])+fileTypeName)
+        #imgTest= imgTest.resize(newsize)
+        picTest.append(imgTest)
+    return picTest
 
 st.set_page_config(page_title="GANS Demonstration", layout="wide")
 
@@ -15,18 +30,19 @@ with st.container():
 # ---- SIDE BAR COTNROLS ---- 
 with st.container():
     st.write("---")
-    st.sidebar.subheader("Controls")
     #st.slider("Slider tester", 1, 5000, 2000)
     seedData = st.sidebar.slider("Seed Data",1,5,5)
     synData = st.sidebar.slider("Synthetic Data",1,5,5)
+    GANData = seedData*synData
     left_column, right_column = st.sidebar.columns(2)
     with left_column:
-        st.sidebar.button("Generate GANs")
-        st.sidebar.button("Randomize Synthetic Data")
+        if st.sidebar.button("Generate GANs"):
+            picResult = rando(GANData)
+        st.sidebar.button("Randomize Synthetic Data") 
     with right_column:
-        st.sidebar.button("Clear Input")
+        if st.sidebar.button("Clear Input"):
+            picResult = []
         st.sidebar.button("Stop")
- 
     with st.expander("Metrics and Results"):
         col1, col2 = st.columns(2)
         with col1:
@@ -48,7 +64,13 @@ with st.container():
         st.image(img_0)
 
 with st.container():
+    #image container
     st.subheader("---")
+    st.write("---")
+    if not picResult:
+        st.write("no pic")
+    else:
+        st.image(picResult, width = 200)
 
 
         
