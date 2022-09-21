@@ -19,6 +19,25 @@ with st.container():
     with col5:
         st.subheader("Output")
 
+# ---- SIDE SLIDER ---- 
+with st.container():
+    st.write("---")
+    #st.slider("Slider tester", 1, 5000, 2000)
+    seedData = st.sidebar.slider("Seed Data",1,5,5)
+    synData = st.sidebar.slider("Synthetic Data",1,5,5)
+    left_column, right_column = st.sidebar.columns(2)
+    with left_column:
+        st.sidebar.button("Generate GANs")
+    with right_column:
+        st.sidebar.button("Clear Input")
+    st.write("---")
+    st.subheader("Metrics")
+    st.write(seedData , "real images")
+    st.write(synData ,"synthetic images")
+    GANData = seedData*synData
+    st.write(GANData,"GAN images")
+    st.write("Generated in - minutes and - seconds")        
+        
 with st.container():
     col1, col2, col3, col4, col5, col6= st.columns(6)
     with col1:
