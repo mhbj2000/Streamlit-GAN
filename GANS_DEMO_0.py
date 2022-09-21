@@ -56,18 +56,5 @@ with st.container():
 with st.container():
     st.subheader("---")
 
-with st.container():
-    with st.expander("Metrics and Results"):
-        col1, col2 = st.columns(2)
-        with col1:
-            st.image("https://static.streamlit.io/examples/dice.jpg")
-            
-        with col2:
-            st.write("---")
-            st.subheader("Metrics")
-            st.write(seedData , "real images")
-            st.write(synData ,"synthetic images")
-            GANData = seedData*synData
-            st.write(GANData,"GAN images")
-            st.write("Generated in - minutes and - seconds")
+
         
