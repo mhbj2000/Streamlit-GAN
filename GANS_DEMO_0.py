@@ -28,8 +28,10 @@ with st.container():
     left_column, right_column = st.sidebar.columns(2)
     with left_column:
         st.sidebar.button("Generate GANs")
+        st.sidebar.button("Randomize Synthetic Data")
     with right_column:
         st.sidebar.button("Clear Input")
+        st.sidebar.button("Stop")
     st.write("---")
     st.subheader("Metrics")
     st.write(seedData , "real images")
