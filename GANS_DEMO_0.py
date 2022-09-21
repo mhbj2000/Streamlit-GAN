@@ -10,14 +10,7 @@ img_1 = Image.open("generator.PNG")
 
 with st.container():
     col1, col2, col3, col4, col5, col6 = st.columns(6)
-    with col1:
-        st.subheader("Options")
-    with col3:
-        st.subheader("Generator")
-    with col4:
-        st.subheader("Discriminator")
-    with col5:
-        st.subheader("Output")
+#potential headers
 
 # ---- SIDE SLIDER ---- 
 with st.container():
