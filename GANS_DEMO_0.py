@@ -43,14 +43,8 @@ with st.container():
 with st.container():
     col1, col2, col3, col4, col5, col6= st.columns(6)
     with col1:
-        st.button('Randomize Synthetic Data')
-        st.button('Run Generator')
-    with col2:
-        st.button('Clear Input')
-        st.button('Stop')
-    with col3:
         st.image(img_1)
-    with col4:
+    with col2:
         st.image(img_0)
 
 with st.container():
