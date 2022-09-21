@@ -29,7 +29,6 @@ with st.container():
 
 # ---- SIDE BAR COTNROLS ---- 
 with st.container():
-    st.write("---")
     st.sidebar.subheader("CONTROLS")
     #st.slider("Slider tester", 1, 5000, 2000)
     seedData = st.sidebar.slider("Seed Data",1,5,5)
@@ -47,7 +46,6 @@ with st.container():
     with st.expander("Metrics and Results"):
         col1, col2 = st.columns(2)
         with col1:
-            st.write("---")
             st.subheader("Metrics")
             st.write(seedData , "real images")
             st.write(synData ,"synthetic images")
