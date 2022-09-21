@@ -12,7 +12,7 @@ with st.container():
     col1, col2, col3, col4, col5, col6 = st.columns(6)
 #potential headers
 
-# ---- SIDE SLIDER ---- 
+# ---- SIDE BAR COTNROLS ---- 
 with st.container():
     st.write("---")
     st.sidebar.subheader("Controls")
@@ -32,7 +32,21 @@ with st.container():
     st.write(synData ,"synthetic images")
     GANData = seedData*synData
     st.write(GANData,"GAN images")
-    st.write("Generated in - minutes and - seconds")        
+    st.write("Generated in - minutes and - seconds")
+    with st.container():
+    with st.expander("Metrics and Results"):
+        col1, col2 = st.columns(2)
+        with col1:
+            st.image("https://static.streamlit.io/examples/dice.jpg")
+            
+        with col2:
+            st.write("---")
+            st.subheader("Metrics")
+            st.write(seedData , "real images")
+            st.write(synData ,"synthetic images")
+            GANData = seedData*synData
+            st.write(GANData,"GAN images")
+            st.write("Generated in - minutes and - seconds")
         
 with st.container():
     col1, col2, col3, col4, col5, col6= st.columns(6)
@@ -51,9 +65,11 @@ with st.container():
             st.image("https://static.streamlit.io/examples/dice.jpg")
             
         with col2:
+            st.write("---")
             st.subheader("Metrics")
-            st.write("10 real images")
-            st.write("4000 synthetic images")
-            st.write("8000 GAN images")
-            st.write("Generated in 1 minute and 30 seconds")
+            st.write(seedData , "real images")
+            st.write(synData ,"synthetic images")
+            GANData = seedData*synData
+            st.write(GANData,"GAN images")
+            st.write("Generated in - minutes and - seconds")
         
