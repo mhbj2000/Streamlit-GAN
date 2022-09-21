@@ -30,6 +30,7 @@ with st.container():
 # ---- SIDE BAR COTNROLS ---- 
 with st.container():
     st.write("---")
+    st.sidebar.subheader("CONTROLS")
     #st.slider("Slider tester", 1, 5000, 2000)
     seedData = st.sidebar.slider("Seed Data",1,5,5)
     synData = st.sidebar.slider("Synthetic Data",1,5,5)
