@@ -53,7 +53,7 @@ with st.container():
 
 with st.container():
     #image container
-     st.write("---")
+    st.write("---")
     col1, col2, col3, col4, col5, col6 = st.columns(6)
     if not picResult:
         st.write("")
