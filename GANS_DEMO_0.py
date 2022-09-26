@@ -64,23 +64,23 @@ with st.container():
             imgRe= picResult[i].resize(newsize)
             if (nextcol == 6):
                 with col6:
-                    st.image(imgRe,caption="Pic/Test_"+str(i))
+                    st.image(imgRe,caption="Test_"+str(i))
                     nextcol = 1
             elif (nextcol == 5):
                 with col5:
-                    st.image(imgRe,caption="Pic/Test_"+str(i))
+                    st.image(imgRe,caption="Test_"+str(i))
                     nextcol = 6
             elif (nextcol == 4):
                 with col4:
-                    st.image(imgRe,caption="Pic/Test_"+str(i))
+                    st.image(imgRe,caption="Test_"+str(i))
                     nextcol = 5
             elif (nextcol == 3):
                 with col3:
-                    st.image(imgRe,caption="Pic/Test_"+str(i))
+                    st.image(imgRe,caption="Test_"+str(i))
                     nextcol = 4
             elif (nextcol == 2):
                 with col2:
-                    st.image(imgRe,caption="Pic/Test_"+str(i))
+                    st.image(imgRe,caption="Test_"+str(i))
                     nextcol = 3
             elif (nextcol == 1):
                 with col1:
