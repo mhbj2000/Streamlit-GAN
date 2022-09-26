@@ -13,7 +13,7 @@ def rando(gStop):
     k = random.sample(range(1,31), gStop)
     for i in range(1,gStop):
         imgTest = Image.open(fileName+str(k[i])+fileTypeName)
-        #imgTest= imgTest.resize(newsize)
+        imgTest= imgTest.resize(newsize)
         picTest.append(imgTest)
     return picTest
 
@@ -53,11 +53,39 @@ with st.container():
 
 with st.container():
     #image container
-    st.write("---")
+     st.write("---")
+    col1, col2, col3, col4, col5, col6 = st.columns(6)
     if not picResult:
-        st.write("no pic")
+        st.write("")
     else:
-        st.image(picResult, width = 200)
+        nextcol = 1
+        newsize = (500, 500)
+        for i in range(len(picResult)):
+            imgRe= picResult[i].resize(newsize)
+            if (nextcol == 6):
+                with col6:
+                    st.image(imgRe,caption="Pic/Test_"+str(i))
+                    nextcol = 1
+            elif (nextcol == 5):
+                with col5:
+                    st.image(imgRe,caption="Pic/Test_"+str(i))
+                    nextcol = 6
+            elif (nextcol == 4):
+                with col4:
+                    st.image(imgRe,caption="Pic/Test_"+str(i))
+                    nextcol = 5
+            elif (nextcol == 3):
+                with col3:
+                    st.image(imgRe,caption="Pic/Test_"+str(i))
+                    nextcol = 4
+            elif (nextcol == 2):
+                with col2:
+                    st.image(imgRe,caption="Pic/Test_"+str(i))
+                    nextcol = 3
+            elif (nextcol == 1):
+                with col1:
+                    st.image(imgRe,caption="Test_"+str(i))
+                    nextcol = 2
 
 with st.container():
     with st.expander("Metrics and Results"):
