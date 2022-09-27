@@ -10,6 +10,8 @@ with st.container():
         st.title("GANS DEMO ")
 
 with st.container():
+    
+    st.markdown('##')
 
     st.write("A generative adversarial network (GAN) is a deep neural network that is trained with existing training data to generate new data of similar characteristics to the training data. For a GAN to work it needs two neural networks the generator, which is trained to produce fake data, and the discriminator, which is trained to distinguish the generator’s fake data from real examples. If the fake data generated is easily recognized as implausible by the discriminator, then the generator is penalized and must try again until it generates something plausible.  ")
 
