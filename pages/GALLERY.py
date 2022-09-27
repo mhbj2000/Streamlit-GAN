@@ -15,7 +15,7 @@ with st.container():
         nextcol = 1
         newsize = (500,500)
         for i in range(len(picResult)):
-            picture_result = picTest_list[i].resize(newsize)
+            picture_result = picResult[i].resize(newsize)
             if(nextcol == 6):
                 with col6:
                     st.image(picture_result)
