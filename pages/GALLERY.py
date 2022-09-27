@@ -66,7 +66,10 @@ with st.container():
           start_index += 12
           picResult = picGen(start_index)
           picDisplay(picResult)
-        st.sidebar.button('Previous Page')
+        if st.sidebar.button('Previous Page'):
+          start_index -= 12
+          picResult = picGen(start_index)
+          picDisplay(picResult)
 
  
 
