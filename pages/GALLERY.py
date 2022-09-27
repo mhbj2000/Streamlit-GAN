@@ -64,10 +64,12 @@ with st.container():
             picDisplay(picResult)
         if st.sidebar.button("Next Page") :
           start_index += 12
+          picResult = []
           picResult = picGen(start_index)
           picDisplay(picResult)
         if st.sidebar.button('Previous Page') :
           start_index = start_index - 12
+          picResult = []
           picResult = picGen(start_index)
           picDisplay(picResult)
 
