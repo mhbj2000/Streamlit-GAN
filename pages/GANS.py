@@ -41,12 +41,6 @@ with st.container():
             picResult = []
         st.sidebar.button("Stop")
             
-with st.container():
-    col1, col2, col3, col4, col5, col6= st.columns(6)
-    with col1:
-        st.image(img_1)
-    with col2:
-        st.image(img_0)
 
 with st.container():
     #image container
