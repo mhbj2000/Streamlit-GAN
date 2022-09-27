@@ -14,7 +14,7 @@ def picGen(pictures):
         pic_test = Image.open(fileName+str(i)+fileTypeName)
         pic_test = pic_test.resize(newsize)
         picTest_list.append(pic_test)
-    return picTest
+    return picTest_list
 with st.container():
     st.sidebar.subheader("CONTROLS")
     #st.slider("Slider tester", 1, 5000, 2000)
