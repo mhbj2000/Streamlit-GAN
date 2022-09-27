@@ -34,33 +34,37 @@ with st.container():
 with st.container():
     #image container
     st.write("---")
-    col1, col2, col3, col4, col5, col6 = st.columns(6)  
-    nextcol = 1
-    newsize = (500,500)
-    for i in range(len(picTest_list)):
-        picture_result = picTest_list[i].resize(newsize)
-        if(nextcol == 6):
-            with col6:
-                st.image(picture_result)
-                nextcol = 1
-        elif (nextcol == 5):
-            with col5:
-                st.image(picture_result)
-                nextcol = 6
-        elif (nextcol == 4):
-            with col4:
-                st.image(picture_result)
-                nextcol = 5
-        elif (nextcol == 3):
-            with col3:
-                st.image(picture_result)
-                nextcol = 4
-        elif (nextcol == 2):
-            with col2:
-                st.image(picture_result)
-                nextcol = 3
-        elif (nextcol == 1):
-            with col1:
-                st.image(picture_result)
-                nextcol = 2
+    col1, col2, col3, col4, col5, col6 = st.columns(6)
+    if not picTest_list:
+        st.write('')
+    else:
+        
+        nextcol = 1
+        newsize = (500,500)
+        for i in range(len(picTest_list)):
+            picture_result = picTest_list[i].resize(newsize)
+            if(nextcol == 6):
+                with col6:
+                    st.image(picture_result)
+                    nextcol = 1
+            elif (nextcol == 5):
+                with col5:
+                    st.image(picture_result)
+                    nextcol = 6
+            elif (nextcol == 4):
+                with col4:
+                    st.image(picture_result)
+                    nextcol = 5
+            elif (nextcol == 3):
+                with col3:
+                    st.image(picture_result)
+                    nextcol = 4
+            elif (nextcol == 2):
+                with col2:
+                    st.image(picture_result)
+                    nextcol = 3
+            elif (nextcol == 1):
+                with col1:
+                    st.image(picture_result)
+                    nextcol = 2
                    
