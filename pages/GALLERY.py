@@ -43,7 +43,7 @@ with st.container():
         return 0
                    
 
-def picGen(pictures):
+def picGen():
     fileName = "Pic/Test_"
     fileTypeName = ".png"
     newsize = (200, 200)
@@ -63,7 +63,7 @@ with st.container():
     left_column, right_column = st.sidebar.columns(2)
     with left_column:
         if st.sidebar.button("Start Gallery"):
-            picResult = picGen(GANData)
+            picResult = picGen()
             picDisplay(picResult)
         #st.sidebar.button("Randomize Synthetic Data") 
     #with right_column:
