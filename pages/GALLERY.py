@@ -11,7 +11,7 @@ def picGen(pictures):
     picTest_list = []
     for i in range(1,26):
         st.write(fileName + str(i)+fileTypeName)
-        pic_test = Image.open(fileName+str(i+fileTypeName))
+        pic_test = Image.open(fileName+str(i)+fileTypeName)
         pic_test = picture.resize(newsize)
         picTest_list.append(picture)
     return picTest
