@@ -19,9 +19,6 @@ def rando(gStop):
 
 st.set_page_config(page_title="GANS Demonstration", layout="wide")
 
-img_0 = Image.open("discriminator.PNG")
-img_1 = Image.open("generator.PNG")
-
 
 with st.container():
     col1, col2, col3, col4, col5, col6 = st.columns(6)
