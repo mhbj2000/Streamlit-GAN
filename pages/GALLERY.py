@@ -12,8 +12,8 @@ def picGen(pictures):
     for i in range(1,26):
         st.write(fileName + str(i)+fileTypeName)
         pic_test = Image.open(fileName+str(i)+fileTypeName)
-        pic_test = picture.resize(newsize)
-        picTest_list.append(picture)
+        pic_test = pic_test.resize(newsize)
+        picTest_list.append(pic_test)
     return picTest
 with st.container():
     st.sidebar.subheader("CONTROLS")
