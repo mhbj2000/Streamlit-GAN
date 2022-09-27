@@ -25,6 +25,7 @@ with st.container():
     with left_column:
         if st.sidebar.button("Generate GANs"):
             picResult = picGen(GANData)
+            picDisplay(picResult)
         st.sidebar.button("Randomize Synthetic Data") 
     with right_column:
         if st.sidebar.button("Clear Input"):
@@ -35,9 +36,7 @@ with st.container():
     #image container
     st.write("---")
     col1, col2, col3, col4, col5, col6 = st.columns(6)
-    if not picTest_list:
-        st.write('')
-    else:
+    def picDisplay(picResult):
         
         nextcol = 1
         newsize = (500,500)
