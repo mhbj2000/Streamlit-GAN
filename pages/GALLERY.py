@@ -6,7 +6,7 @@ from PIL import Image
 
 st.set_page_config(page_title="Gallery", layout="wide")
 pic_list = []
-start_index = 1
+start_index = 0
 with st.container():
     #image container
     st.write("---")
@@ -49,7 +49,7 @@ def picGen(start_index):
     fileTypeName = ".png"
     newsize = (200, 200)
     picTest_list = []
-    for i in range(start_index,start_index+11):
+    for i in range(start_index,start_index+12):
         pic_test = Image.open(fileName+str(i)+fileTypeName)
         pic_test = pic_test.resize(newsize)
         picTest_list.append(pic_test)
@@ -63,7 +63,7 @@ with st.container():
             picResult = picGen(start_index)
             picDisplay(picResult)
         if st.sidebar.button("Next Page") :
-          start_index += 11
+          start_index += 12
           picResult = picGen(start_index)
           picDisplay(picResult)
         st.sidebar.button('Previous Page')
