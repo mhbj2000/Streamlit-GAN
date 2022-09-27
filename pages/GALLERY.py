@@ -66,7 +66,7 @@ with st.container():
             picResult = picGen(GANData)
             picDisplay(picResult)
         #st.sidebar.button("Randomize Synthetic Data") 
-    with right_column:
+    #with right_column:
         #if st.sidebar.button("Clear Input"):
             #picResult = []
         #st.sidebar.button("Stop")
