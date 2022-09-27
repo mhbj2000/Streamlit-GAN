@@ -49,12 +49,10 @@ def picGen():
     newsize = (200, 200)
     picTest_list = []
     for i in range(1,25):
-       # st.write(fileName + str(i)+fileTypeName)
         pic_test = Image.open(fileName+str(i)+fileTypeName)
         pic_test = pic_test.resize(newsize)
         picTest_list.append(pic_test)
     return picTest_list
-picGen()
 with st.container():
     st.sidebar.subheader("CONTROLS")
     #st.slider("Slider tester", 1, 5000, 2000)
@@ -63,10 +61,8 @@ with st.container():
         if st.sidebar.button("Start Gallery"):
             picResult = picGen()
             picDisplay(picResult)
-        #st.sidebar.button("Randomize Synthetic Data") 
-    #with right_column:
-        #if st.sidebar.button("Clear Input"):
-            #picResult = []
-        #st.sidebar.button("Stop")
+        st.sidebar.button("Next Page") 
+        st.sidebar.button('Previous Page')
+
  
 
