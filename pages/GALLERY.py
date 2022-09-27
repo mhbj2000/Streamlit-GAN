@@ -8,11 +8,11 @@ def picGen(pictures):
     fileName = "Pic/Test_"
     fileTypeName = ".png"
     newsize = (200, 200)
-    picTest = []
-    for i in range(26):
-      picture = Image.open(filename+str(i+fileTypeName))
-      picture = picture.resize(newsize)
-      picTest.append(picture)
+    picTest_list = []
+    for i in range(0,26):
+      pic_test = Image.open(filename+str(i+fileTypeName))
+      pic_test = picture.resize(newsize)
+      picTest_list.append(picture)
     return picTest
 with st.container():
     st.sidebar.subheader("CONTROLS")
