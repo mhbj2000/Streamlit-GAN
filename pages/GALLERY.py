@@ -54,7 +54,7 @@ def picGen():
         pic_test = pic_test.resize(newsize)
         picTest_list.append(pic_test)
     return picTest_list
- picGen()
+picGen()
 with st.container():
     st.sidebar.subheader("CONTROLS")
     #st.slider("Slider tester", 1, 5000, 2000)
