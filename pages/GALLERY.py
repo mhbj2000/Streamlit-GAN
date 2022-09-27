@@ -1,5 +1,11 @@
 import streamlit as st
 from PIL import Image
+
+                   
+
+
+st.set_page_config(page_title="Gallery", layout="wide")
+pic_list = []
 with st.container():
     #image container
     st.write("---")
@@ -34,11 +40,9 @@ with st.container():
                 with col1:
                     st.image(picture_result)
                     nextcol = 2
+        return 0
                    
 
-
-st.set_page_config(page_title="Gallery", layout="wide")
-pic_list = []
 def picGen(pictures):
     fileName = "Pic/Test_"
     fileTypeName = ".png"
