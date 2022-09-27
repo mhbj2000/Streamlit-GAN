@@ -10,7 +10,7 @@ def picGen(pictures):
     newsize = (200, 200)
     picTest_list = []
     for i in range(0,26):
-      pic_test = Image.open(filename+str(i+fileTypeName))
+      pic_test = Image.open(fileName+str(i+fileTypeName))
       pic_test = picture.resize(newsize)
       picTest_list.append(picture)
     return picTest
