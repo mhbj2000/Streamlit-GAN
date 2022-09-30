@@ -18,7 +18,7 @@ with st.container():
     st.markdown("""
     <style>
     .big-font {
-        font-size:20px !important;
+        font-size:24px !important;
     }
     </style>
     """, unsafe_allow_html=True)
