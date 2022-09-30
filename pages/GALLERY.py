@@ -63,13 +63,13 @@ with st.container():
             picResult = picGen(start_index)
             picDisplay(picResult)
         if st.sidebar.button("Next Page") :
-          start_index += 12
+          global(start_index += 12)
           st.write(start_index)
           picResult = []
           picResult = picGen(start_index)
           picDisplay(picResult)
         if st.sidebar.button('Previous Page') :
-          start_index = start_index - 12
+          global(start_index = start_index - 12)
           st.write(start_index)
           picResult = []
           picResult = picGen(start_index)
