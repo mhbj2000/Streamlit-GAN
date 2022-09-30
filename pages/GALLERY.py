@@ -61,7 +61,7 @@ with st.container():
     left_column, right_column = st.sidebar.columns(2)
     with left_column:
         if st.sidebar.button("Start Gallery"):
-            picResult = picGen(start_index)
+            picResult = picGen(1)
             picDisplay(picResult)
         if st.sidebar.button("Next Page") :
           st.session_state['start_index'] += 12
