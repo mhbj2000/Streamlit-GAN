@@ -6,7 +6,7 @@ from PIL import Image
 
 st.set_page_config(page_title="Gallery", layout="wide")
 pic_list = []
-start_index = 1
+global start_index = 1
 with st.container():
     #image container
     st.write("---")
