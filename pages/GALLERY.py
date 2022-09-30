@@ -46,7 +46,7 @@ with st.container():
                    
 
 def picGen(start_index):
-  st.write(start_index)
+    st.write(start_index)
     fileName = "Pic/Test_"
     fileTypeName = ".png"
     newsize = (200, 200)
