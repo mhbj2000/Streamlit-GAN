@@ -6,7 +6,7 @@ from PIL import Image
 
 st.set_page_config(page_title="Gallery", layout="wide")
 pic_list = []
-st.session_state.['start_index'] = 1
+st.session_state['start_index'] = 1
 #start_index = 1
 with st.container():
     #image container
@@ -64,18 +64,18 @@ with st.container():
             picResult = picGen(start_index)
             picDisplay(picResult)
         if st.sidebar.button("Next Page") :
-          st.session_state.['start_index'] += 12
+          st.session_state['start_index'] += 12
           #start_index += 12
-          st.write(session.state['start_index'])
+          st.write(st.session_state['start_index'])
           picResult = []
-          picResult = picGen(session.state['start_index'])
+          picResult = picGen(st.session_state['start_index'])
           picDisplay(picResult)
         if st.sidebar.button('Previous Page') :
-          st.session_state.['start_index'] -= 12
+          st.session_state['start_index'] -= 12
           #start_index = start_index - 12
-          st.write(session.state['start_index'])
+          st.write(st.session_state['start_index'])
           picResult = []
-          picResult = picGen(session.state['start_index'])
+          picResult = picGen(st.session_state['start_index'])
           picDisplay(picResult)
 
  
