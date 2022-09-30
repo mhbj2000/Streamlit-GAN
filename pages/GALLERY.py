@@ -46,6 +46,7 @@ with st.container():
                    
 
 def picGen(start_index):
+  st.write(start_index)
     fileName = "Pic/Test_"
     fileTypeName = ".png"
     newsize = (200, 200)
@@ -57,10 +58,8 @@ def picGen(start_index):
     return picTest_list
 with st.container():
     st.sidebar.subheader("CONTROLS")
-    #st.slider("Slider tester", 1, 5000, 2000)
     left_column, right_column = st.sidebar.columns(2)
     with left_column:
-        st.session_state
         if st.sidebar.button("Start Gallery"):
             picResult = picGen(1)
             picDisplay(picResult)
