@@ -60,6 +60,7 @@ with st.container():
     #st.slider("Slider tester", 1, 5000, 2000)
     left_column, right_column = st.sidebar.columns(2)
     with left_column:
+        st.session_state
         if st.sidebar.button("Start Gallery"):
             picResult = picGen(1)
             picDisplay(picResult)
