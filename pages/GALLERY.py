@@ -5,9 +5,10 @@ from PIL import Image
 
 
 st.set_page_config(page_title="Gallery", layout="wide")
-#"st.session_state object:", st.session_state
+if 'start_index' not in st.session_state:
+    st.session_state.start_index = '1'
 pic_list = []
-st.session_state.start_index = 1
+#st.session_state.start_index = 1
 #start_index = 1
 with st.container():
     #image container
