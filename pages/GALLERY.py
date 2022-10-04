@@ -63,7 +63,7 @@ with st.container():
     left_column, right_column = st.sidebar.columns(2)
     with left_column:
         weather_options = ['Rain','Snow','Sunny','Overcast','Night','Cloudy']
-        weather = st.select_slider("Choose a type of weather",options = weather_options)
+        weather = st.select_slider("Choose a Type of Weather",options = weather_options)
         st.write('The current weather is:',weather)
         if st.sidebar.button("Start Gallery"):
             picResult = picGen(1)
