@@ -43,3 +43,22 @@ with st.container():
 
     st.markdown('<p class="big-font">The purpose of the discriminator is to identify real data from fake data created by our generator. </p>', unsafe_allow_html=True)
         
+with st.container():
+    col1, col2, col3, col4, col5 = st.columns(5)
+    with col3:
+        st.image("./wip_photo.png")
+        
+with st.container():
+    
+    st.markdown('##')
+
+    st.markdown("""
+    <style>
+    .big-font {
+        font-size:24px !important;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
+    st.markdown('<p class="big-font">The purpose of the discriminator is to identify real data from fake data created by our generator. </p>', unsafe_allow_html=True)
+        
