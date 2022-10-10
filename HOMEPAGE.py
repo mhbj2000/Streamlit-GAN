@@ -7,7 +7,7 @@ st.set_page_config(page_title="GANS", layout="wide")
 with st.container():
     col1, col2, col3, col4, col5 = st.columns(5)
     with col3:
-        st.title("GANS DEMO ")
+        st.title("HOW IT WORKS")
 
 with st.container():
     
