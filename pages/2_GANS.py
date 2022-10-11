@@ -44,7 +44,7 @@ with st.container():
 with st.container():
     #real_image_1 = Image.open('01.jpg')
     st.write('---')
-    col1,col2,col3 = st.colums(3)
+    col1,col2,col3 = st.columns(3)
     with col1:
         st.image('01.jpg')
             
