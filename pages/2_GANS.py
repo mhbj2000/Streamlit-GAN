@@ -42,11 +42,11 @@ with st.container():
         st.sidebar.button("Stop")
         
 with st.container():
-    #real_image_1 = Image.open('01.jpg')
+    real_image_1 = Image.open('01.jpg')
     st.write('---')
     col1,col2,col3 = st.columns(3)
     with col1:
-        st.image('01.jpg')
+        
             
 
 with st.container():
