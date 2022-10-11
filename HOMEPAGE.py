@@ -60,5 +60,5 @@ with st.container():
     </style>
     """, unsafe_allow_html=True)
 
-    st.markdown('<p class="big-font">The purpose of the discriminator is to identify real data from fake data created by our generator. </p>', unsafe_allow_html=True)
+    st.markdown('<p class="big-font">The generator learns to create fake data by taking feedback from our discriminator and learns to make more realistic images to try and trick the discriminator and make it think a fake output is real.</p>', unsafe_allow_html=True)
         
