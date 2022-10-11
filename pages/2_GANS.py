@@ -40,6 +40,13 @@ with st.container():
         if st.sidebar.button("Clear Input"):
             picResult = []
         st.sidebar.button("Stop")
+        
+with st.container():
+    Image.open('01.jpg')
+    st.write('---')
+    col1,col2,col3 = st.colums(3)
+    with col1:
+        st.image('01.jpg')
             
 
 with st.container():
