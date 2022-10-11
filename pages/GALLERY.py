@@ -48,7 +48,6 @@ with st.container():
                    
 
 def picGen(start_index):
-    st.write(start_index)
     fileName = "Pic/Test_"
     fileTypeName = ".png"
     newsize = (200, 200)
@@ -68,10 +67,9 @@ with st.container():
         if st.sidebar.button("Start Gallery"):
             picResult = picGen(1)
             picDisplay(picResult)
-            st.write(len(picDisplay(picResult)))
+            st.write(len(picResult))
         if st.sidebar.button("Next Page") :
           st.session_state.start_index += 12
-          st.write(st.session_state.start_index)
           picResult = []
           picResult = picGen(st.session_state.start_index)
           if st.session_state.start_index > len(pic_list):
@@ -80,8 +78,6 @@ with st.container():
           picDisplay(picResult)
         if st.sidebar.button('Previous Page') :
           st.session_state.start_index -=12
-          
-          
           picResult = []
           picResult = picGen(st.session_state.start_index)
           picDisplay(picResult)
