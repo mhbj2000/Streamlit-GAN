@@ -72,8 +72,8 @@ with st.container():
           st.session_state.start_index += 12
           picResult = []
           picResult = picGen(st.session_state.start_index)
-          if st.session_state.start_index > len(pic_list):
-            st.session_state.start_index = len(pic_list)-12     #Input Validation
+          if st.session_state.start_index > len(pic_Result):
+            st.session_state.start_index = len(pic_Result)-12     #Input Validation
             picResult = picGen(st.session_state.start_index)
           picDisplay(picResult)
         if st.sidebar.button('Previous Page') :
