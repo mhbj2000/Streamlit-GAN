@@ -1,4 +1,5 @@
 import streamlit as st
+import base64
 
 st.set_page_config(page_title="GANS", layout="wide")
 
@@ -60,5 +61,5 @@ with st.container():
     </style>
     """, unsafe_allow_html=True)
 
-    st.markdown('<p class="big-font">The generator learns to create fake data by taking feedback from our discriminator and learns to make more realistic images to try and trick the discriminator and make it think a fake output is real.</p>', unsafe_allow_html=True)
+    st.markdown('<p class="big-font"> </p>', unsafe_allow_html=True)
         
