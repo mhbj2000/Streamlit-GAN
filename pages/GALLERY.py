@@ -70,6 +70,8 @@ with st.container():
             picDisplay(picResult)
         if st.sidebar.button("Next Page") :
           st.session_state.start_index += 12
+          if st.session_state.start_index > len(pic_list):
+            st.session_state.start_index = len(pic_list)-12
           #start_index += 12
           st.write(st.session_state.start_index)
           picResult = []
