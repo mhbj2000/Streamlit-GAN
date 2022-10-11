@@ -26,7 +26,7 @@ with st.container():
 
 #HERE IS WHERE GIF GOES
 with st.container():
-    file_ = open("/Gear_Turn.gif", "rb")
+    file_ = open("Gear_Turn.gif", "rb")
     contents = file_.read()
     data_url = base64.b64encode(contents).decode("utf-8")
     file_.close()
