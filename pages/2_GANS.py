@@ -41,12 +41,12 @@ with st.container():
             picResult = []
         st.sidebar.button("Stop")
         
-with st.container():
-    real_image_1 = Image.open('01.jpg')
-    st.write('---')
-    col1,col2,col3 = st.columns(3)
-    with col1:
-        st.write('we got here')
+#with st.container():
+    #real_image_1 = Image.open('01.jpg')
+   # st.write('---')
+   # col1,col2,col3 = st.columns(3)
+    #with col1:
+        #st.write('we got here')
         
             
 
