@@ -51,7 +51,7 @@ with st.container():
 with st.container():
     col1, col2, col3, col4, col5 = st.columns(5)
     with col3:
-        st.image("./wip_photo.png")
+        st.image("./conveyer_progress.png")
         
 with st.container():
     
@@ -67,3 +67,7 @@ with st.container():
 
     st.markdown('<p class="big-font">The purpose of our generator is to create fake data, taking feedback from the discriminator and applying it to make more realistic fake images and make the discriminator think the fake images are real. </p>', unsafe_allow_html=True)
         
+with st.container():
+    col1, col2, col3, col4, col5 = st.columns(5)
+    with col3:
+        st.image("./wip_photo.png")
