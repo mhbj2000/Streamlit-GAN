@@ -88,6 +88,3 @@ with st.container():
             GANData = seedData*synData
             st.write(GANData,"GAN images")
             st.write("Generated in - minutes and - seconds")
-        with col2:
-            st.image("https://static.streamlit.io/examples/dice.jpg")
-        
