@@ -52,7 +52,7 @@ with st.container():
     real_image_2.resize(new_size)
     real_image_3.resize(new_size)
     st.write('---')
-    st.header('Examples of Real Images')
+    st.subheader('Examples of Real Images')
     col1,col2,col3 = st.columns(3)
     with col1:
         st.image(real_image_1)
@@ -63,7 +63,7 @@ with st.container():
         
 with st.container():
     st.write('---')
-    st.header('Examples of Synthetic Images')
+    st.subheader('Examples of Synthetic Images')
     col1,col2,col3 = st.columns(3)
     # Synthetic Images being displayed
     fake_image_1 = Image.open('Pic/Fake_Image_01.png') 
@@ -120,7 +120,7 @@ with st.container():
 
 with st.container():
     st.write('---')
-    with st.header("Metrics and Results"):
+    with st.subheader("Metrics and Results"):
         col1, col2 = st.columns(2)
         with col1:
             st.subheader("Metrics")
