@@ -51,7 +51,7 @@ with st.container():
 with st.container():
     col1, col2, col3, col4, col5 = st.columns(5)
     with col3:
-        st.image("./temp.PNG")
+        st.image("./conveyer_progress.PNG")
         
 with st.container():
     
