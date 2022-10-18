@@ -43,11 +43,17 @@ with st.container():
         
 #with st.container():
     real_image_1 = Image.open('Pic/01.jpg')
-    st.image(real_image_1)
-   # st.write('---')
-   # col1,col2,col3 = st.columns(3)
-    #with col1:
-        #st.write('we got here')
+    real_image_2 = Image.open('Pic/02.jpg')
+    real_image_3 = Image.open('Pic/03.jpg')
+    new_size = (200,200)
+    real_image_1.resize(new_size)
+    real_image_2.resize(new_size)
+    real_image_3.resize(new_size)
+    #st.image(real_image_1)
+    st.write('---')
+    col1,col2,col3 = st.columns(3)
+    with col1:
+        st.image(real_image_1)
         
             
 
