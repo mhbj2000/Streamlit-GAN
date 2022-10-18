@@ -114,7 +114,8 @@ with st.container():
                     nextcol = 2
 
 with st.container():
-    with st.expander("Metrics and Results"):
+    st.write('---')
+    with st.header("Metrics and Results"):
         col1, col2 = st.columns(2)
         with col1:
             st.subheader("Metrics")
