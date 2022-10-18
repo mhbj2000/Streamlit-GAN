@@ -51,9 +51,14 @@ with st.container():
     real_image_3.resize(new_size)
     #st.image(real_image_1)
     st.write('---')
+    st.header('Example of Real Images)
     col1,col2,col3 = st.columns(3)
     with col1:
         st.image(real_image_1)
+    with col2:
+        st.image(real_image_2)
+    with col3:
+        st.image(real_image_3)
         
             
 
