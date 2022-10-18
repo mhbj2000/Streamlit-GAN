@@ -72,6 +72,8 @@ with st.container():
     fake_image_1.resize(new_size)
     #fake_image_2.resize(new_size)
     #fake_image_3.resize(new_size)
+    with col1:
+        st.image(fake_image_1)
         
             
 
