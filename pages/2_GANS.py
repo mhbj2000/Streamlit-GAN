@@ -65,13 +65,13 @@ with st.container():
     st.header('Example of Synthetic Images')
     col1,col2,col3 = st.columns(3)
     # Synthetic Images being displayed
-    fake_image_1 = 
-    fake_image_2 = 
-    fake_image_3 = 
+    fake_image_1 = Image.open('Pic/Fake_Image_01.png') 
+    #fake_image_2 = 
+    #fake_image_3 = 
     new_size=(200,200)
     fake_image_1.resize(new_size)
-    fake_image_2.resize(new_size)
-    fake_image_3.resize(new_size)
+    #fake_image_2.resize(new_size)
+    #fake_image_3.resize(new_size)
         
             
 
