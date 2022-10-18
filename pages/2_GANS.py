@@ -60,7 +60,7 @@ with st.container():
     with col3:
         st.image(real_image_3)
         
- with st.container():
+with st.container():
     st.write('---')
     st.header('Example of Synthetic Images')
     col1,col2,col3 = st.columns(3)
