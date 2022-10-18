@@ -23,6 +23,7 @@ st.set_page_config(page_title="GANS Demonstration", layout="wide")
 with st.container():
     col1, col2, col3, col4, col5, col6 = st.columns(6)
 #potential headers
+st.header('HEADER')
 
 # ---- SIDE BAR COTNROLS ---- 
 with st.container():
@@ -51,7 +52,7 @@ with st.container():
     real_image_2.resize(new_size)
     real_image_3.resize(new_size)
     st.write('---')
-    st.header('Example of Real Images')
+    st.header('Examples of Real Images')
     col1,col2,col3 = st.columns(3)
     with col1:
         st.image(real_image_1)
@@ -62,7 +63,7 @@ with st.container():
         
 with st.container():
     st.write('---')
-    st.header('Example of Synthetic Images')
+    st.header('Examples of Synthetic Images')
     col1,col2,col3 = st.columns(3)
     # Synthetic Images being displayed
     fake_image_1 = Image.open('Pic/Fake_Image_01.png') 
