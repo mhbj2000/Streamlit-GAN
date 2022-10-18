@@ -66,14 +66,18 @@ with st.container():
     col1,col2,col3 = st.columns(3)
     # Synthetic Images being displayed
     fake_image_1 = Image.open('Pic/Fake_Image_01.png') 
-    #fake_image_2 = 
-    #fake_image_3 = 
+    fake_image_2 = Image.open('Pic/Fake_Image_02.png') 
+    fake_image_3 = Image.open('Pic/Fake_Image_03.png')  
     new_size=(200,200)
     fake_image_1.resize(new_size)
-    #fake_image_2.resize(new_size)
-    #fake_image_3.resize(new_size)
+    fake_image_2.resize(new_size)
+    fake_image_3.resize(new_size)
     with col1:
         st.image(fake_image_1)
+    with col2:
+        st.image(fake_image_2)
+    with col3:
+        st.image(fake_image_3)
         
             
 
