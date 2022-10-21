@@ -49,9 +49,12 @@ with st.container():
     st.markdown('<p class="big-font">The purpose of the discriminator is to identify real data from fake data created by our generator. </p>', unsafe_allow_html=True)
         
 with st.container():
-    col1, col2, col3, col4, col5 = st.columns(5)
-    with col3:
-        st.image("./temp.PNG")
+    file_ = open("DiscriminatorAnim.gif", "rb")
+    contents = file_.read()
+    data_url = base64.b64encode(contents).decode("utf-8")
+    file_.close()
+    
+    st.markdown(f'<img src="data:image/gif;base64,{data_url}" alt="Gear gif">',unsafe_allow_html=True,)
         
 with st.container():
     
