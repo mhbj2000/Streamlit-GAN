@@ -46,7 +46,7 @@ with st.container():
     </style>
     """, unsafe_allow_html=True)
 
-    st.markdown('<p class="big-font">The purpose of the discriminator is to identify real data from fake data created by our generator. </p>', unsafe_allow_html=True)
+    st.markdown('<p class="big-font">The purpose of the discriminator is to identify real data from fake data created by our generator. The data that the discriminator identifies as false information is sent back to the generator for it to improve upon.</p>', unsafe_allow_html=True)
         
 with st.container():
     file_ = open("DiscriminatorAnim.gif", "rb")
