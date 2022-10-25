@@ -6,10 +6,6 @@ st.set_page_config(page_title="GANS", layout="wide")
 #content of main_page
 
 st.markdown("<h1 style='text-align: center;'>HOW IT WORKS</h1>", unsafe_allow_html=True)
-#with st.container():
-    #col1, col2, col3, col4, col5 = st.columns(5)
-    #with col3:
-        #st.title("HOW IT WORKS")
 
 with st.container():
     
