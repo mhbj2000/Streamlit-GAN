@@ -27,12 +27,13 @@ with st.container():
 
 #HERE IS WHERE GIF GOES
     with col2:
-        file_ = open("Gear_Turn.gif", "rb")
+        file_ = open("DiscriminatorAnim.gif", "rb")
         contents = file_.read()
         data_url = base64.b64encode(contents).decode("utf-8")
         file_.close()
 
         st.markdown(f'<img src="data:image/gif;base64,{data_url}" alt="Gear gif">',unsafe_allow_html=True,)
+
 
 
 with st.container():
@@ -49,14 +50,7 @@ with st.container():
 
     st.markdown('<p class="big-font">The purpose of the discriminator is to identify real data from fake data created by our generator. The data that the discriminator identifies as false information is sent back to the generator for it to improve upon.</p>', unsafe_allow_html=True)
         
-with st.container():
-    file_ = open("DiscriminatorAnim.gif", "rb")
-    contents = file_.read()
-    data_url = base64.b64encode(contents).decode("utf-8")
-    file_.close()
-    
-    st.markdown(f'<img src="data:image/gif;base64,{data_url}" alt="Gear gif">',unsafe_allow_html=True,)
-        
+
 with st.container():
     
     st.markdown('##')
