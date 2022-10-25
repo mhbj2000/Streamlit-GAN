@@ -7,7 +7,7 @@ st.set_page_config(page_title="GANS", layout="wide")
 
 #header
 with open("design.css") as source_des:
-    st.markdown(f"<style>(source_des.read()</style>", unsafe_allow_html=True)
+    st.markdown(f"<style>{source_des.read()}</style>", unsafe_allow_html=True)
 st.markdown("<h1 style='text-align: center;'>HOW IT WORKS</h1>", unsafe_allow_html=True)
 
 with st.container():
