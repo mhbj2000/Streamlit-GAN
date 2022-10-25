@@ -36,36 +36,3 @@ with st.container():
 
 
 
-with st.container():
-    
-    st.markdown('##')
-
-    st.markdown("""
-    <style>
-    .big-font {
-        font-size:24px !important;
-    }
-    </style>
-    """, unsafe_allow_html=True)
-
-    st.markdown('<p class="big-font">The purpose of the discriminator is to identify real data from fake data created by our generator. The data that the discriminator identifies as false information is sent back to the generator for it to improve upon.</p>', unsafe_allow_html=True)
-        
-
-with st.container():
-    
-    st.markdown('##')
-
-    st.markdown("""
-    <style>
-    .big-font {
-        font-size:24px !important;
-    }
-    </style>
-    """, unsafe_allow_html=True)
-
-    st.markdown('<p class="big-font">The purpose of our generator is to create fake data, taking feedback from the discriminator and applying it to make more realistic fake images and make the discriminator think the fake images are real. </p>', unsafe_allow_html=True)
-        
-with st.container():
-    col1, col2, col3, col4, col5 = st.columns(5)
-    with col3:
-        st.image("./wip_photo.png")
