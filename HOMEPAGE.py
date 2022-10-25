@@ -36,5 +36,6 @@ with col1:
     st.markdown(f'<img src="data:image/gif;base64,{data_url}" alt="Gear gif">',unsafe_allow_html=True,)
 
 with st.container():
+    st.markdown('##')
     image = Image.open('GAN_SYSTEM.PNG')
     st.image(image, caption ='Final Animation Demo')
