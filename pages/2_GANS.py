@@ -28,19 +28,14 @@ st.header('HEADER')
 # ---- SIDE BAR COTNROLS ---- 
 with st.container():
     st.sidebar.subheader("CONTROLS")
-    #st.slider("Slider tester", 1, 5000, 2000)
-    seedData = st.sidebar.slider("Seed Data",1,5,5)
-    synData = st.sidebar.slider("Synthetic Data",1,5,5)
-    GANData = seedData*synData
     left_column, right_column = st.sidebar.columns(2)
     with left_column:
         if st.sidebar.button("Generate GANs"):
-            picResult = rando(GANData)
-        st.sidebar.button("Randomize Synthetic Data") 
+            pass
     with right_column:
-        if st.sidebar.button("Clear Input"):
-            picResult = []
-        st.sidebar.button("Stop")
+        if st.sidebar.button("Stop"):
+            pass
+
         
 with st.container():
     #Real Images being displayed
