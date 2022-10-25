@@ -35,5 +35,5 @@ with col1:
     st.markdown(f'<img src="data:image/gif;base64,{data_url}" alt="Gear gif">',unsafe_allow_html=True,)
 
 with st.container():
-    image = Image.open('GAN SYSTEM.PNG')
+    image = Image.open('GAN_SYSTEM.PNG')
     st.image(image, caption ='Final Animation Demo')
