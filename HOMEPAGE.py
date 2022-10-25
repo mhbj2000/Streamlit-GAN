@@ -26,7 +26,7 @@ with st.container():
 
 #HERE IS WHERE GIF GOES
 col1, col2, col3 = st.columns(3)
-with col2:
+with col1:
     file_ = open("DiscriminatorAnim.gif", "rb")
     contents = file_.read()
     data_url = base64.b64encode(contents).decode("utf-8")
