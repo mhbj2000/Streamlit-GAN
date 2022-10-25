@@ -36,4 +36,4 @@ with col1:
 
 with st.container():
     image = Image.open('GAN SYSTEM.PNG')
-    st.image(image, caption ='Final Animation Demo'
+    st.image(image, caption ='Final Animation Demo')
