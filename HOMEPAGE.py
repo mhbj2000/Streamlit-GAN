@@ -55,5 +55,5 @@ video_html = """
                         src="https://streamable.com/r0966b"
                         type="video/mp4" />
              </video>
-         """
+             """
 col2.markdown(video_html, unsafe_allow_html=True)
