@@ -49,12 +49,14 @@ with st.container():
     
 col1, col2 = st.columns([1, 1])
 with col1:
-    """
+    
+    video_html = """
     <video controls width = "250" autoplay="true" muted="true loop="true">
     <source
             src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
             type="video/mp4" />
     </video>
     """
+    col1.markdown(video_html, unsafe_allow_html=True)
      
 #col2.markdown(video_html, unsafe_allow_html=True)
