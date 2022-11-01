@@ -37,16 +37,17 @@ with col1:
     
 col2.markdown(video_html, unsafe_allow_html=True)
     
-    
+#video    
 col1, col2, col3 = st.columns(3)
 with col1:
-    video_html = """
-                <video controls width="320" height="240" autoplay="true" muted="true" loop="true">
-                <source
-                src="GAN_SYTEM.mp4"
-                type="video/mp4" />
-                """
-    col2.markdown(video_html, unsafe_allow_html=True) 
+    file_ = open("GAN_SYSTEM.mp4", "rb")
+    contents = file_.read()
+    data_url = base64.b64encode(contents).decode("utf-8")
+    file_.close()
+
+    st.markdown(f'<img src="data:image/mp4;base64,{data_url}" alt="GAN_SYSTEM">',unsafe_allow_html=True,)
+    
+col2.markdown(video_html, unsafe_allow_html=True)
     
 with st.container():
     video_file = open('GAN_SYSTEM.mp4', 'rb')
