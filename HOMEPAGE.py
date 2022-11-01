@@ -39,3 +39,9 @@ with st.container():
     st.markdown('##')
     image = Image.open('GAN_SYSTEM.PNG')
     st.image(image, caption ='Final Animation Demo')
+    
+with st.container():
+    video_file = open('GAN_SYSTEM.mp4', 'rb')
+    video_bytes = video_file.read()
+    
+    st.video(video_bytes)
