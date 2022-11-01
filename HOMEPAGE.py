@@ -48,12 +48,10 @@ with st.container():
     
     
 col1, col2 = st.columns([1, 1])
-
-video_html = """
-             <video controls width = "250" autoplay="true" muted="true loop="true">
-             <source
-                        src="https://streamable.com/r0966b"
-                        type="video/mp4" />
-             </video>
-             """
-col2.markdown(video_html, unsafe_allow_html=True)
+<video controls width = "250" autoplay="true" muted="true loop="true">
+<source
+             src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
+             type="video/mp4" />
+</video>
+             
+#col2.markdown(video_html, unsafe_allow_html=True)
