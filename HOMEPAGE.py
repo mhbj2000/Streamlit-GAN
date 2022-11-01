@@ -35,7 +35,7 @@ with col1:
 
     st.markdown(f'<img src="data:image/gif;base64,{data_url}" alt="Gear gif">',unsafe_allow_html=True,)
     
-col2.markdown(video_html, unsafe_allow_html=True)
+#col2.markdown(video_html, unsafe_allow_html=True)
     
 
 #VIDEO   
