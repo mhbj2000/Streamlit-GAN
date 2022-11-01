@@ -45,8 +45,8 @@ with st.container():
     
     st.video(video_bytes)
     
-    
-    
+"""    
+GAN SYSTEM VIDEO LOOP   
 col1, col2 = st.columns([1, 1])
 with col1:
     
@@ -60,3 +60,4 @@ with col1:
     col2.markdown(video_html, unsafe_allow_html=True)
      
 #col2.markdown(video_html, unsafe_allow_html=True)
+"""
