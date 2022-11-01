@@ -35,15 +35,7 @@ with col1:
 
     st.markdown(f'<img src="data:image/gif;base64,{data_url}" alt="Gear gif">',unsafe_allow_html=True,)
     
-with col1:
-    video_html = 
-        """
-            <video controls width="320" height="240" autoplay="true" muted="true" loop="true">
-            <source 
-            src="resources/video (online-video-cutter.com).mp4" 
-            type="video/mp4" />
-            </video>
-        """
+
 col2.markdown(video_html, unsafe_allow_html=True)
     
 with st.container():
