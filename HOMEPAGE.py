@@ -57,6 +57,6 @@ with col1:
             type="video/mp4" />
     </video>
     """
-    col1.markdown(video_html, unsafe_allow_html=True)
+    col2.markdown(video_html, unsafe_allow_html=True)
      
 #col2.markdown(video_html, unsafe_allow_html=True)
