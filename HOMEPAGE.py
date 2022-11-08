@@ -28,7 +28,7 @@ with col1:
     </style>
     """, unsafe_allow_html=True)
 
-    st.markdown('<p class="big-font">The purpose of the Generator is to generate plasible data. This is with the goal of those plausible instances becoming negative examples to train the Discriminator.</p>', unsafe_allow_html=True)
+    st.markdown('<p class="big-font">The purpose of the Generator is to generate plausible data. This is with the goal of those plausible instances becoming negative examples for training the Discriminator.</p>', unsafe_allow_html=True)
 
 #DISCRIMINATOR PARAGRAPH 
 with col3:
@@ -43,7 +43,7 @@ with col3:
     </style>
     """, unsafe_allow_html=True)
 
-    st.markdown('<p class="big-font">The Discriminator is meant to identify fake data created by the Generator from real data and give the generator a penalty for producing implausible results.</p>', unsafe_allow_html=True)
+    st.markdown('<p class="big-font">The Discriminator is meant to identify fake data created by the Generator from real data and issue the Generator a penalty for producing implausible results.</p>', unsafe_allow_html=True)
 
 #HERE IS WHERE GIF GOES
 #col1, col2, col3 = st.columns(3)
