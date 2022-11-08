@@ -10,7 +10,7 @@ st.set_page_config(page_title="GANS", layout="wide")
 with open("design.css") as source_des:
     st.markdown(f"<style>{source_des.read()}</style>", unsafe_allow_html=True)
 st.markdown("<h1 style='text-align: center;'>WHAT IS A GAN?</h1>", unsafe_allow_html=True)
-col1, col2, col3, col4, col5 = st.columns(5)
+col1, col2, col3 = st.columns(3)
 with col1:
 #with st.container():
 #container contains old info
