@@ -40,6 +40,8 @@ with col3:
     <style>
     .big-font {
         font-size:24px !important;
+        text-align: justify;
+        word-spacing : -2px;
     }
     </style>
     """, unsafe_allow_html=True)
