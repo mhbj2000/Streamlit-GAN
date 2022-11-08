@@ -10,9 +10,10 @@ st.set_page_config(page_title="GANS", layout="wide")
 with open("design.css") as source_des:
     st.markdown(f"<style>{source_des.read()}</style>", unsafe_allow_html=True)
 st.markdown("<h1 style='text-align: center;'>WHAT IS A GAN?</h1>", unsafe_allow_html=True)
-
-with st.container():
-
+col1, col2, col3, col4, col5 = st.columns(5)
+with col1:
+#with st.container():
+#container contains old info
     st.markdown('##')
 
     st.markdown("""
@@ -24,6 +25,20 @@ with st.container():
     """, unsafe_allow_html=True)
 
     st.markdown('<p class="big-font">A generative adversarial network (GAN) is a deep neural network that is trained with existing training data to generate new data of similar characteristics to the training data. For a GAN to work it needs two neural networks the generator, which is trained to produce fake data, and the discriminator, which is trained to distinguish the generator’s fake data from real examples. If the fake data generated is easily recognized as implausible by the discriminator, then the generator is penalized and must try again until it generates something plausible.  </p>', unsafe_allow_html=True)
+
+with col2:
+    
+    st.markdown('##')
+
+    st.markdown("""
+    <style>
+    .big-font {
+        font-size:24px !important;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
+    st.markdown('<p class="big-font"></p>', unsafe_allow_html=True)
 
 #HERE IS WHERE GIF GOES
 #col1, col2, col3 = st.columns(3)
