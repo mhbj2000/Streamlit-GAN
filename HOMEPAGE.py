@@ -23,8 +23,7 @@ with col1:
     <style>
     .big-font {
         font-size:24px !important;
-        text-align: justify;
-        word-spacing : -3px;
+        text-align: center;
     }
     </style>
     """, unsafe_allow_html=True)
@@ -40,8 +39,6 @@ with col3:
     <style>
     .big-font {
         font-size:24px !important;
-        text-align: justify;
-        word-spacing : -2px;
     }
     </style>
     """, unsafe_allow_html=True)
