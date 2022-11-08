@@ -23,6 +23,7 @@ with col1:
     <style>
     .big-font {
         font-size:24px !important;
+        text-align: center;
     }
     </style>
     """, unsafe_allow_html=True)
