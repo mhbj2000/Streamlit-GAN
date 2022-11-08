@@ -23,7 +23,7 @@ with col1:
     <style>
     .big-font {
         font-size:24px !important;
-        text-align: center;
+        text-align: left;
     }
     </style>
     """, unsafe_allow_html=True)
@@ -39,6 +39,7 @@ with col3:
     <style>
     .big-font {
         font-size:24px !important;
+        text-align: right;
     }
     </style>
     """, unsafe_allow_html=True)
