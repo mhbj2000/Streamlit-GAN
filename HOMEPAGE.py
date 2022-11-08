@@ -24,6 +24,7 @@ with col1:
     .big-font {
         font-size:24px !important;
         text-align: justify;
+        word-spacing : -2px;
     }
     </style>
     """, unsafe_allow_html=True)
