@@ -37,13 +37,14 @@ with col3:
 
     st.markdown("""
     <style>
-    .big-font {
+    .big-font2 {
         font-size:24px !important;
+        text-align: right;
     }
     </style>
     """, unsafe_allow_html=True)
 
-    st.markdown('<p class="big-font">The Discriminator is meant to identify fake data created by the Generator from real data and issue the Generator a penalty for producing implausible results.</p>', unsafe_allow_html=True)
+    st.markdown('<p class="big-font2">The Discriminator is meant to identify fake data created by the Generator from real data and issue the Generator a penalty for producing implausible results.</p>', unsafe_allow_html=True)
 
 #HERE IS WHERE GIF GOES
 #col1, col2, col3 = st.columns(3)
