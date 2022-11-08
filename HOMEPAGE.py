@@ -39,7 +39,7 @@ with col3:
     <style>
     .big-font2 {
         font-size:24px !important;
-        text-align: right;
+        text-align: left;
     }
     </style>
     """, unsafe_allow_html=True)
