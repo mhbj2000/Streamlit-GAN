@@ -37,6 +37,7 @@ with st.container():
     with col1:
         st.image(real_image_1)
     with col2:
+        st.write('---')
         st.write('Description')
         pass
         #st.image(real_image_2)
