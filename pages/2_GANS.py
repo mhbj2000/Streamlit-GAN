@@ -37,6 +37,7 @@ with st.container():
     with col1:
         st.image(real_image_1)
     with col2:
+        pass
         #st.image(real_image_2)
 # ---- GAN Visualizer Row 2 ----       
 with st.container():
