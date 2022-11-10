@@ -33,15 +33,13 @@ with st.container():
     #real_image_3.resize(new_size)
     st.write('---')
     st.subheader('idk')
-    col1,col2,col3 = st.columns(3)
+    col1,col2 = st.columns(2)
     with col1:
         st.image(real_image_1)
     with col2:
         st.write('Description')
         pass
         #st.image(real_image_2)
-    with col3:
-        st.write('|\n','|')
 # ---- GAN Visualizer Row 2 ----       
 with st.container():
     st.write('---')
