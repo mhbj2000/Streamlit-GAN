@@ -8,7 +8,7 @@ st.set_page_config(page_title="GANS Demonstration", layout="wide")
 with st.container():
     col1, col2, col3, col4, col5, col6 = st.columns(6)
 #potential headers
-st.header('HEADER')
+st.header('GAN VISUALIZER')
 
 # ---- SIDE BAR COTNROLS ---- 
 with st.container():
@@ -37,6 +37,7 @@ with st.container():
     with col1:
         st.image(real_image_1)
     with col2:
+        st.write('Description')
         pass
         #st.image(real_image_2)
 # ---- GAN Visualizer Row 2 ----       
@@ -54,6 +55,7 @@ with st.container():
     with col1:
         st.image(fake_image_1)
     with col2:
+        st.write('Description')
         pass
         #st.image(fake_image_2)
 # ---- GAN Visualizer Row 3 ----       
