@@ -21,48 +21,57 @@ with st.container():
         if st.sidebar.button("Stop"):
             pass
 
-# ---- Real Image Display ----         
+# ---- GAN Visualizer Row 1 ----         
 with st.container():
+    # change to gif 1
     real_image_1 = Image.open('Pic/01.jpg')
-    real_image_2 = Image.open('Pic/02.jpg')
-    real_image_3 = Image.open('Pic/03.jpg')
+    #real_image_2 = Image.open('Pic/02.jpg')
+    #real_image_3 = Image.open('Pic/03.jpg')
     new_size = (200,200)
-    real_image_1.resize(new_size)
-    real_image_2.resize(new_size)
-    real_image_3.resize(new_size)
+    #real_image_1.resize(new_size)
+    #real_image_2.resize(new_size)
+    #real_image_3.resize(new_size)
     st.write('---')
-    st.subheader('Examples of Real Images')
-    col1,col2,col3 = st.columns(3)
+    st.subheader('idk')
+    col1,col2 = st.columns(2)
     with col1:
         st.image(real_image_1)
     with col2:
         st.image(real_image_2)
-    with col3:
-        st.image(real_image_3)
-# ---- Synthetic Image Display ----       
+# ---- GAN Visualizer Row 2 ----       
 with st.container():
     st.write('---')
-    st.subheader('Examples of Synthetic Images')
-    col1,col2,col3 = st.columns(3)
+    st.subheader('idk')
     fake_image_1 = Image.open('Pic/Fake_Image_01.png') 
-    fake_image_2 = Image.open('Pic/Fake_Image_02.png') 
-    fake_image_3 = Image.open('Pic/Fake_Image_03.png')  
+    #fake_image_2 = Image.open('Pic/Fake_Image_02.png') 
+    #fake_image_3 = Image.open('Pic/Fake_Image_03.png')  
     new_size=(200,200)
     fake_image_1.resize(new_size)
-    fake_image_2.resize(new_size)
-    fake_image_3.resize(new_size)
+    #fake_image_2.resize(new_size)
+    #fake_image_3.resize(new_size)
+    col1,col2 = st.columns(2)
     with col1:
         st.image(fake_image_1)
     with col2:
-        st.image(fake_image_2)
-    with col3:
-        st.image(fake_image_3)
-#---- Metrics and Results----       
+        pass
+        #st.image(fake_image_2)
+# ---- GAN Visualizer Row 3 ----       
 with st.container():
     st.write('---')
-    with st.subheader("Metrics and Results"):
-        col1, col2 = st.columns(2)
-        with col1:
-            st.subheader("Metrics")
-            st.write('Total Amount of GAN Images Created = x')
-            st.write('Time Elapsed = x')
+    st.subheader('idk')
+    fake_image_1 = Image.open('Pic/Fake_Image_01.png') 
+    #fake_image_2 = Image.open('Pic/Fake_Image_02.png') 
+    #fake_image_3 = Image.open('Pic/Fake_Image_03.png')  
+    new_size=(200,200)
+    fake_image_1.resize(new_size)
+    #fake_image_2.resize(new_size)
+    #fake_image_3.resize(new_size)
+    col1,col2 = st.columns(2)
+    with col1:
+        st.image(fake_image_1)
+    with col2:
+        st.write('A description of the GIF')
+
+        pass
+    
+        #st.image(fake_image_2)
