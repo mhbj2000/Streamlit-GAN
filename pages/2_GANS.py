@@ -41,7 +41,7 @@ with st.container():
         pass
         #st.image(real_image_2)
     with col3:
-        st.write('|\n|')
+        st.write('|\n','|')
 # ---- GAN Visualizer Row 2 ----       
 with st.container():
     st.write('---')
