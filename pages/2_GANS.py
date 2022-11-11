@@ -37,7 +37,9 @@ with st.container():
     with col1:
         st.image(real_image_1)
     with col2:
-        st.write('Description')
+        st.write('Length of Clear Dataset
+                 'Length of Rainy Dataset
+                 'Time to train:')
         pass
         #st.image(real_image_2)
 # ---- GAN Visualizer Row 2 ----       
