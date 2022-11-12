@@ -37,7 +37,7 @@ with st.container():
     with col1:
         st.image(real_image_1)
     with col2:
-        st.write('Length of Clear Dataset',
+        st.write('Length of Clear Dataset  \n',
                  'Length of Rainy Dataset',
                  'Time to train: 10:30 Hours')
         pass
