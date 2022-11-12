@@ -23,7 +23,7 @@ with st.container():
 
 # ---- GAN Rain Visualizer | Row 1 ----         
 with st.container():
-    def(divider):
+    def divider():
         my_line = st.write('|  \n')
         for i in range(25):
             my_line
