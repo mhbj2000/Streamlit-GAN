@@ -23,10 +23,6 @@ with st.container():
 
 # ---- GAN Rain Visualizer | Row 1 ----         
 with st.container():
-    def divider():
-        my_line = st.write('|  \n|')
-        for i in range(25):
-            my_line
     # change to gif 1
     real_image_1 = Image.open('Pic/01.jpg')
     #real_image_2 = Image.open('Pic/02.jpg')
@@ -41,7 +37,6 @@ with st.container():
     with col1:
         st.image(real_image_1)
     with col2:
-        divider()
         st.write('Length of Clear Dataset  \n',
                  'Length of Rainy Dataset',
                  'Time to train: 10:30 Hours')
