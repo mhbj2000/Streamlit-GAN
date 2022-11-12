@@ -21,7 +21,7 @@ with st.container():
         if st.sidebar.button("Stop"):
             pass
 
-# ---- GAN Visualizer Row 1 ----         
+# ---- GAN Rain Visualizer | Row 1 ----         
 with st.container():
     # change to gif 1
     real_image_1 = Image.open('Pic/01.jpg')
@@ -32,14 +32,14 @@ with st.container():
     #real_image_2.resize(new_size)
     #real_image_3.resize(new_size)
     st.write('---')
-    st.subheader('idk')
+    st.subheader('Sun to Rain Model')
     col1,col2 = st.columns(2)
     with col1:
         st.image(real_image_1)
     with col2:
         st.write('Length of Clear Dataset',
                  'Length of Rainy Dataset',
-                 'Time to train:')
+                 'Time to train: 10:30 Hours')
         pass
         #st.image(real_image_2)
 # ---- GAN Visualizer Row 2 ----       
