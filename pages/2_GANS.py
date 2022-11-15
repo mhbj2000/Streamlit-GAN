@@ -41,10 +41,10 @@ with st.container():
     st.write('---')
     st.subheader('Clear to Rain Model')
     col1,col2 = st.columns(2)
-    with col1:
+    with col2:
         #st.image(real_image_1)
         st.video(video_bytes)
-    with col2:
+    with col1:
         st.write('Length of Clear Dataset: 1013 Images  \n',
                  'Length of Rainy Dataset: 1054 Images  \n',
                  'Time to Train: 10:30 Hours')
