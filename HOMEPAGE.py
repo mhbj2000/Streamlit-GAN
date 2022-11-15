@@ -23,7 +23,9 @@ with col1:
     <style>
     .big-font {
         font-size:24px !important;
-        text-align: left;
+        text-align: justify;
+        text-justify: distribute;
+        text-align-last: left;
     }
     </style>
     """, unsafe_allow_html=True)
