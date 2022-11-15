@@ -17,6 +17,7 @@ with st.container():
     st.sidebar.subheader("CONTROLS")
     left_column, right_column = st.sidebar.columns(2)
     with left_column:
+        rain_counter = st.slider('Timelapses', 0,19,4)
         if st.sidebar.button("View Next Rain Timelapse"):
             rain_timelapse_counter = rain_timelapse_counter + 1
             st.write(rain_timelapse_counter)
@@ -28,7 +29,7 @@ with st.container():
 with st.container():
     # change to gif 1
     
-    rain_timelapse = open('Time-lapse/RainTimelapse/Timelapse'+ str(rain_timelapse_counter)+'.mp4', 'rb')
+    rain_timelapse = open('Time-lapse/RainTimelapse/Timelapse'+ str(rain_counter)+'.mp4', 'rb')
     video_bytes = rain_timelapse.read()
     real_image_1 = Image.open('Pic/01.jpg')
     #real_image_2 = Image.open('Pic/02.jpg')
