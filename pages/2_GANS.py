@@ -24,7 +24,7 @@ with st.container():
 # ---- GAN Rain Visualizer | Row 1 ----         
 with st.container():
     # change to gif 1
-    rain_timelapse = open('Time-lapse/RainTimelapse/Timelapse12.mp4', 'rb')
+    rain_timelapse = open('Time-lapse/RainTimelapse/Timelapse4.mp4', 'rb')
     video_bytes = rain_timelapse.read()
     real_image_1 = Image.open('Pic/01.jpg')
     #real_image_2 = Image.open('Pic/02.jpg')
@@ -40,8 +40,8 @@ with st.container():
         #st.image(real_image_1)
         st.video(video_bytes)
     with col2:
-        st.write('Length of Clear Dataset  \n',
-                 'Length of Rainy Dataset  \n',
+        st.write('Length of Clear Dataset: 1013 Images  \n',
+                 'Length of Rainy Dataset: 1054 Images  \n',
                  'Time to train: 10:30 Hours')
         pass
         #st.image(real_image_2)
