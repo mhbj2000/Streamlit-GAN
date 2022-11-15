@@ -35,7 +35,7 @@ with col1:
     </style>
     """, unsafe_allow_html=True)
 
-    st.markdown('<p class="big-font">The purpose of the Generator is to generate plausible data. This is with the goal of those plausible instances becoming negative examples for training the Discriminator.</p>', unsafe_allow_html=True)
+    st.markdown('<p class="big-font">The purpose of the Generator is to create plausible data. This is with the goal of those plausible instances becoming negative examples for training the Discriminator.</p>', unsafe_allow_html=True)
 
 #DISCRIMINATOR PARAGRAPH 
 with col3:
