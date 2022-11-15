@@ -16,7 +16,7 @@ with st.container():
     left_column, right_column = st.sidebar.columns(2)
     with left_column:
         if st.sidebar.button("View Next Rain Timelapse"):
-            rain_timelapse_counter =+1
+            rain_timelapse_counter = rain_timelapse_counter + 1
             st.write(rain_timelapse_counter)
     with right_column:
         if st.sidebar.button("View Next Fog Timelapse"):
