@@ -30,7 +30,7 @@ with st.container():
     # change to gif 1
     rain_counter = 4
     #rain_timelapse = open('Time-lapse/RainTimelapse/Timelapse'+ str(rain_counter)+'.mp4', 'rb')
-    video_bytes = rain_timelapse.read()
+    #video_bytes = rain_timelapse.read()
     real_image_1 = Image.open('Pic/01.jpg')
     #real_image_2 = Image.open('Pic/02.jpg')
     #real_image_3 = Image.open('Pic/03.jpg')
@@ -50,6 +50,7 @@ with st.container():
                  'Time to Train: 10:30 Hours')
         rain_counter = st.slider('Timelapses', 0,19,4)
         rain_timelapse = open('Time-lapse/RainTimelapse/Timelapse'+ str(rain_counter)+'.mp4', 'rb')
+        video_bytes = rain_timelapse.read()
         pass
         #st.image(real_image_2)
 # ---- GAN Visualizer Row 2 ----       
