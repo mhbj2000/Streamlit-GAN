@@ -42,7 +42,7 @@ with st.container():
     with col2:
         st.write('Length of Clear Dataset: 1013 Images  \n',
                  'Length of Rainy Dataset: 1054 Images  \n',
-                 'Time to train: 10:30 Hours')
+                 'Time to Train: 10:30 Hours')
         pass
         #st.image(real_image_2)
 # ---- GAN Visualizer Row 2 ----       
@@ -63,7 +63,9 @@ with st.container():
         #st.image(fake_image_1)
         st.video(fog_bytes)
     with col2:
-        st.write('Description')
+        st.write('Length of Clear Dataset: 1013 Images  \n
+        Length of Fog Dataset: 1008 Images  \n
+        Time to Train: 10:30 Hours')
         pass
         #st.image(fake_image_2)
 # ---- GAN Visualizer Row 3 ----       
