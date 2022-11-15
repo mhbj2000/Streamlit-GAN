@@ -13,17 +13,17 @@ rain_timelapse_counter = 4
 fog_timelapse_counter = 4
 
 # ---- SIDE BAR COTNROLS ---- 
-with st.container():
-    st.sidebar.subheader("CONTROLS")
-    left_column, right_column = st.sidebar.columns(2)
-    with left_column:
-        rain_counter = st.slider('Timelapses', 0,19,4)
-        if st.sidebar.button("View Next Rain Timelapse"):
-            rain_timelapse_counter = rain_timelapse_counter + 1
-            st.write(rain_timelapse_counter)
-    with right_column:
-        if st.sidebar.button("View Next Fog Timelapse"):
-            fog_timelapse_counter =+1
+#with st.container():
+    #st.sidebar.subheader("CONTROLS")
+    #left_column, right_column = st.sidebar.columns(2)
+    #with left_column:
+        #rain_counter = st.slider('Timelapses', 0,19,4)
+        #if st.sidebar.button("View Next Rain Timelapse"):
+            #rain_timelapse_counter = rain_timelapse_counter + 1
+            #st.write(rain_timelapse_counter)
+    #with right_column:
+        #if st.sidebar.button("View Next Fog Timelapse"):
+            #fog_timelapse_counter =+1
 
 # ---- GAN Rain Visualizer | Row 1 ----         
 with st.container():
@@ -48,6 +48,7 @@ with st.container():
         st.write('Length of Clear Dataset: 1013 Images  \n',
                  'Length of Rainy Dataset: 1054 Images  \n',
                  'Time to Train: 10:30 Hours')
+        rain_counter = st.slider('Timelapses', 0,19,4)
         pass
         #st.image(real_image_2)
 # ---- GAN Visualizer Row 2 ----       
@@ -55,7 +56,7 @@ with st.container():
     st.write('---')
     st.subheader('Clear to Fog Model')
     fog_timelapse_counter = 4
-    fog_timelapse = open('Time-lapse/FogTimelapse/Timelapse4.mp4', 'rb')
+    fog_timelapse = open('Time-lapse/FogTimelapse/Timelapse'+str(fog_counter)+'.mp4', 'rb')
     fog_bytes = fog_timelapse.read()
     fake_image_1 = Image.open('Pic/Fake_Image_01.png') 
     #fake_image_2 = Image.open('Pic/Fake_Image_02.png') 
@@ -72,6 +73,7 @@ with st.container():
         st.write('Length of Clear Dataset: 1013 Images  \n',
         'Length of Fog Dataset: 1008 Images  \n',
         'Time to Train: 10:30 Hours')
+        fog_counter = st.slider('Timelapses', 0,19,4)
         pass
         #st.image(fake_image_2)
 # ---- GAN Visualizer Row 3 ----       
