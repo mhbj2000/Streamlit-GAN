@@ -7,7 +7,7 @@ st.set_page_config(page_title="GANS", layout="wide")
 #content of main_page
 
 logo = Image.open('site.png')
-st.image(image)
+st.image(logo)
 
 #header
 with open("design.css") as source_des:
