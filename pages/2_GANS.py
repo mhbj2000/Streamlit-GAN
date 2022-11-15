@@ -48,7 +48,9 @@ with st.container():
 # ---- GAN Visualizer Row 2 ----       
 with st.container():
     st.write('---')
-    st.subheader('idk')
+    st.subheader('Clear to Fog Model')
+    fog_timelapse = open('Time-lapse/RainTimelapse/Timelapse4.mp4', 'rb')
+    fog_bytes = fog_timelapse.read()
     fake_image_1 = Image.open('Pic/Fake_Image_01.png') 
     #fake_image_2 = Image.open('Pic/Fake_Image_02.png') 
     #fake_image_3 = Image.open('Pic/Fake_Image_03.png')  
@@ -58,7 +60,8 @@ with st.container():
     #fake_image_3.resize(new_size)
     col1,col2 = st.columns(2)
     with col1:
-        st.image(fake_image_1)
+        #st.image(fake_image_1)
+        st.video(fog_bytes)
     with col2:
         st.write('Description')
         pass
