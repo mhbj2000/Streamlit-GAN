@@ -14,6 +14,8 @@ with open("design.css") as source_des:
     st.markdown(f"<style>{source_des.read()}</style>", unsafe_allow_html=True)
 st.markdown("<h1 style='text-align: center;'>WHAT IS A GAN?</h1>", unsafe_allow_html=True)
 st.write('##')
+st.write('##')
+st.write('##')
 
 
 col1, col2, col3= st.columns(3)
