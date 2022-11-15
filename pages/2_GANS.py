@@ -28,7 +28,7 @@ fog_timelapse_counter = 4
 # ---- GAN Rain Visualizer | Row 1 ----         
 with st.container():
     # change to gif 1
-    
+    rain_counter = 4
     rain_timelapse = open('Time-lapse/RainTimelapse/Timelapse'+ str(rain_counter)+'.mp4', 'rb')
     video_bytes = rain_timelapse.read()
     real_image_1 = Image.open('Pic/01.jpg')
@@ -55,7 +55,7 @@ with st.container():
 with st.container():
     st.write('---')
     st.subheader('Clear to Fog Model')
-    fog_timelapse_counter = 4
+    fog_counter = 4
     fog_timelapse = open('Time-lapse/FogTimelapse/Timelapse'+str(fog_counter)+'.mp4', 'rb')
     fog_bytes = fog_timelapse.read()
     fake_image_1 = Image.open('Pic/Fake_Image_01.png') 
