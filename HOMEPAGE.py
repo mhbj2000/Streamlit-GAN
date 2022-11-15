@@ -25,7 +25,7 @@ with col1:
         font-size:24px !important;
         text-align: justify;
         text-align-last: left;
-        word-spacing:10px
+        word-spacing:2px
 
     }
     </style>
