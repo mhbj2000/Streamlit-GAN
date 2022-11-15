@@ -42,16 +42,14 @@ with st.container():
     st.subheader('Clear to Rain Model')
     col1,col2 = st.columns(2)
     with col2:
-        rain_counter = st.slider('Timelapses', 0,19,5)
+        rain_counter = st.slider('Timelapses', 0,19,4)
         rain_timelapse = open('Time-lapse/RainTimelapse/Timelapse'+ str(rain_counter)+'.mp4', 'rb')
         video_bytes = rain_timelapse.read()
-        #st.video(video_bytes)
-    with col1:
-        st.video(video_bytes)
-        
         st.write('Length of Clear Dataset: 1013 Images  \n',
                  'Length of Rainy Dataset: 1054 Images  \n',
                  'Time to Train: 10:30 Hours')
+    with col1:
+        st.video(video_bytes)
         pass
         #st.image(real_image_2)
 # ---- GAN Visualizer Row 2 ----       
