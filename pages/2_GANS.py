@@ -24,7 +24,7 @@ with st.container():
 # ---- GAN Rain Visualizer | Row 1 ----         
 with st.container():
     # change to gif 1
-    rain_timelapse = open('Time-lapse/RainTimelapse/Timelapse0.mp4')
+    rain_timelapse = open('Time-lapse/RainTimelapse/Timelapse0.mp4', 'rb')
     video_bytes = rain_timelapse.read()
     real_image_1 = Image.open('Pic/01.jpg')
     #real_image_2 = Image.open('Pic/02.jpg')
