@@ -9,6 +9,8 @@ with st.container():
     col1, col2, col3, col4, col5, col6 = st.columns(6)
 #potential headers
 st.header('GAN VISUALIZER')
+rain_timelapse_counter = 4
+fog_timelapse_counter = 4
 
 # ---- SIDE BAR COTNROLS ---- 
 with st.container():
@@ -25,7 +27,7 @@ with st.container():
 # ---- GAN Rain Visualizer | Row 1 ----         
 with st.container():
     # change to gif 1
-    rain_timelapse_counter = 4
+    
     rain_timelapse = open('Time-lapse/RainTimelapse/Timelapse'+ str(rain_timelapse_counter)+'.mp4', 'rb')
     video_bytes = rain_timelapse.read()
     real_image_1 = Image.open('Pic/01.jpg')
