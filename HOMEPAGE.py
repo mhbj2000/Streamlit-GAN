@@ -23,7 +23,7 @@ with col1:
     <style>
     .big-font {
         font-size:24px !important;
-        text-align: justify;
+        text-align: left;
 
     }
     </style>
