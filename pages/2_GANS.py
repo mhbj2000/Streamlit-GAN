@@ -15,16 +15,17 @@ with st.container():
     st.sidebar.subheader("CONTROLS")
     left_column, right_column = st.sidebar.columns(2)
     with left_column:
-        if st.sidebar.button("Generate GANs"):
-            pass
+        if st.sidebar.button("View Next Rain Timelapse"):
+            rain_timelapse_counter =+1
     with right_column:
-        if st.sidebar.button("Stop"):
-            pass
+        if st.sidebar.button("View Next Fog Timelapse"):
+            fog_timelapse_counter =+1
 
 # ---- GAN Rain Visualizer | Row 1 ----         
 with st.container():
     # change to gif 1
-    rain_timelapse = open('Time-lapse/RainTimelapse/Timelapse4.mp4', 'rb')
+    rain_timelapse_counter = 4
+    rain_timelapse = open('Time-lapse/RainTimelapse/Timelapse'+ str(rain_timelapse_counter)'.mp4', 'rb')
     video_bytes = rain_timelapse.read()
     real_image_1 = Image.open('Pic/01.jpg')
     #real_image_2 = Image.open('Pic/02.jpg')
@@ -49,6 +50,7 @@ with st.container():
 with st.container():
     st.write('---')
     st.subheader('Clear to Fog Model')
+    fog_timelapse_counter = 4
     fog_timelapse = open('Time-lapse/FogTimelapse/Timelapse4.mp4', 'rb')
     fog_bytes = fog_timelapse.read()
     fake_image_1 = Image.open('Pic/Fake_Image_01.png') 
