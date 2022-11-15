@@ -63,9 +63,9 @@ with st.container():
         #st.image(fake_image_1)
         st.video(fog_bytes)
     with col2:
-        st.write('Length of Clear Dataset: 1013 Images  \n
-        Length of Fog Dataset: 1008 Images  \n
-        Time to Train: 10:30 Hours')
+        st.write('Length of Clear Dataset: 1013 Images  \n',
+        'Length of Fog Dataset: 1008 Images  \n',
+        'Time to Train: 10:30 Hours')
         pass
         #st.image(fake_image_2)
 # ---- GAN Visualizer Row 3 ----       
