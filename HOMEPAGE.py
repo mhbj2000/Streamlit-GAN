@@ -24,7 +24,6 @@ with col1:
     .big-font {
         font-size:24px !important;
         text-align: justify;
-        text-justify: distribute;
         text-align-last: left;
     }
     </style>
