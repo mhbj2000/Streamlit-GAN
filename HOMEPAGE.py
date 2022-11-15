@@ -6,6 +6,9 @@ st.set_page_config(page_title="GANS", layout="wide")
 
 #content of main_page
 
+logo = Image.open('site.png')
+st.image(image)
+
 #header
 with open("design.css") as source_des:
     st.markdown(f"<style>{source_des.read()}</style>", unsafe_allow_html=True)
