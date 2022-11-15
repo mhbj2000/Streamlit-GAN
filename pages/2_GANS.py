@@ -31,7 +31,7 @@ with st.container():
     st.subheader('Clear to Rain Model')
     col1,col2 = st.columns(2)
     with col2:
-        rain_counter = st.slider('Timelapses', 0,19,4)
+        rain_counter = st.slider('Rain Timelapses', 0,19,4)
         rain_timelapse = open('Time-lapse/RainTimelapse/Timelapse'+ str(rain_counter)+'.mp4', 'rb')
         video_bytes = rain_timelapse.read()
         st.write('Length of Clear Dataset: 1013 Images  \n',
