@@ -49,7 +49,7 @@ with st.container():
 with st.container():
     st.write('---')
     st.subheader('Clear to Fog Model')
-    fog_timelapse = open('Time-lapse/RainTimelapse/Timelapse4.mp4', 'rb')
+    fog_timelapse = open('Time-lapse/FogTimelapse/Timelapse4.mp4', 'rb')
     fog_bytes = fog_timelapse.read()
     fake_image_1 = Image.open('Pic/Fake_Image_01.png') 
     #fake_image_2 = Image.open('Pic/Fake_Image_02.png') 
