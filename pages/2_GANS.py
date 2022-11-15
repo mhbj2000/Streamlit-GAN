@@ -46,7 +46,7 @@ with st.container():
     st.subheader('Clear to Fog Model')
     col1,col2 = st.columns(2)
     with col2:
-        fog_counter = st.slider('Timelapses', 0,19,4)
+        fog_counter = st.slider('Fog Timelapses', 0,19,4)
         fog_timelapse = open('Time-lapse/FogTimelapse/Timelapse'+str(fog_counter)+'.mp4', 'rb')
         fog_bytes = fog_timelapse.read()
         st.write('Length of Clear Dataset: 1013 Images  \n',
