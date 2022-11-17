@@ -32,7 +32,7 @@ with st.container():
     col1,col2,col3 = st.columns(3)
     with col3: #CONTROLS FOR THE ENTIRE ROW
         model_selector = st.selectbox('Choose an image to run.',('Example 1', 'Example 2', 'Example 3'))
-        rain_counter = st.slider('Intermediate Image Number', 0,6,0)
+        rain_counter = st.slider('Intermediate Image Number', 0,5,0)
         if model_selector == 'Example 1':
             true_counter = rain_counter + 40
             rain_timelapse_picture = Image.open('IntermediatePic/RainFake/Fake4/False_image_'+str(true_counter)+'.png')
