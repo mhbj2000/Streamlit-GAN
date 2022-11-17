@@ -30,7 +30,8 @@ with st.container():
     st.write('---')
     st.subheader('Clear to Rain Model')
     col1,col2,col3 = st.columns(3)
-    with col3:
+    with col3: #CONTROLS FOR THE ENTIRE ROW
+        model_selector = st.selectbox('Choose a model to run.',('Rain Model', 'Fog Model'))
         rain_counter = st.slider('GAN Iteration', 40,49,40)
         rain_timelapse_picture = Image.open('IntermediatePic/RainFake/Fake4/False_image_'+str(rain_counter)+'.png')
         image_resizer = (400,400)
