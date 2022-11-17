@@ -35,7 +35,7 @@ with st.container():
     with col2: #CONTROLS FOR THE ENTIRE ROW
         #st.header('Clear to Rain GAN Model')
         st.subheader('Controls')
-        model_selector = st.selectbox('Choose an image to run.',('Example 1', 'Example 2', 'Example 3'))
+        model_selector = st.selectbox(str(testing),('Example 1', 'Example 2', 'Example 3'))
         rain_counter = st.slider('Intermediate Image Number', 0,5)
         if model_selector == 'Example 1':
             true_counter = rain_counter + 40
@@ -64,7 +64,7 @@ with st.container():
         }
         </style>
         """, unsafe_allow_html=True)
-        st.markdown('<p class="big-font">Length of Clear Dataset: 1013 Images <br>Length of Rainy Dataset: 1054 <br> Images Time to Train: 10:30 Hours</p>', unsafe_allow_html=True)
+        testing = st.markdown('<p class="big-font">Length of Clear Dataset: 1013 Images <br>Length of Rainy Dataset: 1054 <br> Images Time to Train: 10:30 Hours</p>', unsafe_allow_html=True)
 
     #st.markdown('<p class="big-font"></p>', unsafe_allow_html=True)
  
