@@ -45,7 +45,7 @@ with st.container():
         st.subheader('Controls')
         model_selector = st.selectbox('Choose an Example',('Example 1', 'Example 2', 'Example 3'))
         st.markdown('<p class="big-font">Intermediate Image Number</p>', unsafe_allow_html=True)
-        rain_counter = st.slider('Intermediate Image Number', 0,5)
+        rain_counter = st.slider(0,5)
         if model_selector == 'Example 1':
             true_counter = rain_counter + 40
             rain_timelapse_picture = Image.open('IntermediatePic/RainFake/Fake4/False_image_'+str(true_counter)+'.png')
