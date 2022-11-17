@@ -40,7 +40,9 @@ with st.container():
             rain_timelapse = open('Time-lapse/RainTimelapse/Timelapse4.mp4', 'rb')
             video_bytes = rain_timelapse.read()
         elif model_selector == 'Example 2':
-            st.write('Poggers')
+            #rain_counter = st.slider('GAN Iteration',
+            rain_timelapse = open('Time-lapse/RainTimelapse/Timelapse5.mp4', 'rb')
+            video_bytes = rain_timelapse.read()
             
         
         #rain_counter = st.slider('GAN Iteration', 40,49,40)
