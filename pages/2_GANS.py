@@ -35,8 +35,8 @@ with st.container():
         rain_timelapse_picture = Image.open('IntermediatePic/RainFake/Fake4/False_image_'+str(rain_counter)+'.png')
         image_resizer = (200,200)
         rain_timelapse_picture = rain_timelapse_picture.resize(image_resizer)
-        rain_timelapse = open('Time-lapse/RainTimelapse/Timelapse'+ str(rain_counter)+'.mp4', 'rb')
-        video_bytes = rain_timelapse.read()
+        #rain_timelapse = open('Time-lapse/RainTimelapse/Timelapse'+ str(rain_counter)+'.mp4', 'rb')
+        #video_bytes = rain_timelapse.read()
         st.write('Length of Clear Dataset: 1013 Images  \n',
                  'Length of Rainy Dataset: 1054 Images  \n',
                  'Time to Train: 10:30 Hours')
