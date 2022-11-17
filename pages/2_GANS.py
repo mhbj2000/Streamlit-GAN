@@ -29,7 +29,7 @@ fog_timelapse_counter = 4
 
 # ---- GAN Rain Visualizer | Row 1 ----         
 with st.container():
-    st.write('---')
+    #st.write('---')
     #st.subheader('Clear to Rain Model')
     col1,col2,col3 = st.columns(3)
     with col2: #CONTROLS FOR THE ENTIRE ROW
