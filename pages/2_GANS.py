@@ -10,7 +10,7 @@ with st.container():
     with col2:
         st.header('Clear to Rain GAN Model')
 #potential headers
-st.header('GAN VISUALIZER')
+#st.header('GAN VISUALIZER')
 rain_timelapse_counter = 4
 fog_timelapse_counter = 4
 
