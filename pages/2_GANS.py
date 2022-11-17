@@ -50,8 +50,11 @@ with st.container():
             video_bytes = rain_timelapse.read()
         elif model_selector == 'Example 3':
             rain_counter = st.slider('Intermediate Image Number', 0,9,0)
-            #true_counter = rain_counter +
-            rain_timelapse = open('Time-lapse/RainTimelapse/Timelapse19.mp4', 'rb')
+            true_counter = rain_counter + 170
+            rain_timelapse_picture = Image.open('IntermediatePic/RainFake/Fake17/False_image_'+str(true_counter)+'.png')
+            image_resizer = (400,400)
+            rain_timelapse_picture = rain_timelapse_picture.resize(image_resizer)
+            rain_timelapse = open('Time-lapse/RainTimelapse/Timelapse17.mp4', 'rb')
             video_bytes = rain_timelapse.read()
             
             
