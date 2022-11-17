@@ -36,7 +36,7 @@ with st.container():
     .big-font {
         font-size:26px !important;
         text-align: left;
-        line-height: 1.5
+        line-height: 2.0;
     }
     </style>
     """, unsafe_allow_html=True)
