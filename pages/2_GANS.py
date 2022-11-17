@@ -44,7 +44,7 @@ with st.container():
         #st.header('Clear to Rain GAN Model')
         st.subheader('Controls')
         st.markdown('<p class="big-font">Choose an Example</p>', unsafe_allow_html=True)
-        model_selector = st.selectbox('Choose an Example',('Example 1', 'Example 2', 'Example 3'))
+        model_selector = st.selectbox('Choose an Example',('Example 1', 'Example 2', 'Example 3'),label_visibility="collapsed")
         st.markdown('<p class="big-font">Intermediate Image Number</p>', unsafe_allow_html=True)
         rain_counter = st.slider('Intermediate Image Number', 0,5,label_visibility="collapsed")
         if model_selector == 'Example 1':
