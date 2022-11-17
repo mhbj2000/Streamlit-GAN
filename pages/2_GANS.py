@@ -31,7 +31,7 @@ with st.container():
     st.subheader('Clear to Rain Model')
     col1,col2 = st.columns(2)
     with col2:
-        rain_counter = st.slider('Rain Timelapses', 40,49,0)
+        rain_counter = st.slider('Rain Timelapses', 40,49,40)
         rain_timelapse_picture = Image.open('IntermediatePic/RainFake/Fake4/False_image_'+str(rain_counter)+'.png')
         image_resizer = (200,200)
         rain_timelapse_picture = rain_timelapse_picture.resize(image_resizer)
