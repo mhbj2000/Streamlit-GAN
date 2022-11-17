@@ -59,7 +59,7 @@ with st.container():
         st.markdown("""
         <style>
         .big-font {
-            font-size:24px !important;
+            font-size:32px !important;
             text-align: left;
         }
         </style>
