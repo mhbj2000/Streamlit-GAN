@@ -31,6 +31,14 @@ fog_timelapse_counter = 4
 with st.container():
     st.write('---')
     #st.subheader('Clear to Rain Model')
+    st.markdown("""
+    <style>
+    .big-font {
+        font-size:26px !important;
+        text-align: left;
+    }
+    </style>
+    """, unsafe_allow_html=True)
     col1,col2,col3 = st.columns(3)
     with col2: #CONTROLS FOR THE ENTIRE ROW
         #st.header('Clear to Rain GAN Model')
@@ -56,15 +64,8 @@ with st.container():
         #st.write('Length of Clear Dataset: 1013 Images  \n',
                  #'Length of Rainy Dataset: 1054 Images  \n',
                  #'Time to Train: 10:30 Hours')
-        st.markdown("""
-        <style>
-        .big-font {
-            font-size:26px !important;
-            text-align: left;
-        }
-        </style>
-        """, unsafe_allow_html=True)
-        testing = st.markdown('<p class="big-font">Length of Clear Dataset: 1013 Images <br>Length of Rainy Dataset: 1054 <br> Images Time to Train: 10:30 Hours</p>', unsafe_allow_html=True)
+        
+        st.markdown('<p class="big-font">Length of Clear Dataset: 1013 Images <br>Length of Rainy Dataset: 1054 <br> Images Time to Train: 10:30 Hours</p>', unsafe_allow_html=True)
 
     #st.markdown('<p class="big-font"></p>', unsafe_allow_html=True)
  
