@@ -31,6 +31,7 @@ with st.container():
     st.subheader('Clear to Rain Model')
     col1,col2,col3 = st.columns(3)
     with col2: #CONTROLS FOR THE ENTIRE ROW
+        st.subheader('Controls')
         model_selector = st.selectbox('Choose an image to run.',('Example 1', 'Example 2', 'Example 3'))
         rain_counter = st.slider('Intermediate Image Number', 0,5)
         if model_selector == 'Example 1':
@@ -54,9 +55,11 @@ with st.container():
                  'Time to Train: 10:30 Hours')
         
     with col1:
+        st.subheader('Timelapse')
         st.video(video_bytes)
       
     with col3:
+        st.subheader('Intermediate Images')
         image_resizer = (400,425)
         rain_timelapse_picture = rain_timelapse_picture.resize(image_resizer)
         st.image(rain_timelapse_picture)
