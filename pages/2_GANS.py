@@ -30,7 +30,7 @@ with st.container():
     st.write('---')
     st.subheader('Clear to Rain Model')
     col1,col2,col3 = st.columns(3)
-    with col3: #CONTROLS FOR THE ENTIRE ROW
+    with col2: #CONTROLS FOR THE ENTIRE ROW
         model_selector = st.selectbox('Choose an image to run.',('Example 1', 'Example 2', 'Example 3'))
         rain_counter = st.slider('Intermediate Image Number', 0,5)
         if model_selector == 'Example 1':
@@ -56,9 +56,9 @@ with st.container():
     with col1:
         st.video(video_bytes)
       
-    with col2:
-        #image_resizer = (400,425)
-        #rain_timelapse_picture = rain_timelapse_picture.resize(image_resizer)
+    with col3:
+        image_resizer = (400,425)
+        rain_timelapse_picture = rain_timelapse_picture.resize(image_resizer)
         st.image(rain_timelapse_picture)
         
 # ---- GAN Visualizer Row 2 ----       
