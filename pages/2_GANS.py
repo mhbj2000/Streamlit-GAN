@@ -51,7 +51,7 @@ with st.container():
         elif model_selector == 'Example 3':
             rain_counter = st.slider('Intermediate Image Number', 0,9,0)
             #true_counter = rain_counter +
-            rain_timelapse = open('Time-lapse/RainTimelapse/Timelapse16.mp4', 'rb')
+            rain_timelapse = open('Time-lapse/RainTimelapse/Timelapse17.mp4', 'rb')
             video_bytes = rain_timelapse.read()
             
             
