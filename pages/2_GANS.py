@@ -34,27 +34,24 @@ with st.container():
         model_selector = st.selectbox('Choose an image to run.',('Example 1', 'Example 2', 'Example 3'))
         rain_counter = st.slider('Intermediate Image Number', 0,9,0)
         if model_selector == 'Example 1':
-            #rain_counter = st.slider('Intermediate Image Number', 0,9,0)
             true_counter = rain_counter + 40
             rain_timelapse_picture = Image.open('IntermediatePic/RainFake/Fake4/False_image_'+str(true_counter)+'.png')
-            image_resizer = (400,400)
-            rain_timelapse_picture = rain_timelapse_picture.resize(image_resizer)
+            #image_resizer = (400,400)
+            #rain_timelapse_picture = rain_timelapse_picture.resize(image_resizer)
             rain_timelapse = open('Time-lapse/RainTimelapse/Timelapse4.mp4', 'rb')
             video_bytes = rain_timelapse.read()
         elif model_selector == 'Example 2':
-            #rain_counter = st.slider('Intermediate Image Number', 0,9,0)
             true_counter = rain_counter + 160
             rain_timelapse_picture = Image.open('IntermediatePic/RainFake/Fake16/False_image_'+str(true_counter)+'.png')
-            image_resizer = (400,400)
-            rain_timelapse_picture = rain_timelapse_picture.resize(image_resizer)
+            #image_resizer = (400,400)
+            #rain_timelapse_picture = rain_timelapse_picture.resize(image_resizer)
             rain_timelapse = open('Time-lapse/RainTimelapse/Timelapse16.mp4', 'rb')
             video_bytes = rain_timelapse.read()
         elif model_selector == 'Example 3':
-            #rain_counter = st.slider('Intermediate Image Number', 0,9,0)
             true_counter = rain_counter + 170
             rain_timelapse_picture = Image.open('IntermediatePic/RainFake/Fake17/False_image_'+str(true_counter)+'.png')
-            image_resizer = (400,400)
-            rain_timelapse_picture = rain_timelapse_picture.resize(image_resizer)
+            #image_resizer = (400,400)
+            #rain_timelapse_picture = rain_timelapse_picture.resize(image_resizer)
             rain_timelapse = open('Time-lapse/RainTimelapse/Timelapse17.mp4', 'rb')
             video_bytes = rain_timelapse.read()
             
@@ -77,6 +74,8 @@ with st.container():
         
         pass
     with col2:
+        image_resizer = (400,400)
+        rain_timelapse_picture = rain_timelapse_picture.resize(image_resizer)
         st.image(rain_timelapse_picture)
         
 # ---- GAN Visualizer Row 2 ----       
