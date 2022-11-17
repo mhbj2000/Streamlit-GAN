@@ -64,7 +64,7 @@ with st.container():
         }
         </style>
         """, unsafe_allow_html=True)
-        st.markdown('<p class="big-font">Length of Clear Dataset: 1013 Images <br><br> Length of Rainy Dataset: 1054 <br><br> Images Time to Train: 10:30 Hours</p>', unsafe_allow_html=True)
+        st.markdown('<p class="big-font">Length of Clear Dataset: 1013 Images <br>Length of Rainy Dataset: 1054 <br> Images Time to Train: 10:30 Hours</p>', unsafe_allow_html=True)
 
     #st.markdown('<p class="big-font"></p>', unsafe_allow_html=True)
  
