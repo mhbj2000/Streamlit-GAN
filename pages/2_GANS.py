@@ -33,7 +33,7 @@ with st.container():
     with col3:
         rain_counter = st.slider('Rain Timelapses', 40,49,40)
         rain_timelapse_picture = Image.open('IntermediatePic/RainFake/Fake4/False_image_'+str(rain_counter)+'.png')
-        image_resizer = (200,200)
+        image_resizer = (400,400)
         rain_timelapse_picture = rain_timelapse_picture.resize(image_resizer)
         rain_timelapse = open('Time-lapse/RainTimelapse/Timelapse4.mp4', 'rb')
         video_bytes = rain_timelapse.read()
