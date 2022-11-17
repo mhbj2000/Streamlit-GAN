@@ -6,7 +6,9 @@ import random
 st.set_page_config(page_title="GANS Demonstration", layout="wide")
 
 with st.container():
-    col1, col2, col3, col4, col5, col6 = st.columns(6)
+    col1, col2, col3,= st.columns(3)
+    with col3:
+        st.header('Clear to Rain GAN Model')
 #potential headers
 st.header('GAN VISUALIZER')
 rain_timelapse_counter = 4
@@ -31,7 +33,7 @@ with st.container():
     #st.subheader('Clear to Rain Model')
     col1,col2,col3 = st.columns(3)
     with col2: #CONTROLS FOR THE ENTIRE ROW
-        st.header('Clear to Rain GAN Model')
+        #st.header('Clear to Rain GAN Model')
         st.subheader('Controls')
         model_selector = st.selectbox('Choose an image to run.',('Example 1', 'Example 2', 'Example 3'))
         rain_counter = st.slider('Intermediate Image Number', 0,5)
