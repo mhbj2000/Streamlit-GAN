@@ -31,13 +31,24 @@ with st.container():
     st.subheader('Clear to Rain Model')
     col1,col2,col3 = st.columns(3)
     with col3: #CONTROLS FOR THE ENTIRE ROW
-        model_selector = st.selectbox('Choose a model to run.',('Rain Model', 'Fog Model'))
-        rain_counter = st.slider('GAN Iteration', 40,49,40)
-        rain_timelapse_picture = Image.open('IntermediatePic/RainFake/Fake4/False_image_'+str(rain_counter)+'.png')
-        image_resizer = (400,400)
-        rain_timelapse_picture = rain_timelapse_picture.resize(image_resizer)
-        rain_timelapse = open('Time-lapse/RainTimelapse/Timelapse4.mp4', 'rb')
-        video_bytes = rain_timelapse.read()
+        model_selector = st.selectbox('Choose an image to run.',('Example 1', 'Example 2', 'Example 3'))
+        if model_selector == 'Example 1':
+            rain_counter = st.slider('GAN Iteration', 40,49,40)
+            rain_timelapse_picture = Image.open('IntermediatePic/RainFake/Fake4/False_image_'+str(rain_counter)+'.png')
+            image_resizer = (400,400)
+            rain_timelapse_picture = rain_timelapse_picture.resize(image_resizer)
+            rain_timelapse = open('Time-lapse/RainTimelapse/Timelapse4.mp4', 'rb')
+            video_bytes = rain_timelapse.read()
+        elif model_selector == 'Example 2':
+            st.write('Poggers')
+            
+        
+        #rain_counter = st.slider('GAN Iteration', 40,49,40)
+        #rain_timelapse_picture = Image.open('IntermediatePic/RainFake/Fake4/False_image_'+str(rain_counter)+'.png')
+        #image_resizer = (400,400)
+        #rain_timelapse_picture = rain_timelapse_picture.resize(image_resizer)
+        #rain_timelapse = open('Time-lapse/RainTimelapse/Timelapse4.mp4', 'rb')
+        #video_bytes = rain_timelapse.read()
         st.write('Length of Clear Dataset: 1013 Images  \n',
                  'Length of Rainy Dataset: 1054 Images  \n',
                  'Time to Train: 10:30 Hours')
