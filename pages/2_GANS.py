@@ -35,7 +35,7 @@ with st.container():
     with col2: #CONTROLS FOR THE ENTIRE ROW
         #st.header('Clear to Rain GAN Model')
         st.subheader('Controls')
-        model_selector = st.selectbox(testing,('Example 1', 'Example 2', 'Example 3'))
+        model_selector = st.selectbox('Choose an Example',('Example 1', 'Example 2', 'Example 3'))
         rain_counter = st.slider('Intermediate Image Number', 0,5)
         if model_selector == 'Example 1':
             true_counter = rain_counter + 40
