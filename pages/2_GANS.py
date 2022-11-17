@@ -42,7 +42,7 @@ with st.container():
     col1,col2,col3 = st.columns(3)
     with col2: #CONTROLS FOR THE ENTIRE ROW
         #st.header('Clear to Rain GAN Model')
-        st.subheader('Controls')
+        st.subheader('Controls and Metrics')
         st.markdown('<p class="big-font">Choose an Example</p>', unsafe_allow_html=True)
         model_selector = st.selectbox('Choose an Example',('Example 1', 'Example 2', 'Example 3'),label_visibility="collapsed")
         st.markdown('<p class="big-font">Intermediate Image Number</p>', unsafe_allow_html=True)
