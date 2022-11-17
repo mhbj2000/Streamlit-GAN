@@ -29,7 +29,7 @@ fog_timelapse_counter = 4
 with st.container():
     st.write('---')
     st.subheader('Clear to Rain Model')
-    col1,col2 = st.columns(3)
+    col1,col2,col3 = st.columns(3)
     with col3:
         rain_counter = st.slider('Rain Timelapses', 40,49,40)
         rain_timelapse_picture = Image.open('IntermediatePic/RainFake/Fake4/False_image_'+str(rain_counter)+'.png')
