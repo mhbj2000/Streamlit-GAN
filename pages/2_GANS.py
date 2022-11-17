@@ -57,7 +57,7 @@ with st.container():
         st.video(video_bytes)
       
     with col2:
-        image_resizer = (400,450)
+        image_resizer = (400,425)
         rain_timelapse_picture = rain_timelapse_picture.resize(image_resizer)
         st.image(rain_timelapse_picture)
         
