@@ -7,7 +7,7 @@ st.set_page_config(page_title="GANS Demonstration", layout="wide")
 
 with st.container():
     col1, col2, col3,= st.columns(3)
-    with col3:
+    with col2:
         st.header('Clear to Rain GAN Model')
 #potential headers
 st.header('GAN VISUALIZER')
