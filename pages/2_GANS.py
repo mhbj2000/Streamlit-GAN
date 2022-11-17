@@ -53,10 +53,21 @@ with st.container():
             rain_timelapse = open('Time-lapse/RainTimelapse/Timelapse17.mp4', 'rb')
             video_bytes = rain_timelapse.read()
             
-        st.write('Length of Clear Dataset: 1013 Images  \n',
-                 'Length of Rainy Dataset: 1054 Images  \n',
-                 'Time to Train: 10:30 Hours')
-        
+        #st.write('Length of Clear Dataset: 1013 Images  \n',
+                 #'Length of Rainy Dataset: 1054 Images  \n',
+                 #'Time to Train: 10:30 Hours')
+        st.markdown("""
+        <style>
+        .big-font {
+            font-size:24px !important;
+            text-align: left;
+        }
+        </style>
+        """, unsafe_allow_html=True)
+        st.markdown('<p class="big-font">Length of Clear Dataset: 1013 Images Length of Rainy Dataset: 1054 Images  \n Time to Train: 10:30 Hours</p>', unsafe_allow_html=True)
+
+    st.markdown('<p class="big-font"></p>', unsafe_allow_html=True)
+ 
     with col1:
         st.subheader('Timelapse')
         st.video(video_bytes)
