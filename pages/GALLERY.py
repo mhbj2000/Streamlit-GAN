@@ -13,6 +13,7 @@ with st.container():
     current_model =st.selectbox('Choose a Model',('Rain','Fog'))
   with col2:
     current_iteration = st.selectbox('Choose an Iteration',(0,1,2,3,4,5))
+  st.sidebar.write('Iteration 0 is the Real Image and Iteration 5 is the final GAN image.')
   def picGen(current_model,current_iteration):
     current_iteration = current_iteration
     image_list =[]
