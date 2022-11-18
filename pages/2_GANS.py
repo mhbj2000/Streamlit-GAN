@@ -33,7 +33,7 @@ with st.container():
     #st.subheader('Clear to Rain Model')
     st.markdown("""
     <style>
-    .big-font {
+    .main-text {
         font-size:26px !important;
         text-align: left;
         line-height: 2.0;
@@ -43,7 +43,7 @@ with st.container():
     
     st.markdown("""
     <style>
-    .text {
+    .subheader {
         font-size:26px !important;
         text-align: center;
         line-height: 2.0;
@@ -51,15 +51,24 @@ with st.container():
     </style>
     """, unsafe_allow_html=True)
     
+    st.markdown("""
+    <style>
+    .headers {
+        font-size:26px !important;
+        text-align: left;
+        line-height: 2.0;
+    }
+    </style>
+    """, unsafe_allow_html=True)
     
     
     col1,col2,col3 = st.columns(3)
     with col2: #CONTROLS FOR THE ENTIRE ROW
         #st.header('Clear to Rain GAN Model')
-        st.subheader('Controls and Metrics')
-        st.markdown('<p class="text">Choose an Example</p>', unsafe_allow_html=True)
+        st.markdown('<p class="headers">Controls and Metrics</p>', unsafe_allow_html=True)
+        st.markdown('<p class="subheader">Choose an Example</p>', unsafe_allow_html=True)
         model_selector = st.selectbox('Choose an Example',('Example 1', 'Example 2', 'Example 3'),label_visibility="collapsed")
-        st.markdown('<p class="text">Intermediate Image Number</p>', unsafe_allow_html=True)
+        st.markdown('<p class="subheader">Intermediate Image Number</p>', unsafe_allow_html=True)
         rain_counter = st.slider('Intermediate Image Number', 0,5,label_visibility="collapsed")
         if model_selector == 'Example 1':
             true_counter = rain_counter + 40
@@ -81,16 +90,16 @@ with st.container():
                  #'Length of Rainy Dataset: 1054 Images  \n',
                  #'Time to Train: 10:30 Hours')
         
-        st.markdown('<p class="big-font">Length of Clear Dataset: 1013 Images <br>Length of Rainy Dataset: 1054 <br> Images Time to Train: 10:30 Hours</p>', unsafe_allow_html=True)
+        st.markdown('<p class="main-text">Length of Clear Dataset: 1013 Images <br>Length of Rainy Dataset: 1054 <br> Images Time to Train: 10:30 Hours</p>', unsafe_allow_html=True)
 
     #st.markdown('<p class="big-font"></p>', unsafe_allow_html=True)
  
     with col1:
-        st.subheader('Timelapse')
+        st.markdown('<p class="headers">Timelapse</p>', unsafe_allow_html=True)
         st.video(video_bytes)
       
     with col3:
-        st.subheader('Intermediate Images')
+        st.markdown('<p class="headers">Intermediate Images</p>', unsafe_allow_html=True)
         image_resizer = (400,425)
         rain_timelapse_picture = rain_timelapse_picture.resize(image_resizer)
         st.image(rain_timelapse_picture)
