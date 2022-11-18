@@ -80,7 +80,11 @@ with col1:
     
 #col2.markdown(video_html, unsafe_allow_html=True)
     
-
+vid = """
+<video controls loop>
+    <source src="movie.mp4" type="video/mp4">
+</video>
+"""
 #VIDEO   
 with col2:
     st.markdown('##')
@@ -89,7 +93,7 @@ with col2:
     
     st.video(video_bytes)
     
-    st.markdown('<video controls loop><source src="GAN_SYSTEM.mp4" type="video/mp4"></video>', unsafe_allow_html=True)
+    st.markdown(vid, unsafe_allow_html=True)
     
 #GAN SYSTEM VIDEO LOOP   
 #col1, col2 = st.columns([1, 1])
