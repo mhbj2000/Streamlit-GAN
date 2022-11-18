@@ -89,7 +89,10 @@ with col2:
     
     st.video(video_bytes)
     
-
+    <video controls loop>
+        <source src="GAN_SYSTEM.mp4" type="video/mp4">
+    </video>
+    
 #GAN SYSTEM VIDEO LOOP   
 #col1, col2 = st.columns([1, 1])
 #with col1:
