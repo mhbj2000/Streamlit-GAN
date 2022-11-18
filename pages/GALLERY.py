@@ -29,6 +29,7 @@ with st.container():
   col1, col2, col3, col4 = st.columns(4)
   def picDisplay():
     image_list = picGen(current_model,current_iteration)
+    st.image(image_list[0])
     nextcol = 1
     for i in range(len(image_list)):
       if(nextcol == 4):
