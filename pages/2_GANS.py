@@ -129,6 +129,17 @@ with st.container():
             fog_timelapse_picture = Image.open('IntermediatePic/FogFake/Fake17/False_image_'+str(true_counter)+'.png')
             fog_timelapse = open('Time-lapse/FogTimelapse/Timelapse17.mp4', 'rb')
             video_bytes = fog_timelapse.read()
+        st.markdown('<p class="main-text">Length of Clear Dataset: 1013 Images <br>Length of Rainy Dataset: 1054 <br> Images Time to Train: 10:30 Hours</p>', unsafe_allow_html=True)
+        
+    with col1:
+        st.markdown('<p class="headers">Timelapse</p>', unsafe_allow_html=True)
+        st.video(video_bytes)
+    with col3:
+        st.markdown('<p class="headers">Intermediate Images</p>', unsafe_allow_html=True)
+        image_resizer = (400,425)
+        fog_timelapse_picture = fog_timelapse_picture.resize(image_resizer)
+        st.image(fog_timelapse_picture)        
+        
     #st.write('---')
     #st.subheader('Clear to Fog Model')
     #col1,col2 = st.columns(2)
