@@ -89,9 +89,7 @@ with col2:
     
     st.video(video_bytes)
     
-    <'video controls loop'>
-        <source src="GAN_SYSTEM.mp4" type="video/mp4">
-    <'/video'>
+    st.markdown('<video controls loop><source src="GAN_SYSTEM.mp4" type="video/mp4"></video>', unsafe_allow_html=True)
     
 #GAN SYSTEM VIDEO LOOP   
 #col1, col2 = st.columns([1, 1])
