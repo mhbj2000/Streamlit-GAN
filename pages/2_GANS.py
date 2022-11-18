@@ -40,13 +40,26 @@ with st.container():
     }
     </style>
     """, unsafe_allow_html=True)
+    
+    st.markdown("""
+    <style>
+    .text {
+        font-size:26px !important;
+        text-align: center;
+        line-height: 2.0;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+    
+    
+    
     col1,col2,col3 = st.columns(3)
     with col2: #CONTROLS FOR THE ENTIRE ROW
         #st.header('Clear to Rain GAN Model')
         st.subheader('Controls and Metrics')
-        st.markdown('<p class="big-font">Choose an Example</p>', unsafe_allow_html=True)
+        st.markdown('<p class="text">Choose an Example</p>', unsafe_allow_html=True)
         model_selector = st.selectbox('Choose an Example',('Example 1', 'Example 2', 'Example 3'),label_visibility="collapsed")
-        st.markdown('<p class="big-font">Intermediate Image Number</p>', unsafe_allow_html=True)
+        st.markdown('<p class="text">Intermediate Image Number</p>', unsafe_allow_html=True)
         rain_counter = st.slider('Intermediate Image Number', 0,5,label_visibility="collapsed")
         if model_selector == 'Example 1':
             true_counter = rain_counter + 40
