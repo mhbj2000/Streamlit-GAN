@@ -18,19 +18,13 @@ with st.container():
     image_list =[]
     #image_string = ('IntermediatePic/'+(current_model)+'Fake/Fake'+(fake_counter)+ 'False_image_'+str(current_iteration)+'.png')
     for i in range(0,20):
-      st.write(current_model)
-      st.write(current_iteration)
-      st.write(str(i))
-      st.write('IntermediatePic/RainFake/Fake0/False_image_0.png')
-      st.write('IntermediatePic/'+str(current_model)+'Fake/Fake'+(str(i))+'/False_image_'+str(current_iteration)+'.png')
-      
       current_image = Image.open('IntermediatePic/'+str(current_model)+'Fake/Fake'+(str(i))+'/False_image_'+str(current_iteration)+'.png')
       current_image = current_image.resize((200,200))
       image_list.append(current_image)
       current_iteration = current_iteration + 10
     return image_list
   picGen(current_model,current_iteration)
-  #picDisplay()
+  picDisplay()
   
     
     
