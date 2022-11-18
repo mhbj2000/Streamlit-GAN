@@ -82,7 +82,7 @@ with col1:
     
 vid = """
 <video controls loop>
-    <source src="movie.mp4" type="video/mp4">
+    <source src="GAN_SYSTEM.mp4" type="video/mp4">
 </video>
 """
 #VIDEO   
