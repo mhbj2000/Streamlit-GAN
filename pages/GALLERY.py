@@ -48,7 +48,7 @@ with st.container():
             st.image(image_list[i])
             nextcol = 2
         return 0
-  picDisplay()
+picDisplay()
   
     
     
