@@ -5,6 +5,17 @@ from PIL import Image
 
 
 st.set_page_config(page_title="Gallery", layout="wide")
+
+#with st.container():
+  #st.sidebar.subheader('Controls')
+  
+    
+
+
+
+
+
+
 if 'start_index' not in st.session_state:
     st.session_state.start_index = 1
 pic_list = []
@@ -82,6 +93,8 @@ with st.container():
           picResult = []
           picResult = picGen(st.session_state.start_index)
           picDisplay(picResult)
+      with right_column:
+        st.slider('deez',0,5,0)
 
  
 
