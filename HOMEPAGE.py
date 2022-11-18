@@ -80,11 +80,7 @@ with col1:
     
 #col2.markdown(video_html, unsafe_allow_html=True)
     
-st.markdown("""
-    <video controls loop>
-        <source src="GAN_SYSTEM.mp4" type="video/mp4">
-    </video>
-    """, unsafe_allow_html=True)
+
 
 #VIDEO   
 with col2:
@@ -96,17 +92,17 @@ with col2:
     
     
 #GAN SYSTEM VIDEO LOOP   
-#col1, col2 = st.columns([1, 1])
-#with col1:
+col1, col2 = st.columns([1, 1])
+with col1:
     
-#    video_html = """
-#    <video controls width = "250" autoplay="true" muted="true loop="true">
-#    <source
-#            src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
-#            type="video/mp4" />
-#    </video>
-#    """
-#    col2.markdown(video_html, unsafe_allow_html=True)
+    video_html = """
+    <video controls width = "250" autoplay="true" muted="true loop="true">
+    <source
+            src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
+            type="video/mp4" />
+    </video>
+    """
+    col2.markdown(video_html, unsafe_allow_html=True)
      
-#col2.markdown(video_html, unsafe_allow_html=True)
+col2.markdown(video_html, unsafe_allow_html=True)
 
