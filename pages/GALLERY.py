@@ -21,7 +21,8 @@ with st.container():
       current_image = current_image.resize((200,200))
       image_list.append(current_image)
     return image_list
-  picDisplay()
+  picGen(current_model,current_iteration)
+  #picDisplay()
   
     
     
