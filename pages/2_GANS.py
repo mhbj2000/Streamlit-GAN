@@ -55,8 +55,9 @@ with st.container():
     <style>
     .headers {
         font-size:26px !important;
-        text-align: left;
+        text-align: center;
         line-height: 2.0;
+        font-weight: bold;
     }
     </style>
     """, unsafe_allow_html=True)
