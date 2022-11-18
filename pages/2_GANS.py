@@ -26,9 +26,9 @@ fog_timelapse_counter = 4
     #with right_column:
         #if st.sidebar.button("View Next Fog Timelapse"):
             #fog_timelapse_counter =+1
-
+tab1,tab2 =st.tabs(['Clear To Rain Model', 'Clear to Fog Model'])
 # ---- GAN Rain Visualizer | Row 1 ----         
-with st.container():
+with tab1():
     st.write('---')
     #st.subheader('Clear to Rain Model')
     st.markdown("""
