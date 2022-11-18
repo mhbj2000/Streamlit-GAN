@@ -100,6 +100,9 @@ with col1:
     <source
             src="GAN_SYSTEM.mp4"
             type="video/mp4" />
+    <source 
+            src="GAN_SYSTEM.ogg" 
+            type="video/ogg">
     </video>
     """
     col2.markdown(video_html, unsafe_allow_html=True)
