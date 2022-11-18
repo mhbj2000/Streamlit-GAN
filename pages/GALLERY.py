@@ -6,8 +6,17 @@ from PIL import Image
 
 st.set_page_config(page_title="Gallery", layout="wide")
 
-#with st.container():
-  #st.sidebar.subheader('Controls')
+with st.container():
+  st.sidebar.subheader('Controls')
+  col1,col2 = st.sidebar.columns(2)
+  with col1:
+    current_model =st.selectbox('Choose a Model',('Rain','Fog'))
+  with col2:
+    current_iteration = st.selectbox('Choose an Iteration',(1,2,3,4,5))
+    
+    
+ 
+                                
   
     
 
@@ -69,31 +78,31 @@ def picGen(start_index):
         pic_test = pic_test.resize(newsize)
         picTest_list.append(pic_test)
     return picTest_list
-with st.container():
-    st.sidebar.subheader("CONTROLS")
-    left_column, right_column = st.sidebar.columns(2)
-    with right_column:
-      st.slider('deez',0,5,0)
-    with left_column:
-        weather_options = ['Rain','Snow','Sunny','Overcast','Night','Cloudy']
-        weather = st.select_slider("Choose a Type of Weather",options = weather_options)
-        st.write('The current weather is:',weather)
-        if st.sidebar.button("Start Gallery"):
-            picResult = picGen(1)
-            picDisplay(picResult)
-        if st.sidebar.button("Next Page") :
-          st.session_state.start_index += 12
+#with st.container():
+    #st.sidebar.subheader("CONTROLS")
+    #left_column, right_column = st.sidebar.columns(2)
+    #with right_column:
+      #st.slider('deez',0,5,0)
+    #with left_column:
+        #weather_options = ['Rain','Snow','Sunny','Overcast','Night','Cloudy']
+        #weather = st.select_slider("Choose a Type of Weather",options = weather_options)
+        #st.write('The current weather is:',weather)
+        #if st.sidebar.button("Start Gallery"):
+            #picResult = picGen(1)
+            #picDisplay(picResult)
+        #if st.sidebar.button("Next Page") :
+          #st.session_state.start_index += 12
           #start_index += 12
-          st.write(st.session_state.start_index)
-          picResult = []
-          picResult = picGen(st.session_state.start_index)
-          picDisplay(picResult)
-        if st.sidebar.button('Previous Page') :
-          st.session_state.start_index -=12
+          #st.write(st.session_state.start_index)
+          #picResult = []
+          #picResult = picGen(st.session_state.start_index)
+          #picDisplay(picResult)
+        #if st.sidebar.button('Previous Page') :
+          #st.session_state.start_index -=12
           #start_index = start_index - 12
-          st.write(st.session_state.start_index)
-          picResult = []
-          picResult = picGen(st.session_state.start_index)
-          picDisplay(picResult)
+          #st.write(st.session_state.start_index)
+          #picResult = []
+          #picResult = picGen(st.session_state.start_index)
+          #picDisplay(picResult)
  
 
