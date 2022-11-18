@@ -81,6 +81,7 @@ with col1:
 
 #VIDEO   
 with col2:
+    st.markdown('##')
     video_file = open('GAN_SYSTEM.mp4', 'rb')
     video_bytes = video_file.read()
     
