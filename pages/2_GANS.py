@@ -8,13 +8,12 @@ st.set_page_config(page_title="GANS Demonstration", layout="wide")
 with st.container():
     col1, col2, col3,= st.columns(3)
     with col2:
-        st.header('Clear to Rain GAN Model')
+        st.header('GAN MODEL VISUALIZER')
 
 
 tab1,tab2 =st.tabs(['Clear To Rain Model', 'Clear to Fog Model'])
 # ---- GAN Rain Visualizer | Row 1 ----         
 with tab1:
-    #st.subheader('Clear to Rain Model')
     st.markdown("""
     <style>
     .main-text {
@@ -71,13 +70,7 @@ with tab1:
             rain_timelapse = open('Time-lapse/RainTimelapse/Timelapse17.mp4', 'rb')
             video_bytes = rain_timelapse.read()
             
-        #st.write('Length of Clear Dataset: 1013 Images  \n',
-                 #'Length of Rainy Dataset: 1054 Images  \n',
-                 #'Time to Train: 10:30 Hours')
-        
         st.markdown('<p class="main-text">Length of Clear Dataset: 1013 Images <br>Length of Rainy Dataset: 1054 Images <br> Images Time to Train: 10:30 Hours</p>', unsafe_allow_html=True)
-
-    #st.markdown('<p class="big-font"></p>', unsafe_allow_html=True)
  
     with col1:
         st.markdown('<p class="headers">Timelapse</p>', unsafe_allow_html=True)
