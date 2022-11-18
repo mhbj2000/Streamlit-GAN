@@ -4,16 +4,8 @@ import streamlit.components.v1 as components
 import random
 
 st.set_page_config(page_title="GANS Demonstration", layout="wide")
-
 with st.container():
-    col1, col2, col3,= st.columns(3)
-    with col2:
-        st.header('GAN MODEL VISUALIZER')
-
-
-tab1,tab2 =st.tabs(['Clear To Rain Model', 'Clear to Fog Model'])
-# ---- GAN Rain Visualizer | Row 1 ----         
-with tab1:
+    #HTML FONT BUILDER
     st.markdown("""
     <style>
     .main-text {
@@ -45,6 +37,48 @@ with tab1:
     }
     </style>
     """, unsafe_allow_html=True)
+    
+
+with st.container():
+    col1, col2, col3,= st.columns(3)
+    with col2:
+        st.header('GAN MODEL VISUALIZER')
+
+
+tab1,tab2 =st.tabs(['Clear To Rain Model', 'Clear to Fog Model'])
+# ---- GAN Rain Visualizer | Row 1 ----         
+with tab1:
+    #st.markdown("""
+    #<style>
+    #.main-text {
+        #font-size:26px !important;
+        #text-align: left;
+        #line-height: 2.0;
+        #font-weight: bold;
+    #}
+    #</style>
+    #""", unsafe_allow_html=True)
+    
+    #st.markdown("""
+    #<style>
+    #.subheader {
+        #font-size:26px !important;
+        #text-align: center;
+        #line-height: 2.0;
+    #}
+    #</style>
+    #""", unsafe_allow_html=True)
+    
+   #st.markdown("""
+    #<style>
+    #.headers {
+    #    font-size:32px !important;
+        #text-align: center;
+        #line-height: 2.0;
+        #font-weight: bold;
+    #}
+    #</style>
+    #""", unsafe_allow_html=True)
     
     
     col1,col2,col3 = st.columns(3)
