@@ -67,7 +67,7 @@ with col3:
 
 #VIDEO   
 with st.container():
-    video_file = open('GAN-SYSTEM.mp4', 'rb')
+    video_file = open('GAN_SYSTEM.mp4', 'rb')
     video_bytes = video_file.read()
     
     st.video(video_bytes)
