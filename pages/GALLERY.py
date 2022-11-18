@@ -22,7 +22,6 @@ with st.container():
       st.write(current_iteration)
       st.write(str(i))
       st.write('IntermediatePic/RainFake/Fake0/False_image_0.png')
-      st.image(test_image)
       st.write('IntermediatePic/'+str(current_model)+'Fake/Fake'+(str(i))+'False_image_'+str(current_iteration)+'.png')
       
       current_image = Image.open('IntermediatePic/'+str(current_model)+'Fake/Fake'+(str(i))+'False_image_'+str(current_iteration)+'.png')
