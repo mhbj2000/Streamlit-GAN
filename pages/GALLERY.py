@@ -20,6 +20,7 @@ with st.container():
     for i in range(0,20):
       st.write(current_model)
       st.write(current_iteration)
+      st.write(str(i))
       test_image = Image.open('IntermediatePic/RainFake/Fake0/False_image_0.png')
       st.image(test_image)
       current_image = Image.open('IntermediatePic/'+str(current_model)+'Fake/Fake'+(str(i))+'False_image_'+str(current_iteration)+'.png')
