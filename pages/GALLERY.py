@@ -24,7 +24,7 @@ with st.container():
       current_iteration = current_iteration + 10
     return image_list
   picGen(current_model,current_iteration)
-  #picDisplay()
+  picDisplay()
 with st.container():
   col1, col2, col3, col4 = st.columns(4)
   def picDisplay():
@@ -47,7 +47,7 @@ with st.container():
         with col1:
           st.image(image_list[i])
           nextcol = 2
-picDisplay()
+#picDisplay()
   
     
     
