@@ -14,7 +14,6 @@ with st.container():
 tab1,tab2 =st.tabs(['Clear To Rain Model', 'Clear to Fog Model'])
 # ---- GAN Rain Visualizer | Row 1 ----         
 with tab1:
-    st.write('---')
     #st.subheader('Clear to Rain Model')
     st.markdown("""
     <style>
@@ -50,7 +49,7 @@ with tab1:
     
     
     col1,col2,col3 = st.columns(3)
-    with col2: #CONTROLS FOR THE ENTIRE ROW
+    with col2: #CONTROLS FOR THE MODEL
         st.markdown('<p class="headers">Controls and Metrics</p>', unsafe_allow_html=True)
         st.markdown('<p class="subheader">Choose an Example</p>', unsafe_allow_html=True)
         model_selector = st.selectbox('Choose an Example',('Example 1', 'Example 2', 'Example 3'),label_visibility="collapsed")
@@ -92,9 +91,8 @@ with tab1:
         
 # ---- GAN Visualizer Row 2 ----       
 with tab2:
-    st.write('---')
     col1,col2,col3 = st.columns(3)
-    with col2: #CONTROLS FOR THE ENTIRE ROW
+    with col2: #CONTROLS FOR THE MODEL
         st.markdown('<p class="headers">Controls and Metrics</p>', unsafe_allow_html=True)
         st.markdown('<p class="subheader">Choose an Example</p>', unsafe_allow_html=True)
         model_selector = st.selectbox('Choose an Example',('Example 1', 'Example 2', 'Example 3'), key = '2nd selectbox',label_visibility="collapsed")
@@ -126,18 +124,3 @@ with tab2:
         fog_timelapse_picture = fog_timelapse_picture.resize(image_resizer)
         st.image(fog_timelapse_picture)        
         
-    #st.write('---')
-    #st.subheader('Clear to Fog Model')
-    #col1,col2 = st.columns(2)
-    #with col2:
-        #fog_counter = st.slider('Fog Timelapses', 0,19,4)
-        #fog_timelapse = open('Time-lapse/FogTimelapse/Timelapse'+str(fog_counter)+'.mp4', 'rb')
-        #fog_bytes = fog_timelapse.read()
-        #st.write('Length of Clear Dataset: 1013 Images  \n',
-        #'Length of Fog Dataset: 1008 Images  \n',
-        #'#Time to Train: 10:30 Hours')
-    #with col1:
-       # st.video(fog_bytes)
-       # pass
-        #st.image(fake_image_2)
-
