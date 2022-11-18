@@ -113,7 +113,7 @@ with st.container():
         st.markdown('<p class="subheader">Choose an Example</p>', unsafe_allow_html=True)
         model_selector = st.selectbox('Choose an Example',('Example 1', 'Example 2', 'Example 3'), key = '2nd selectbox',label_visibility="collapsed")
         st.markdown('<p class="subheader">Intermediate Image Number</p>', unsafe_allow_html=True)
-        fog_counter = st.slider('Intermediate Image Number', 0,5,label_visibility="collapsed")
+        fog_counter = st.slider('Intermediate Image Number', 0,5, key = '2nd slider',label_visibility="collapsed")
         if model_selector == 'Example 1':
             true_counter = fog_counter + 40
             fog_timelapse_picture = Image.open('IntermediatePic/FogFake/Fake4/False_image_'+str(true_counter)+'.png')
