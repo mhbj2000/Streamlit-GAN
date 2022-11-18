@@ -9,23 +9,8 @@ with st.container():
     col1, col2, col3,= st.columns(3)
     with col2:
         st.header('Clear to Rain GAN Model')
-#potential headers
-#st.header('GAN VISUALIZER')
-rain_timelapse_counter = 4
-fog_timelapse_counter = 4
 
-# ---- SIDE BAR COTNROLS ---- 
-#with st.container():
-    #st.sidebar.subheader("CONTROLS")
-    #left_column, right_column = st.sidebar.columns(2)
-    #with left_column:
-        #rain_counter = st.slider('Timelapses', 0,19,4)
-        #if st.sidebar.button("View Next Rain Timelapse"):
-            #rain_timelapse_counter = rain_timelapse_counter + 1
-            #st.write(rain_timelapse_counter)
-    #with right_column:
-        #if st.sidebar.button("View Next Fog Timelapse"):
-            #fog_timelapse_counter =+1
+
 tab1,tab2 =st.tabs(['Clear To Rain Model', 'Clear to Fog Model'])
 # ---- GAN Rain Visualizer | Row 1 ----         
 with st.container():
@@ -91,7 +76,7 @@ with st.container():
                  #'Length of Rainy Dataset: 1054 Images  \n',
                  #'Time to Train: 10:30 Hours')
         
-        st.markdown('<p class="main-text">Length of Clear Dataset: 1013 Images <br>Length of Rainy Dataset: 1054 <br> Images Time to Train: 10:30 Hours</p>', unsafe_allow_html=True)
+        st.markdown('<p class="main-text">Length of Clear Dataset: 1013 Images <br>Length of Rainy Dataset: 1054 Images <br> Images Time to Train: 10:30 Hours</p>', unsafe_allow_html=True)
 
     #st.markdown('<p class="big-font"></p>', unsafe_allow_html=True)
  
@@ -107,6 +92,7 @@ with st.container():
         
 # ---- GAN Visualizer Row 2 ----       
 with st.container():
+    st.write('---')
     col1,col2,col3 = st.columns(3)
     with col2: #CONTROLS FOR THE ENTIRE ROW
         st.markdown('<p class="headers">Controls and Metrics</p>', unsafe_allow_html=True)
@@ -129,7 +115,7 @@ with st.container():
             fog_timelapse_picture = Image.open('IntermediatePic/FogFake/Fake17/False_image_'+str(true_counter)+'.png')
             fog_timelapse = open('Time-lapse/FogTimelapse/Timelapse17.mp4', 'rb')
             video_bytes = fog_timelapse.read()
-        st.markdown('<p class="main-text">Length of Clear Dataset: 1013 Images <br>Length of Rainy Dataset: 1054 <br> Images Time to Train: 10:30 Hours</p>', unsafe_allow_html=True)
+        st.markdown('<p class="main-text">Length of Clear Dataset: 1013 Images <br>Length of Fog Dataset: 1008 Images <br> Images Time to Train: 10:30 Hours</p>', unsafe_allow_html=True)
         
     with col1:
         st.markdown('<p class="headers">Timelapse</p>', unsafe_allow_html=True)
