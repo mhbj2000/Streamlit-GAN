@@ -91,21 +91,3 @@ with col2:
     st.video(video_bytes)
     
     
-#GAN SYSTEM VIDEO LOOP   
-col1, col2 = st.columns([1, 1])
-with col1:
-    
-    video_html = """
-    <video controls width="250" autoplay="true" muted="true" loop="true">
-    <source
-            src="GAN_SYSTEM.mp4"
-            type="video/mp4" />
-    <source 
-            src="GAN_SYSTEM.ogg" 
-            type="video/ogg">
-    </video>
-    """
-    col2.markdown(video_html, unsafe_allow_html=True)
-     
-col2.markdown(video_html, unsafe_allow_html=True)
-
