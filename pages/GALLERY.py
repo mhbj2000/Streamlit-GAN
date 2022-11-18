@@ -72,6 +72,8 @@ def picGen(start_index):
 with st.container():
     st.sidebar.subheader("CONTROLS")
     left_column, right_column = st.sidebar.columns(2)
+    with right_column:
+      st.slider('deez',0,5,0)
     with left_column:
         weather_options = ['Rain','Snow','Sunny','Overcast','Night','Cloudy']
         weather = st.select_slider("Choose a Type of Weather",options = weather_options)
@@ -93,8 +95,5 @@ with st.container():
           picResult = []
           picResult = picGen(st.session_state.start_index)
           picDisplay(picResult)
-      with right_column:
-        st.slider('deez',0,5,0)
-
  
 
