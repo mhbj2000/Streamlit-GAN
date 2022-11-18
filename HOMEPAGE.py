@@ -24,7 +24,7 @@ st.markdown("""
 st.markdown("""
     <style>
     .subheader {
-        font-size:24px;
+        font-size:26px;
         text-align: left;
         font-weight: bold;
 
@@ -35,7 +35,7 @@ st.markdown("""
 st.markdown("""
     <style>
     .big-font {
-        font-size:24px !important;
+        font-size:26px !important;
         text-align: left;
 
     }
