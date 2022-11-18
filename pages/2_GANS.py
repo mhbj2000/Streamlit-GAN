@@ -13,7 +13,7 @@ with st.container():
 
 tab1,tab2 =st.tabs(['Clear To Rain Model', 'Clear to Fog Model'])
 # ---- GAN Rain Visualizer | Row 1 ----         
-with st.container():
+with tab1:
     st.write('---')
     #st.subheader('Clear to Rain Model')
     st.markdown("""
@@ -91,7 +91,7 @@ with st.container():
         st.image(rain_timelapse_picture)
         
 # ---- GAN Visualizer Row 2 ----       
-with st.container():
+with tab2:
     st.write('---')
     col1,col2,col3 = st.columns(3)
     with col2: #CONTROLS FOR THE ENTIRE ROW
