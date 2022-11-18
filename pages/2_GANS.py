@@ -48,40 +48,8 @@ with st.container():
 tab1,tab2 =st.tabs(['Clear To Rain Model', 'Clear to Fog Model'])
 # ---- GAN Rain Visualizer | Row 1 ----         
 with tab1:
-    #st.markdown("""
-    #<style>
-    #.main-text {
-        #font-size:26px !important;
-        #text-align: left;
-        #line-height: 2.0;
-        #font-weight: bold;
-    #}
-    #</style>
-    #""", unsafe_allow_html=True)
-    
-    #st.markdown("""
-    #<style>
-    #.subheader {
-        #font-size:26px !important;
-        #text-align: center;
-        #line-height: 2.0;
-    #}
-    #</style>
-    #""", unsafe_allow_html=True)
-    
-   #st.markdown("""
-    #<style>
-    #.headers {
-    #    font-size:32px !important;
-        #text-align: center;
-        #line-height: 2.0;
-        #font-weight: bold;
-    #}
-    #</style>
-    #""", unsafe_allow_html=True)
-    
-    
     col1,col2,col3 = st.columns(3)
+    
     with col2: #CONTROLS FOR THE MODEL
         st.markdown('<p class="headers">Controls and Metrics</p>', unsafe_allow_html=True)
         st.markdown('<p class="subheader">Choose an Example</p>', unsafe_allow_html=True)
