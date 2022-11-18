@@ -13,8 +13,9 @@ st.image(logo)
 st.markdown("""
     <style>
     .header {
-        font-size:24px !important;
+        font-size:24px;
         text-align: left;
+        font-weight: bold;
 
     }
     </style>
