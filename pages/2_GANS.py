@@ -28,7 +28,7 @@ fog_timelapse_counter = 4
             #fog_timelapse_counter =+1
 tab1,tab2 =st.tabs(['Clear To Rain Model', 'Clear to Fog Model'])
 # ---- GAN Rain Visualizer | Row 1 ----         
-with tab1():
+with tab1:
     st.write('---')
     #st.subheader('Clear to Rain Model')
     st.markdown("""
