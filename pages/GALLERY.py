@@ -19,7 +19,7 @@ with st.container():
     for i in range(0,20):
       st.write(current_model)
       st.write(current_iteration)
-      current_image = Image.open('IntermediatePic/'+(current_model)+'Fake/Fake'+(i)+ 'False_image_'+str(current_iteration)+'.png')
+      current_image = Image.open('IntermediatePic/'+(current_model)+'Fake/Fake'+(str(i))+ 'False_image_'+str(current_iteration)+'.png')
       current_image = current_image.resize((200,200))
       image_list.append(current_image)
     return image_list
