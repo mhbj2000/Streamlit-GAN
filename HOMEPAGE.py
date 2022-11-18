@@ -23,6 +23,17 @@ st.markdown("""
 
 st.markdown("""
     <style>
+    .subheader {
+        font-size:32px;
+        text-align: left;
+        font-weight: bold;
+
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
+st.markdown("""
+    <style>
     .big-font {
         font-size:24px !important;
         text-align: left;
@@ -45,11 +56,14 @@ st.markdown('<p class="header">How a GAN Works</p>', unsafe_allow_html=True)
 col1, col2= st.columns(2)
 #GENERATOR PARAGRAPH
 with col1:
+    
     st.markdown('##')
+    st.markdown('<p class="header">Generator</p>', unsafe_allow_html=True)
     st.markdown('<p class="big-font">The purpose of the Generator is to create plausible data. This is with the goal of those plausible instances becoming negative examples for training the Discriminator.</p>', unsafe_allow_html=True)
 
 #DISCRIMINATOR PARAGRAPH     
     st.markdown('##')
+    st.markdown('<p class="header">Discriminator</p>', unsafe_allow_html=True)
     st.markdown('<p class="big-font2">The Discriminator is meant to identify fake data created by the Generator from real data and issue the Generator a penalty for producing implausible results.</p>', unsafe_allow_html=True)
 
 #HERE IS WHERE GIF GOES
