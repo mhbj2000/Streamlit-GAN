@@ -72,7 +72,7 @@ with tab1:
             rain_timelapse = open('Time-lapse/RainTimelapse/Timelapse17.mp4', 'rb')
             video_bytes = rain_timelapse.read()
             
-        st.markdown('<p class="main-text">Length of Clear Dataset: 1013 Images <br>Length of Rainy Dataset: 1054 Images <br> Time to Train Rainy Model: 10:30 Hours</p>', unsafe_allow_html=True)
+        st.markdown('<p class="main-text">Length of Clear Dataset: 1013 Images <br>Length of Rainy Dataset: 1054 Images <br> Time to Train Rain Model: 10:30 Hours</p>', unsafe_allow_html=True)
  
     with col1:
         st.markdown('<p class="headers">Timelapse</p>', unsafe_allow_html=True)
