@@ -7,10 +7,9 @@ st.set_page_config(page_title="GANS", layout="wide")
 #content of main_page
 
 
-col1, col2, col3 = st.columns(3)
-with col3:  
-    logo = Image.open('site.png')
-    st.image(logo)
+
+logo = Image.open('site.png')
+st.image(logo)
 
 
 st.markdown("""
