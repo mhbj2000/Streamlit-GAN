@@ -23,7 +23,7 @@ with st.container():
       st.write(str(i))
       test_image = Image.open('IntermediatePic/RainFake/Fake0/False_image_0.png')
       st.image(test_image)
-      current_image = Image.open('IntermediatePic/'+str(current_model)+'Fake/Fake'+(str(i))+'False_image_'+str(current_iteration)+'.png')
+      current_image = Image.open('IntermediatPic/'+str(current_model)+'Fake/Fake'+(str(i))+'False_image_'+str(current_iteration)+'.png')
       st.image(current_image)
       current_image = current_image.resize((200,200))
       image_list.append(current_image)
