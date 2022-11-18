@@ -94,7 +94,6 @@ with col2:
     
     st.video(video_bytes)
     
-    st.markdown(vid, unsafe_allow_html=True)
     
 #GAN SYSTEM VIDEO LOOP   
 #col1, col2 = st.columns([1, 1])
