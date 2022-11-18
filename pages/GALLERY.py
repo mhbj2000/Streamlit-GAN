@@ -42,12 +42,10 @@ with st.container():
           nextcol = 4
       elif (nextcol == 2):
         with col2:
-          st.write('hello')
           st.image(image_list[i])
           nextcol = 3
       elif (nextcol ==1):
         with col1:
-          st.write('hello')
           st.image(image_list[i])
           nextcol = 2
 picDisplay()
