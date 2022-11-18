@@ -50,7 +50,6 @@ with st.container():
           st.write('hello')
           st.image(image_list[i])
           nextcol = 2
-        return 0
 picDisplay()
   
     
