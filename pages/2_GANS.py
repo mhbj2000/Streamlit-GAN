@@ -66,7 +66,6 @@ with st.container():
     
     col1,col2,col3 = st.columns(3)
     with col2: #CONTROLS FOR THE ENTIRE ROW
-        #st.header('Clear to Rain GAN Model')
         st.markdown('<p class="headers">Controls and Metrics</p>', unsafe_allow_html=True)
         st.markdown('<p class="subheader">Choose an Example</p>', unsafe_allow_html=True)
         model_selector = st.selectbox('Choose an Example',('Example 1', 'Example 2', 'Example 3'),label_visibility="collapsed")
@@ -108,37 +107,40 @@ with st.container():
         
 # ---- GAN Visualizer Row 2 ----       
 with st.container():
-    st.write('---')
-    st.subheader('Clear to Fog Model')
-    col1,col2 = st.columns(2)
-    with col2:
-        fog_counter = st.slider('Fog Timelapses', 0,19,4)
-        fog_timelapse = open('Time-lapse/FogTimelapse/Timelapse'+str(fog_counter)+'.mp4', 'rb')
-        fog_bytes = fog_timelapse.read()
-        st.write('Length of Clear Dataset: 1013 Images  \n',
-        'Length of Fog Dataset: 1008 Images  \n',
-        'Time to Train: 10:30 Hours')
-    with col1:
-        st.video(fog_bytes)
-        pass
+    col1,col2,col3 = st.columns(3)
+    with col2: #CONTROLS FOR THE ENTIRE ROW
+        st.markdown('<p class="headers">Controls and Metrics</p>', unsafe_allow_html=True)
+        st.markdown('<p class="subheader">Choose an Example</p>', unsafe_allow_html=True)
+        model_selector = st.selectbox('Choose an Example',('Example 1', 'Example 2', 'Example 3'),label_visibility="collapsed")
+        st.markdown('<p class="subheader">Intermediate Image Number</p>', unsafe_allow_html=True)
+        fog_counter = st.slider('Intermediate Image Number', 0,5,label_visibility="collapsed")
+        if model_selector == 'Example 1':
+            true_counter = fog_counter + 40
+            fog_timelapse_picture = Image.open('IntermediatePic/FogFake/Fake4/False_image_'+str(true_counter)+'.png')
+            fog_timelapse = open('Time-lapse/FogTimelapse/Timelapse4.mp4', 'rb')
+            video_bytes = fog_timelapse.read()
+        elif model_selector == 'Example 2':
+            true_counter = fog_counter + 160
+            fog_timelapse_picture = Image.open('IntermediatePic/FogFake/Fake16/False_image_'+str(true_counter)+'.png')
+            fog_timelapse = open('Time-lapse/FogTimelapse/Timelapse16.mp4', 'rb')
+            video_bytes = fog_timelapse.read()
+        elif model_selector == 'Example 3':
+            true_counter = fog_counter + 170
+            fog_timelapse_picture = Image.open('IntermediatePic/FogFake/Fake17/False_image_'+str(true_counter)+'.png')
+            fog_timelapse = open('Time-lapse/FogTimelapse/Timelapse17.mp4', 'rb')
+            video_bytes = fog_timelapse.read()
+    #st.write('---')
+    #st.subheader('Clear to Fog Model')
+    #col1,col2 = st.columns(2)
+    #with col2:
+        #fog_counter = st.slider('Fog Timelapses', 0,19,4)
+        #fog_timelapse = open('Time-lapse/FogTimelapse/Timelapse'+str(fog_counter)+'.mp4', 'rb')
+        #fog_bytes = fog_timelapse.read()
+        #st.write('Length of Clear Dataset: 1013 Images  \n',
+        #'Length of Fog Dataset: 1008 Images  \n',
+        #'#Time to Train: 10:30 Hours')
+    #with col1:
+       # st.video(fog_bytes)
+       # pass
         #st.image(fake_image_2)
-# ---- GAN Visualizer Row 3 ----       
-with st.container():
-    st.write('---')
-    st.subheader('idk')
-    fake_image_1 = Image.open('Pic/Fake_Image_01.png') 
-    #fake_image_2 = Image.open('Pic/Fake_Image_02.png') 
-    #fake_image_3 = Image.open('Pic/Fake_Image_03.png')  
-    new_size=(200,200)
-    fake_image_1.resize(new_size)
-    #fake_image_2.resize(new_size)
-    #fake_image_3.resize(new_size)
-    col1,col2 = st.columns(2)
-    with col1:
-        st.image(fake_image_1)
-    with col2:
-        st.write('A description of the GIF')
 
-        pass
-    
-        #st.image(fake_image_2)
