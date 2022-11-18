@@ -16,15 +16,7 @@ st.markdown("<h1 style='text-align: center;'>WHAT IS A GAN?</h1>", unsafe_allow_
 st.write('##')
 st.write('##')
 
-
-col1, col2, col3= st.columns(3)
-#GENERATOR PARAGRAPH
-with col1:
-#with st.container():
-#container contains old info
-    st.markdown('##')
-
-    st.markdown("""
+st.markdown("""
     <style>
     .big-font {
         font-size:24px !important;
@@ -34,14 +26,7 @@ with col1:
     </style>
     """, unsafe_allow_html=True)
 
-    st.markdown('<p class="big-font">The purpose of the Generator is to create plausible data. This is with the goal of those plausible instances becoming negative examples for training the Discriminator.</p>', unsafe_allow_html=True)
-
-#DISCRIMINATOR PARAGRAPH 
-with col3:
-    
-    st.markdown('##')
-
-    st.markdown("""
+st.markdown("""
     <style>
     .big-font2 {
         font-size:24px !important;
@@ -50,6 +35,14 @@ with col3:
     </style>
     """, unsafe_allow_html=True)
 
+col1, col2= st.columns(2)
+#GENERATOR PARAGRAPH
+with col1:
+    st.markdown('##')
+    st.markdown('<p class="big-font">The purpose of the Generator is to create plausible data. This is with the goal of those plausible instances becoming negative examples for training the Discriminator.</p>', unsafe_allow_html=True)
+
+#DISCRIMINATOR PARAGRAPH     
+    st.markdown('##')
     st.markdown('<p class="big-font2">The Discriminator is meant to identify fake data created by the Generator from real data and issue the Generator a penalty for producing implausible results.</p>', unsafe_allow_html=True)
 
 #HERE IS WHERE GIF GOES
@@ -66,7 +59,7 @@ with col3:
     
 
 #VIDEO   
-with col3:
+with col2:
     video_file = open('GAN_SYSTEM.mp4', 'rb')
     video_bytes = video_file.read()
     
