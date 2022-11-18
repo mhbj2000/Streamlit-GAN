@@ -111,20 +111,20 @@ with st.container():
     with col2: #CONTROLS FOR THE ENTIRE ROW
         st.markdown('<p class="headers">Controls and Metrics</p>', unsafe_allow_html=True)
         st.markdown('<p class="subheader">Choose an Example</p>', unsafe_allow_html=True)
-        model_selector = st.selectbox('Choose an Example',('Example 1', 'Example 2', 'Example 3'),label_visibility="collapsed")
+        model_selector_1 = st.selectbox('Choose an Example',('Example 1', 'Example 2', 'Example 3'),label_visibility="collapsed")
         st.markdown('<p class="subheader">Intermediate Image Number</p>', unsafe_allow_html=True)
         fog_counter = st.slider('Intermediate Image Number', 0,5,label_visibility="collapsed")
-        if model_selector == 'Example 1':
+        if model_selector_1 == 'Example 1':
             true_counter = fog_counter + 40
             fog_timelapse_picture = Image.open('IntermediatePic/FogFake/Fake4/False_image_'+str(true_counter)+'.png')
             fog_timelapse = open('Time-lapse/FogTimelapse/Timelapse4.mp4', 'rb')
             video_bytes = fog_timelapse.read()
-        elif model_selector == 'Example 2':
+        elif model_selector_1 == 'Example 2':
             true_counter = fog_counter + 160
             fog_timelapse_picture = Image.open('IntermediatePic/FogFake/Fake16/False_image_'+str(true_counter)+'.png')
             fog_timelapse = open('Time-lapse/FogTimelapse/Timelapse16.mp4', 'rb')
             video_bytes = fog_timelapse.read()
-        elif model_selector == 'Example 3':
+        elif model_selector_1 == 'Example 3':
             true_counter = fog_counter + 170
             fog_timelapse_picture = Image.open('IntermediatePic/FogFake/Fake17/False_image_'+str(true_counter)+'.png')
             fog_timelapse = open('Time-lapse/FogTimelapse/Timelapse17.mp4', 'rb')
