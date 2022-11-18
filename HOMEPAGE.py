@@ -9,12 +9,16 @@ st.set_page_config(page_title="GANS", layout="wide")
 logo = Image.open('site.png')
 st.image(logo)
 
-#header
-with open("design.css") as source_des:
-    st.markdown(f"<style>{source_des.read()}</style>", unsafe_allow_html=True)
-st.markdown("<h1 style='text-align: center;'>WHAT IS A GAN?</h1>", unsafe_allow_html=True)
-st.write('##')
-st.write('##')
+
+st.markdown("""
+    <style>
+    .header {
+        font-size:24px !important;
+        text-align: left;
+
+    }
+    </style>
+    """, unsafe_allow_html=True)
 
 st.markdown("""
     <style>
@@ -34,6 +38,8 @@ st.markdown("""
     }
     </style>
     """, unsafe_allow_html=True)
+
+st.markdown('<p class="header">How a GAN Works</p>', unsafe_allow_html=True)
 
 col1, col2= st.columns(2)
 #GENERATOR PARAGRAPH
