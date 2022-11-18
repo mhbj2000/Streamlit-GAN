@@ -12,7 +12,17 @@ with st.container():
   with col1:
     current_model =st.selectbox('Choose a Model',('Rain','Fog'))
   with col2:
-    current_iteration = st.selectbox('Choose an Iteration',(1,2,3,4,5))
+    current_iteration = st.selectbox('Choose an Iteration',(0,1,2,3,4,5))
+  def picGen(current_model,current_iteration):
+    image_list =[]
+    image_string = ('IntermediatePic/'+(current_model)+'Fake/Fake'+(fake_counter)+ 'False_image_'+str(current_iteration)+'.png')
+    for i in range(0,20):
+      current_image = Image.open('IntermediatePic/'+(current_model)+'Fake/Fake'+(i)+ 'False_image_'+str(current_iteration)+'.png')
+      current_image = current_image.resize((200,200))
+      image_list.append(current_image)
+    return image_list
+  picDisplay()
+  
     
     
  
@@ -33,51 +43,81 @@ pic_list = []
 with st.container():
     #image container
     st.write("---")
-    col1, col2, col3, col4, col5, col6 = st.columns(6)
-    def picDisplay(picResult):
-        
-        nextcol = 1
-        newsize = (500,500)
-        for i in range(len(picResult)):
-            picture_result = picResult[i].resize(newsize)
-            if(nextcol == 6):
-                with col6:
-                    st.image(picture_result)
-                    nextcol = 1
-            elif (nextcol == 5):
-                with col5:
-                    st.image(picture_result)
-                    nextcol = 6
-            elif (nextcol == 4):
-                with col4:
-                    st.image(picture_result)
-                    nextcol = 5
-            elif (nextcol == 3):
-                with col3:
-                    st.image(picture_result)
-                    nextcol = 4
-            elif (nextcol == 2):
-                with col2:
-                    st.image(picture_result)
-                    nextcol = 3
-            elif (nextcol == 1):
-                with col1:
-                    st.image(picture_result)
-                    nextcol = 2
+    col1, col2, col3, col4 = st.columns(4)
+    def picDisplay():
+      image_list = picGen(current_model,current_iteration)
+      nextcol = 1
+      for i in range(len(image_list))
+        if(nextcol == 4):
+          with col4:
+            st.image(image_list[i])
+            nextcol = 1
+        elif (nextcol == 3):
+          with col3:
+            st.image(image_list[i])
+            nextcol = 4
+        elif (nextcol == 2):
+          with col2:
+            st.image(image_list[i])
+            nextcol = 3
+        elif (nextcol ==1):
+          with col1:
+            st.image(image_list[i])
+            nextcol = 2
         return 0
+
+        
+        
+        #nextcol = 1
+        #newsize = (500,500)
+        #for i in range(len(picResult)):
+            #picture_result = picResult[i].resize(newsize)
+            #if(nextcol == 6):
+                #with col6:
+                    #st.image(picture_result)
+                    #nextcol = 1
+            #elif (nextcol == 5):
+                #with col5:
+                    #st.image(picture_result)
+                    #nextcol = 6
+            #elif (nextcol == 4):
+                #with col4:
+                    #st.image(picture_result)
+                    #nextcol = 5
+            #elif (nextcol == 3):
+                #with col3:
+                    #st.image(picture_result)
+                    #nextcol = 4
+            #elif (nextcol == 2):
+                #with col2:
+                    #st.image(picture_result)
+                    #nextcol = 3
+            #elif (nextcol == 1):
+                #with col1:
+                    #st.image(picture_result)
+                    #nextcol = 2
+        #return 0
                    
 
-def picGen(start_index):
-    st.write(start_index)
-    fileName = "Pic/Test_"
-    fileTypeName = ".png"
-    newsize = (200, 200)
-    picTest_list = []
-    for i in range(start_index,start_index+12):
-        pic_test = Image.open(fileName+str(i)+fileTypeName)
-        pic_test = pic_test.resize(newsize)
-        picTest_list.append(pic_test)
-    return picTest_list
+def picGen(current_model,current_iteration):
+  image_list =[]
+  image_string = ('IntermediatePic/'+(current_model)+'Fake/Fake'+(fake_counter)+ 'False_image_'+str(current_iteration)+'.png')
+  for i in range(0,20):
+    current_image = Image.open('IntermediatePic/'+(current_model)+'Fake/Fake'+(i)+ 'False_image_'+str(current_iteration)+'.png')
+    current_image = current_image.resize((200,200))
+    image_list.append(current_image)
+  return image_list 
+                 
+    #st.write(start_index)
+    #fileName = "Pic/Test_"
+    #fileTypeName = ".png"
+    #newsize = (200, 200)
+    #picTest_list = []
+    #for i in range(start_index,start_index+12):
+        #pic_test = Image.open(fileName+str(i)+fileTypeName)
+        #pic_test = pic_test.resize(newsize)
+        #picTest_list.append(pic_test)
+    #return picTest_list
 #with st.container():
     #st.sidebar.subheader("CONTROLS")
     #left_column, right_column = st.sidebar.columns(2)
