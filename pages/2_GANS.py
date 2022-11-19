@@ -45,7 +45,7 @@ with st.container():
         st.header('GAN MODEL VISUALIZER')
 
 
-tab1,tab2 =st.tabs(['Clear To Rain Model Visualizer', 'Clear to Fog Model','testing'])
+tab1,tab2,tab3 =st.tabs(['Clear To Rain Model Visualizer', 'Clear to Fog Model','testing'])
 # ---- GAN Rain Visualizer | Row 1 ----         
 with tab1:
     image_resizer = (400,425)
