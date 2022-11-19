@@ -51,6 +51,7 @@ with tab1:
     image_resizer = (400,425)
     col1,col2,col3 = st.columns(3)
     with col1:
+        st.header('Examples of the Clear Image Dataset')
         testingthis = Image.open('IntermediatePic/Real/Real_image_4.png')
         testingthis = testingthis.resize(image_resizer)
         st.image(testingthis)
