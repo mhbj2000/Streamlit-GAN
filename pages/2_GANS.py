@@ -60,6 +60,10 @@ with tab1:
         clear_images = st.slider('Clear Image Dataset',0,5,key = 'clear_image slider',label_visibility ='collapsed')
         #st.write('---')
         st.markdown('##')
+        st.markdown('#')
+        st.markdown('#')
+        st.markdown('#')
+        
     with col3:
         st.subheader('Rainy Image Dataset')
         testingthis = Image.open('IntermediatePic/Real/Real_image_4.png')
