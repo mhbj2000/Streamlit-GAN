@@ -71,6 +71,8 @@ with tab1:
  
     with col1:
         #st.subheader('Sample of Clear Image Dataset')
+        st.write('The Clear to Rain GAN Model was trained using the Clear Image Dataset and the Rainy Image Dataset  \n')
+        st.write('The Clear to Foggy GAN Model was trained using the Clear Image Dataset and the Foggy Image Dataset)
         if clear_or_rainy == 'Clear Image Dataset':
             clear_image = Image.open('IntermediatePic/Clear Images/Clear_image_'+str(image_counter)+'.png')
             clear_image = clear_image.resize(image_resizer)
