@@ -65,7 +65,8 @@ with tab1:
         testingthis = testingthis.resize(image_resizer)
         st.image(testingthis,'Provided by CityScape')  
 
-with tab2:  
+with tab2:
+    st.write('This should be in tab 2')
     with col2: #CONTROLS FOR THE MODEL
         st.markdown('<p class="headers">Controls and Metrics</p>', unsafe_allow_html=True)
         st.markdown('<p class="subheader">Choose an Example</p>', unsafe_allow_html=True)
