@@ -45,7 +45,7 @@ with st.container():
         st.header('GAN MODEL VISUALIZER')
 
 
-tab1,tab2 =st.tabs(['Clear To Rain Model', 'Clear to Fog Model'])
+tab1,tab2,tab3 =st.tabs(['Clear to Rain Model Training','Clear To Rain Model Visualizer', 'Clear to Fog Model'])
 # ---- GAN Rain Visualizer | Row 1 ----         
 with tab1:
     image_resizer = (400,425)
@@ -64,7 +64,7 @@ with tab1:
         testingthis = Image.open('IntermediatePic/Real/Real_image_4.png')
         testingthis = testingthis.resize(image_resizer)
         st.image(testingthis,'Provided by CityScape')
-        
+ with tab2:       
     with col2: #CONTROLS FOR THE MODEL
         st.markdown('<p class="headers">Controls and Metrics</p>', unsafe_allow_html=True)
         st.markdown('<p class="subheader">Choose an Example</p>', unsafe_allow_html=True)
@@ -112,7 +112,7 @@ with tab1:
         st.image(rain_timelapse_picture)
         
 # ---- GAN Visualizer Row 2 ----       
-with tab2:
+with tab3:
     col1,col2,col3 = st.columns(3)
     with col2: #CONTROLS FOR THE MODEL
         st.markdown('<p class="headers">Controls and Metrics</p>', unsafe_allow_html=True)
