@@ -56,7 +56,7 @@ with tab1:
         testingthis = testingthis.resize(image_resizer)
         st.image(testingthis,'Provided by CityScape')
     with col2:
-        clear_images = st.slider(0,5,key = 'clear_image slider')
+        clear_images = st.slider('Clear Image Dataset',0,5,key = 'clear_image slider')
     with col2: #CONTROLS FOR THE MODEL
         st.markdown('<p class="headers">Controls and Metrics</p>', unsafe_allow_html=True)
         st.markdown('<p class="subheader">Choose an Example</p>', unsafe_allow_html=True)
