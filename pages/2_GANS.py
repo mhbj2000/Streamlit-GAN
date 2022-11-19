@@ -61,17 +61,17 @@ with tab1:
                 rain_timelapse_picture = Image.open('IntermediatePic/Real/Real_image_0.png')
             else:
                 pass
-            true_counter = rain_counter + 39 #making changes RIGHT HERERERERERERE
+            true_counter = rain_counter + 40 #making changes RIGHT HERERERERERERE
             rain_timelapse_picture = Image.open('IntermediatePic/RainFake/Fake4/False_image_'+str(true_counter)+'.png')
             rain_timelapse = open('Time-lapse/RainTimelapse/Timelapse4.mp4', 'rb')
             video_bytes = rain_timelapse.read()
         elif model_selector == 'Example 2':
-            true_counter = rain_counter + 159
+            true_counter = rain_counter + 160
             rain_timelapse_picture = Image.open('IntermediatePic/RainFake/Fake16/False_image_'+str(true_counter)+'.png')
             rain_timelapse = open('Time-lapse/RainTimelapse/Timelapse16.mp4', 'rb')
             video_bytes = rain_timelapse.read()
         elif model_selector == 'Example 3':
-            true_counter = rain_counter + 169
+            true_counter = rain_counter + 170
             rain_timelapse_picture = Image.open('IntermediatePic/RainFake/Fake17/False_image_'+str(true_counter)+'.png')
             rain_timelapse = open('Time-lapse/RainTimelapse/Timelapse17.mp4', 'rb')
             video_bytes = rain_timelapse.read()
