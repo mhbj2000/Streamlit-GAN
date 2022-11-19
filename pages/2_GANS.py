@@ -51,6 +51,7 @@ with tab1:
     image_resizer = (400,425)
     col1,col2,col3 = st.columns(3)
     with col2:
+        st.subheader('Image Slider')
         image_counter = st.slider('Image Counter',1,5,1,key = 'clear_image slider',label_visibility ='collapsed')
         for i in range(12):
             st.markdown('#')
