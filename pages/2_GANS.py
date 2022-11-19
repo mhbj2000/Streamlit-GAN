@@ -90,6 +90,7 @@ with tab1:
         #rainy_image = rainy_image.resize(image_resizer)
         #st.image(rainy_image,'Provided by CityScape')  
 with tab2:
+    col1,col2,col3 = st.columns(3)
     with col2: #CONTROLS FOR THE MODEL
         #st.markdown('<p class="headers">Controls and Metrics</p>', unsafe_allow_html=True)
         st.markdown('<p class="subheader">Choose an Example</p>', unsafe_allow_html=True)
