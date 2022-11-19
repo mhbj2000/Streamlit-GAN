@@ -57,12 +57,18 @@ with tab1:
         st.image(testingthis,'Provided by CityScape')
     with col2:
         st.subheader('Clear Image Dataset')
-        clear_images = st.slider('Clear Image Dataset',0,5,key = 'clear_image slider')
+        clear_images = st.slider('Clear Image Dataset',0,5,key = 'clear_image slider',label_visibility ='collapsed')
         st.write('---')
+    with col3:
+        st.subheader('Rainy Image Dataset')
+        testingthis = Image.open('IntermediatePic/Real/Real_image_4.png')
+        testingthis = testingthis.resize(image_resizer)
+        st.image(testingthis,'Provided by CityScape')
+        
     with col2: #CONTROLS FOR THE MODEL
         st.markdown('<p class="headers">Controls and Metrics</p>', unsafe_allow_html=True)
         st.markdown('<p class="subheader">Choose an Example</p>', unsafe_allow_html=True)
-        model_selector = st.selectbox('Choose an Example',('Example 1', 'Example 2', 'Example 3'),label_visibility="collapsed")
+        model_selector = st.selectbox('Choose an Example',('Example 1', 'Example 2', 'Example 3'),label_visibility='collapsed')
         st.markdown('<p class="subheader">Intermediate Image Number</p>', unsafe_allow_html=True)
         rain_counter = st.slider('Intermediate Image Number', 0,6,label_visibility="collapsed")            
         if model_selector == 'Example 1':
