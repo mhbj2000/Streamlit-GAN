@@ -58,7 +58,7 @@ with tab1:
         #st.write('The total time to train the clear to rainy model was: 10:30hours')
         
         image_counter = st.slider('Sample Image Display Slider',1,5,1,key = 'clear_image slider',label_visibility ='visible')
-        clear_or_rainy = st.selectbox('Choose an option',('Clear Image Dataset','Rainy Image Dataset'))
+        clear_or_rainy = st.selectbox('Choose an option',('Clear Image Dataset','Rainy Image Dataset','Foggy Image Dataset'))
         #for i in range(12):
             #st.markdown('#')
  
@@ -71,7 +71,11 @@ with tab1:
         elif clear_or_rainy == 'Rainy Image Dataset':
             rainy_image = Image.open('IntermediatePic/Rainy Images/rainy_image_'+str(image_counter)+'.png')
             rainy_image = rainy_image.resize(image_resizer)
-            st.image(rainy_image,'Provided by CityScape') 
+            st.image(rainy_image,'Provided by CityScape')
+        elif clear_or_rainy == 'Foggy Image Dataset':
+            foggy_image = Image.open('IntermediatePic/Foggy Images/foggy_image_'+str(image_counter)+'.png')
+            foggy_image = foggy_image.resize(image_resizer)
+            st.image(foggy_image,'Provided by CityScape')
             
             
             
