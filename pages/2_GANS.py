@@ -51,24 +51,24 @@ with tab1:
     image_resizer = (400,425)
     col1,col2,col3 = st.columns(3)
     with col1:
-        st.subheader('Examples of the Clear Image Dataset')
+        st.subheader('Sample of Clear Image Dataset')
         testingthis = Image.open('IntermediatePic/Real/Real_image_4.png')
         testingthis = testingthis.resize(image_resizer)
         st.image(testingthis,'Provided by CityScape')
     with col2:
-        st.subheader('Clear Image Dataset')
+        st.subheader('Change Image')
         clear_images = st.slider('Clear Image Dataset',0,5,key = 'clear_image slider',label_visibility ='collapsed')
         #st.write('---')
-        for i in range(13):
+        for i in range(12):
             st.markdown('#')
     with col3:
-        st.subheader('Rainy Image Dataset')
+        st.subheader('Sample of Rainy Image Dataset')
         testingthis = Image.open('IntermediatePic/Real/Real_image_4.png')
         testingthis = testingthis.resize(image_resizer)
         st.image(testingthis,'Provided by CityScape')  
 
     with col2: #CONTROLS FOR THE MODEL
-        st.markdown('<p class="headers">Controls and Metrics</p>', unsafe_allow_html=True)
+        #st.markdown('<p class="headers">Controls and Metrics</p>', unsafe_allow_html=True)
         st.markdown('<p class="subheader">Choose an Example</p>', unsafe_allow_html=True)
         model_selector = st.selectbox('Choose an Example',('Example 1', 'Example 2', 'Example 3'),label_visibility='collapsed')
         st.markdown('<p class="subheader">Intermediate Image Number</p>', unsafe_allow_html=True)
