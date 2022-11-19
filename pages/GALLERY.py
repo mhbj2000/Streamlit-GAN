@@ -12,17 +12,33 @@ with st.container():
   with col1:
     current_model =st.selectbox('Choose a Model',('Rain','Fog'))
   with col2:
-    current_iteration = st.selectbox('Choose an Iteration',(0,1,2,3,4,5))
+    current_iteration = st.selectbox('Choose an Iteration',(0,1,2,3,4,5,6))
   st.sidebar.write('Iteration 0 is the Real Image and Iteration 5 is the final GAN image.')
   def picGen(current_model,current_iteration):
     current_iteration = current_iteration
     image_list =[]
-    for i in range(0,20):
-      current_image = Image.open('IntermediatePic/'+str(current_model)+'Fake/Fake'+(str(i))+'/False_image_'+str(current_iteration)+'.png')
-      current_image = current_image.resize((500,500))
-      image_list.append(current_image)
-      current_iteration = current_iteration + 10
-    return image_list
+    if current_iteration == 0:
+      for i in range(0,20):
+        current_image = Image.open('IntermediatePic/Real/Real_image_'+ str(i) + '.png')
+        current_image = current_image.resize((500,500))
+        image_list.append(current_image)
+      return image_list
+        
+     else:
+       for i in range(0,20):
+         current_image = Image.open('IntermediatePic/'+str(current_model)+'Fake/Fake'+ str(i)+'/False_image_'+str(current_iteration)+'.png')
+         current_image = current_image.resize((500,500))
+         image_list.append(current_image)
+         current_iteration = current_iteration + 10
+       return image_list
+      
+
+    #for i in range(0,20):
+      #current_image = Image.open('IntermediatePic/'+str(current_model)+'Fake/Fake'+ str(i)+'/False_image_'+str(current_iteration)+'.png')
+      #current_image = current_image.resize((500,500))
+      #image_list.append(current_image)
+      #current_iteration = current_iteration + 10
+    #return image_list
   picGen(current_model,current_iteration)
 
 with st.container():
