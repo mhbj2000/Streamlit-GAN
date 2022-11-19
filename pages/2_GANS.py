@@ -57,20 +57,20 @@ with tab1:
         #st.write('The total length of the rainy image dataset = 1054 images  \n')
         #st.write('The total time to train the clear to rainy model was: 10:30hours')
         
-        image_counter = st.slider('Image Display Slider',1,5,1,key = 'clear_image slider',label_visibility ='visible')
+        image_counter = st.slider('Sample Image Display Slider',1,5,1,key = 'clear_image slider',label_visibility ='visible')
         for i in range(12):
             st.markdown('#')
  
     with col1:
-        st.subheader('Sample of Clear Image Dataset')
-        st.subheader('Length of Clear Image Dataset: 1013 images')
+        #st.subheader('Sample of Clear Image Dataset')
+        st.subheader('Clear Image Dataset: 1013 Images')
         clear_image = Image.open('IntermediatePic/Clear Images/Clear_image_'+str(image_counter)+'.png')
         clear_image = clear_image.resize(image_resizer)
         st.image(clear_image,'Provided by CityScape')
 
     with col3:
-        st.subheader('Sample of Rainy Image Dataset')
-        st.subheader('Length of Rainy Image Dataset: 1054')
+        #st.subheader('Sample of Rainy Image Dataset')
+        st.subheader('Rainy Image Dataset: 1054 Images')
         rainy_image = Image.open('IntermediatePic/Rainy Images/rainy_image_'+str(image_counter)+'.png')
         rainy_image = rainy_image.resize(image_resizer)
         st.image(rainy_image,'Provided by CityScape')  
