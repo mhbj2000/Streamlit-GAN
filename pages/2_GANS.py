@@ -58,7 +58,8 @@ with tab1:
         rain_counter = st.slider('Intermediate Image Number', 0,6,label_visibility="collapsed")            
         if model_selector == 'Example 1':
             if rain_counter == 0:
-                rain_timelapse_picture = Image.open('IntermediatePic/Real/Real_image_0.png')
+                st.write(rain_counter)
+                rain_timelapse_picture = Image.open('IntermediatePic/Real/Real_image_4.png')
             else:
                 pass
             true_counter = rain_counter + 40 #making changes RIGHT HERERERERERERE
