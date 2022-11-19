@@ -63,7 +63,7 @@ with tab1:
         st.subheader('Sample of Clear Image Dataset')
         clear_image = Image.open('IntermediatePic/Clear Images/Clear_image_'+str(clear_image_counter)+'.png')
         clear_image = clear_image.resize(image_resizer)
-        st.image.(clear_image)
+        st.image(clear_image)
         #st.subheader('Change Image')
         #clear_images = st.slider('Clear Image Dataset',1,5,key = 'clear_image slider',label_visibility ='collapsed')
         #st.write('---')
