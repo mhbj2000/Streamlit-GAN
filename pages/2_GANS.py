@@ -176,7 +176,7 @@ with tab3:
             fog_timelapse_picture = Image.open('IntermediatePic/FogFake/Fake17/False_image_'+str(true_counter)+'.png')
             fog_timelapse = open('Time-lapse/FogTimelapse/Timelapse17.mp4', 'rb')
             video_bytes = fog_timelapse.read()
-        st.markdown('<p class="main-text">Length of Clear Dataset: 1013 Images <br>Length of Fog Dataset: 1008 Images <br> Time to Train Fog Model: 10:30 Hours</p>', unsafe_allow_html=True)
+        #st.markdown('<p class="main-text">Length of Clear Dataset: 1013 Images <br>Length of Fog Dataset: 1008 Images <br> Time to Train Fog Model: 10:30 Hours</p>', unsafe_allow_html=True)
         
     with col1:
         st.markdown('<p class="headers">Timelapse</p>', unsafe_allow_html=True)
