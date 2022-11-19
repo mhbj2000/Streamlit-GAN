@@ -59,7 +59,7 @@ with tab1:
         st.subheader('Clear Image Dataset')
         clear_images = st.slider('Clear Image Dataset',0,5,key = 'clear_image slider',label_visibility ='collapsed')
         #st.write('---')
-        for i in range(10):
+        for i in range(13):
             st.markdown('#')
     with col3:
         st.subheader('Rainy Image Dataset')
