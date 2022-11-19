@@ -51,7 +51,7 @@ with tab1:
     image_resizer = (400,425)
     col1,col2 = st.columns(2)
     with col2:
-        st.subheader('Image Slider')
+        #st.subheader('Image Slider')
         #st.markdown('<p class="main-text">Length of Clear Dataset: 1013 Images <br>Length of Rainy Dataset: 1054 Images <br> Time to Train Rain Model: 10:30 Hours</p>', unsafe_allow_html=True)
         #st.write('The total length of the clear image dataset = 1013 images  \n')
         #st.write('The total length of the rainy image dataset = 1054 images  \n')
@@ -76,8 +76,10 @@ with tab1:
             foggy_image = Image.open('IntermediatePic/Foggy Images/foggy_image_'+str(image_counter)+'.png')
             foggy_image = foggy_image.resize(image_resizer)
             st.image(foggy_image,'Provided by CityScape')
+            st.write('Total Length of Foggy Dataset: 1008 Images')
             
-            
+        st.write('---')
+        
             
                                       
         #st.subheader('Clear Image Dataset: 1013 Images')
