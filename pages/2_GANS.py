@@ -51,7 +51,7 @@ with tab1:
     image_resizer = (400,425)
     col1,col2,col3 = st.columns(3)
     with col2:
-        clear_image_counter = st.slider('Clear Image Dataset',1,5,key = 'clear_image slider',label_visibility ='collapsed')
+        clear_image_counter = st.slider('Clear Image Dataset',1,5,1,key = 'clear_image slider',label_visibility ='collapsed')
         for i in range(12):
             st.markdown('#')
         
