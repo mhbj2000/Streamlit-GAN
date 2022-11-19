@@ -56,9 +56,9 @@ with tab1:
         #st.write('The total length of the clear image dataset = 1013 images  \n')
         #st.write('The total length of the rainy image dataset = 1054 images  \n')
         #st.write('The total time to train the clear to rainy model was: 10:30hours')
-        st.write('The Clear to Rain GAN Model was trained using the Clear Image Dataset and the Rainy Image Dataset  \n')
-        st.write('The Clear to Foggy GAN Model was trained using the Clear Image Dataset and the Foggy Image Dataset  \n')
-        st.write('The time to train the models was 10:30 hours')
+        st.write('The Clear to Rain GAN Model was trained using the Clear and Rainy Image Dataset  \n')
+        st.write('The Clear to Foggy GAN Model was trained using the Clear and Foggy Image Dataset  \n')
+        st.write('Time to Train: 10.5 hrs approx.')
         image_counter = st.slider('Sample Image Display Slider',1,5,1,key = 'clear_image slider',label_visibility ='visible')
         clear_or_rainy = st.selectbox('Choose an option',('Clear Image Dataset','Rainy Image Dataset','Foggy Image Dataset'))
         if clear_or_rainy == 'Clear Image Dataset':
