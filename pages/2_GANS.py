@@ -81,10 +81,10 @@ with tab1:
         #clear_image = clear_image.resize(image_resizer)
         #st.image(clear_image,'Provided by CityScape')
 col1,col2,col3= st.columns(3)
-    with col3:
-        st.markdown('<p class="main-text">Length of Clear Dataset: 1013 Images <br>Length of Rainy Dataset: 1054 Images <br> Time to Train Rain Model: 10:30 Hours</p>', unsafe_allow_html=True)
-        for i in range(12):
-            st.markdown('#')
+    #with col3:
+        #st.markdown('<p class="main-text">Length of Clear Dataset: 1013 Images <br>Length of Rainy Dataset: 1054 Images <br> Time to Train Rain Model: 10:30 Hours</p>', unsafe_allow_html=True)
+        #for i in range(12):
+            #st.markdown('#')
         #st.subheader('Sample of Rainy Image Dataset')
         #st.subheader('Rainy Image Dataset: 1054 Images')
         #rainy_image = Image.open('IntermediatePic/Rainy Images/rainy_image_'+str(image_counter)+'.png')
