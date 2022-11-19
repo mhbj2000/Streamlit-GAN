@@ -59,6 +59,13 @@ with tab1:
         
         image_counter = st.slider('Sample Image Display Slider',1,5,1,key = 'clear_image slider',label_visibility ='visible')
         clear_or_rainy = st.selectbox('Choose an option',('Clear Image Dataset','Rainy Image Dataset','Foggy Image Dataset'))
+        if clear_or_rainy == 'Clear Image Dataset':
+            st.write('Total Length of Clear Dataset: 1013 Images')
+        elif clear_or_rainy == 'Rainy Image Dataset':
+            st.write('Total Length of Rainy Dataset: 1054 Images')
+        elif clear_or_rainy == 'Foggy Image Dataset':
+            st.write('Total Length of Foggy Dataset: 1008 Images')
+            
         #for i in range(12):
             #st.markdown('#')
  
@@ -76,7 +83,7 @@ with tab1:
             foggy_image = Image.open('IntermediatePic/Foggy Images/foggy_image_'+str(image_counter)+'.png')
             foggy_image = foggy_image.resize(image_resizer)
             st.image(foggy_image,'Provided by CityScape')
-            st.write('Total Length of Foggy Dataset: 1008 Images')
+            
             
         st.write('---')
         
