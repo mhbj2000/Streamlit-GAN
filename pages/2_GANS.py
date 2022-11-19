@@ -50,17 +50,25 @@ tab1,tab2 =st.tabs(['Clear To Rain Model Visualizer', 'Clear to Fog Model'])
 with tab1:
     image_resizer = (400,425)
     col1,col2,col3 = st.columns(3)
-    with col1:
-        st.subheader('Sample of Clear Image Dataset')
-        testingthis = Image.open('IntermediatePic/Clear Images/Clear_image_1.png')
-        #testingthis = testingthis.resize(image_resizer)
-        st.image(testingthis,'Provided by CityScape')
     with col2:
-        st.subheader('Change Image')
-        clear_images = st.slider('Clear Image Dataset',0,5,key = 'clear_image slider',label_visibility ='collapsed')
-        #st.write('---')
+        clear_image_counter = st.slider('Clear Image Dataset',1,5,key = 'clear_image slider',label_visibility ='collapsed')
         for i in range(12):
             st.markdown('#')
+        
+        st.subheader('Sample of Clear Image Dataset')
+        testingthis = Image.open('IntermediatePic/Clear Images/Clear_image_1.png')
+        testingthis = testingthis.resize(image_resizer)
+        st.image(testingthis,'Provided by CityScape')
+    with col1:
+        st.subheader('Sample of Clear Image Dataset')
+        clear_image = Image.open('IntermediatePic/Clear Images/Clear_image_'+str(clear_image_counter)+'.png')
+        clear_image = clear_image.resize(image_resizer)
+        st.image.(clear_image)
+        #st.subheader('Change Image')
+        #clear_images = st.slider('Clear Image Dataset',1,5,key = 'clear_image slider',label_visibility ='collapsed')
+        #st.write('---')
+        #for i in range(12):
+            #st.markdown('#')
     with col3:
         st.subheader('Sample of Rainy Image Dataset')
         testingthis = Image.open('IntermediatePic/Real/Real_image_4.png')
