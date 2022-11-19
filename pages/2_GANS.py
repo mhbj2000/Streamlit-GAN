@@ -52,7 +52,7 @@ with tab1:
     col1,col2,col3 = st.columns(3)
     with col1:
         st.subheader('Sample of Clear Image Dataset')
-        testingthis = Image.open('IntermediatePic/Real/Real_image_4.png')
+        testingthis = Image.open('IntermediatePic/Clear Images/Clear_image_1.png')
         testingthis = testingthis.resize(image_resizer)
         st.image(testingthis,'Provided by CityScape')
     with col2:
