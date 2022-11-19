@@ -61,9 +61,11 @@ with tab1:
                 st.write(rain_counter)
                 rain_timelapse_picture = Image.open('IntermediatePic/Real/Real_image_4.png')
             else:
-                pass
-            true_counter = rain_counter + 40 #making changes RIGHT HERERERERERERE
-            rain_timelapse_picture = Image.open('IntermediatePic/RainFake/Fake4/False_image_'+str(true_counter)+'.png')
+                true_counter = rain_counter + 39
+                rain_timelapse_picture = Image.open('IntermediatePic/RainFake/Fake4/False_image_'+str(true_counter)+'.png')
+                
+            #true_counter = rain_counter + 40 #making changes RIGHT HERERERERERERE
+            #rain_timelapse_picture = Image.open('IntermediatePic/RainFake/Fake4/False_image_'+str(true_counter)+'.png')
             rain_timelapse = open('Time-lapse/RainTimelapse/Timelapse4.mp4', 'rb')
             video_bytes = rain_timelapse.read()
         elif model_selector == 'Example 2':
