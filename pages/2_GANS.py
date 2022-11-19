@@ -45,7 +45,7 @@ with st.container():
         st.header('GAN MODEL VISUALIZER')
 
 
-tab1,tab2,tab3 =st.tabs(['Clear To Rain Model Visualizer', 'Clear to Fog Model','testing'])
+tab1,tab2,tab3 =st.tabs(['Training the Clear to Rain Model','Clear To Rain Model Visualizer', 'Clear to Fog Model',])
 # ---- GAN Rain Visualizer | Row 1 ----         
 with tab1:
     image_resizer = (400,425)
@@ -59,8 +59,8 @@ with tab1:
         
         image_counter = st.slider('Sample Image Display Slider',1,5,1,key = 'clear_image slider',label_visibility ='visible')
         clear_or_rainy = st.selectbox('Choose an option',('Clear Image Dataset','Rainy Image Dataset'))
-        for i in range(12):
-            st.markdown('#')
+        #for i in range(12):
+            #st.markdown('#')
  
     with col1:
         #st.subheader('Sample of Clear Image Dataset')
