@@ -114,7 +114,6 @@ with tab2:
         rain_counter = st.slider('Intermediate Image Number', 0,6,label_visibility="collapsed")            
         if model_selector == 'Example 1':
             if rain_counter == 0:
-                st.write(rain_counter)
                 rain_timelapse_picture = Image.open('IntermediatePic/Real/Real_image_4.png')
             else:
                 true_counter = rain_counter + 39
@@ -160,20 +159,31 @@ with tab3:
         st.markdown('<p class="subheader">Choose an Example</p>', unsafe_allow_html=True)
         model_selector = st.selectbox('Choose an Example',('Example 1', 'Example 2', 'Example 3'), key = '2nd selectbox',label_visibility="collapsed")
         st.markdown('<p class="subheader">Intermediate Image Number</p>', unsafe_allow_html=True)
-        fog_counter = st.slider('Intermediate Image Number', 0,5, key = '2nd slider',label_visibility="collapsed")
+        fog_counter = st.slider('Intermediate Image Number', 0,6, key = '2nd slider',label_visibility="collapsed")
         if model_selector == 'Example 1':
-            true_counter = fog_counter + 40
-            fog_timelapse_picture = Image.open('IntermediatePic/FogFake/Fake4/False_image_'+str(true_counter)+'.png')
+            if fog_counter == 0:
+                fog_timelapse_picture = Image.open('IntermediatePic/Real/Real_image_4.png')
+            else:
+                true_counter = fog_counter + 39
+                fog_timelapse_picture = Image.open('IntermediatePic/FogFake/Fake4/False_image_'+str(true_counter)+'.png')
+            #true_counter = fog_counter + 40
+            #fog_timelapse_picture = Image.open('IntermediatePic/FogFake/Fake4/False_image_'+str(true_counter)+'.png')
             fog_timelapse = open('Time-lapse/FogTimelapse/Timelapse4.mp4', 'rb')
             video_bytes = fog_timelapse.read()
         elif model_selector == 'Example 2':
-            true_counter = fog_counter + 160
-            fog_timelapse_picture = Image.open('IntermediatePic/FogFake/Fake16/False_image_'+str(true_counter)+'.png')
+            if fog_counter == 0:
+                fog_timelapse_picture = Image.open('IntermediatePic/Real/Real_image_16.png')
+            else:
+                true_counter = fog_counter + 159
+                fog_timelapse_picture = Image.open('IntermediatePic/FogFake/Fake16/False_image_'+str(true_counter)+'.png')
             fog_timelapse = open('Time-lapse/FogTimelapse/Timelapse16.mp4', 'rb')
             video_bytes = fog_timelapse.read()
         elif model_selector == 'Example 3':
-            true_counter = fog_counter + 170
-            fog_timelapse_picture = Image.open('IntermediatePic/FogFake/Fake17/False_image_'+str(true_counter)+'.png')
+            if fog_counter == 0:
+                fog_timelapse_picture = Image.open('IntermediatePic/Real/Real_image_17.png')
+            else:    
+                true_counter = fog_counter + 169
+                fog_timelapse_picture = Image.open('IntermediatePic/Real/Real_image_17.png')
             fog_timelapse = open('Time-lapse/FogTimelapse/Timelapse17.mp4', 'rb')
             video_bytes = fog_timelapse.read()
         #st.markdown('<p class="main-text">Length of Clear Dataset: 1013 Images <br>Length of Fog Dataset: 1008 Images <br> Time to Train Fog Model: 10:30 Hours</p>', unsafe_allow_html=True)
