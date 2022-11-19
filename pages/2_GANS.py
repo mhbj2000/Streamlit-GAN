@@ -140,7 +140,7 @@ with tab2:
             rain_timelapse = open('Time-lapse/RainTimelapse/Timelapse17.mp4', 'rb')
             video_bytes = rain_timelapse.read()
             
-        st.markdown('<p class="main-text">Length of Clear Dataset: 1013 Images <br>Length of Rainy Dataset: 1054 Images <br> Time to Train Rain Model: 10:30 Hours</p>', unsafe_allow_html=True)
+        #st.markdown('<p class="main-text">Length of Clear Dataset: 1013 Images <br>Length of Rainy Dataset: 1054 Images <br> Time to Train Rain Model: 10:30 Hours</p>', unsafe_allow_html=True)
  
     with col1:
         st.markdown('<p class="headers">Timelapse</p>', unsafe_allow_html=True)
@@ -153,7 +153,7 @@ with tab2:
         st.image(rain_timelapse_picture)
         
 # ---- GAN Visualizer Row 2 ----       
-with tab2:
+with tab3:
     col1,col2,col3 = st.columns(3)
     with col2: #CONTROLS FOR THE MODEL
         st.markdown('<p class="headers">Controls and Metrics</p>', unsafe_allow_html=True)
