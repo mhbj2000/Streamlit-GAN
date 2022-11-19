@@ -49,7 +49,7 @@ tab1,tab2,tab3 =st.tabs(['Clear To Rain Model Visualizer', 'Clear to Fog Model',
 # ---- GAN Rain Visualizer | Row 1 ----         
 with tab1:
     image_resizer = (400,425)
-    col1,col2,col3 = st.columns(3)
+    col1,col2 = st.columns(2)
     with col2:
         st.subheader('Image Slider')
         #st.markdown('<p class="main-text">Length of Clear Dataset: 1013 Images <br>Length of Rainy Dataset: 1054 Images <br> Time to Train Rain Model: 10:30 Hours</p>', unsafe_allow_html=True)
@@ -80,15 +80,15 @@ with tab1:
         #clear_image = Image.open('IntermediatePic/Clear Images/Clear_image_'+str(image_counter)+'.png')
         #clear_image = clear_image.resize(image_resizer)
         #st.image(clear_image,'Provided by CityScape')
-    with col3:
+    #with col3:
         #st.markdown('<p class="main-text">Length of Clear Dataset: 1013 Images <br>Length of Rainy Dataset: 1054 Images <br> Time to Train Rain Model: 10:30 Hours</p>', unsafe_allow_html=True)
         #for i in range(12):
             #st.markdown('#')
         #st.subheader('Sample of Rainy Image Dataset')
         #st.subheader('Rainy Image Dataset: 1054 Images')
-        rainy_image = Image.open('IntermediatePic/Rainy Images/rainy_image_'+str(image_counter)+'.png')
-        rainy_image = rainy_image.resize(image_resizer)
-        st.image(rainy_image,'Provided by CityScape')  
+        #rainy_image = Image.open('IntermediatePic/Rainy Images/rainy_image_'+str(image_counter)+'.png')
+        #rainy_image = rainy_image.resize(image_resizer)
+        #st.image(rainy_image,'Provided by CityScape')  
 with tab2:
     col1,col2,col3 = st.columns(3)
     with col2: #CONTROLS FOR THE MODEL
