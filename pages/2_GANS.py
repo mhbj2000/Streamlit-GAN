@@ -50,7 +50,8 @@ tab1,tab2 =st.tabs(['Clear To Rain Model', 'Clear to Fog Model'])
 with tab1:
     col1,col2,col3 = st.columns(3)
     with col1:
-        Image.open('IntermediatePic/Real/Real_image_4.png')
+        testingthis = Image.open('IntermediatePic/Real/Real_image_4.png')
+        st.image(testingthis)
     
     with col2: #CONTROLS FOR THE MODEL
         st.markdown('<p class="headers">Controls and Metrics</p>', unsafe_allow_html=True)
