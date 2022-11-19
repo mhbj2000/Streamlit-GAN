@@ -52,28 +52,42 @@ with tab1:
     col1,col2,col3 = st.columns(3)
     with col2:
         st.subheader('Image Slider')
-        #st.markdown('<p class="main-text">Length of Clear Dataset: 1013 Images <br>Length of Rainy Dataset: 1054 Images <br> Time to Train Rain Model: 10:30 Hours</p>', unsafe_allow_html=True)
+        st.markdown('<p class="main-text">Length of Clear Dataset: 1013 Images <br>Length of Rainy Dataset: 1054 Images <br> Time to Train Rain Model: 10:30 Hours</p>', unsafe_allow_html=True)
         #st.write('The total length of the clear image dataset = 1013 images  \n')
         #st.write('The total length of the rainy image dataset = 1054 images  \n')
         #st.write('The total time to train the clear to rainy model was: 10:30hours')
         
         image_counter = st.slider('Sample Image Display Slider',1,5,1,key = 'clear_image slider',label_visibility ='visible')
+        clear_or_rainy = st.selectbox('Choose an option',('Clear Image Dataset','Rainy Image Dataset'))
         for i in range(12):
             st.markdown('#')
  
     with col1:
         #st.subheader('Sample of Clear Image Dataset')
-        st.subheader('Clear Image Dataset: 1013 Images')
-        clear_image = Image.open('IntermediatePic/Clear Images/Clear_image_'+str(image_counter)+'.png')
-        clear_image = clear_image.resize(image_resizer)
-        st.image(clear_image,'Provided by CityScape')
+        if clear_or_rainy == 'Clear Image Dataset':
+            clear_image = Image.open('IntermediatePic/Clear Images/Clear_image_'+str(image_counter)+'.png')
+            clear_image = clear_image.resize(image_resizer)
+            st.image(clear_image,'Provided by CityScape')
+        elif clear_or_rainy == 'Rainy Image Dataset':
+            rainy_image = Image.open('IntermediatePic/Rainy Images/rainy_image_'+str(image_counter)+'.png')
+            rainy_image = rainy_image.resize(image_resizer)
+            st.image(rainy_image,'Provided by CityScape') 
+            
+            
+            
+                                      
+        #st.subheader('Clear Image Dataset: 1013 Images')
+        #clear_image = Image.open('IntermediatePic/Clear Images/Clear_image_'+str(image_counter)+'.png')
+        #clear_image = clear_image.resize(image_resizer)
+        #st.image(clear_image,'Provided by CityScape')
 
     with col3:
+        st.markdown('<p class="main-text">Length of Clear Dataset: 1013 Images <br>Length of Rainy Dataset: 1054 Images <br> Time to Train Rain Model: 10:30 Hours</p>', unsafe_allow_html=True)
         #st.subheader('Sample of Rainy Image Dataset')
-        st.subheader('Rainy Image Dataset: 1054 Images')
-        rainy_image = Image.open('IntermediatePic/Rainy Images/rainy_image_'+str(image_counter)+'.png')
-        rainy_image = rainy_image.resize(image_resizer)
-        st.image(rainy_image,'Provided by CityScape')  
+        #st.subheader('Rainy Image Dataset: 1054 Images')
+        #rainy_image = Image.open('IntermediatePic/Rainy Images/rainy_image_'+str(image_counter)+'.png')
+        #rainy_image = rainy_image.resize(image_resizer)
+        #st.image(rainy_image,'Provided by CityScape')  
 
     with col2: #CONTROLS FOR THE MODEL
         #st.markdown('<p class="headers">Controls and Metrics</p>', unsafe_allow_html=True)
