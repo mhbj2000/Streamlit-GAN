@@ -63,8 +63,9 @@ with tab1:
         st.subheader('Rainy Image Dataset')
         testingthis = Image.open('IntermediatePic/Real/Real_image_4.png')
         testingthis = testingthis.resize(image_resizer)
-        st.image(testingthis,'Provided by CityScape')
- with tab2:       
+        st.image(testingthis,'Provided by CityScape')  
+
+with tab2:  
     with col2: #CONTROLS FOR THE MODEL
         st.markdown('<p class="headers">Controls and Metrics</p>', unsafe_allow_html=True)
         st.markdown('<p class="subheader">Choose an Example</p>', unsafe_allow_html=True)
