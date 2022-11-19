@@ -51,11 +51,12 @@ with tab1:
     image_resizer = (400,425)
     col1,col2,col3 = st.columns(3)
     with col1:
-        st.header('Examples of the Clear Image Dataset')
+        st.subheader('Examples of the Clear Image Dataset')
         testingthis = Image.open('IntermediatePic/Real/Real_image_4.png')
         testingthis = testingthis.resize(image_resizer)
-        st.image(testingthis)
-    
+        st.image(testingthis,'Provided by CityScape')
+    with col2:
+        clear_images = st.slider(0,5,key = 'clear_image slider')
     with col2: #CONTROLS FOR THE MODEL
         st.markdown('<p class="headers">Controls and Metrics</p>', unsafe_allow_html=True)
         st.markdown('<p class="subheader">Choose an Example</p>', unsafe_allow_html=True)
