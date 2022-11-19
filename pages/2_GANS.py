@@ -59,6 +59,8 @@ with tab1:
         
         image_counter = st.slider('Sample Image Display Slider',1,5,1,key = 'clear_image slider',label_visibility ='visible')
         clear_or_rainy = st.selectbox('Choose an option',('Clear Image Dataset','Rainy Image Dataset','Foggy Image Dataset'))
+        st.write('The Clear to Rain GAN Model was trained using the Clear Image Dataset and the Rainy Image Dataset  \n')
+        st.write('The Clear to Foggy GAN Model was trained using the Clear Image Dataset and the Foggy Image Dataset  \n')
         if clear_or_rainy == 'Clear Image Dataset':
             st.write('Total Length of Clear Dataset: 1013 Images')
         elif clear_or_rainy == 'Rainy Image Dataset':
@@ -71,8 +73,6 @@ with tab1:
  
     with col1:
         #st.subheader('Sample of Clear Image Dataset')
-        st.write('The Clear to Rain GAN Model was trained using the Clear Image Dataset and the Rainy Image Dataset  \n')
-        st.write('The Clear to Foggy GAN Model was trained using the Clear Image Dataset and the Foggy Image Dataset)
         if clear_or_rainy == 'Clear Image Dataset':
             clear_image = Image.open('IntermediatePic/Clear Images/Clear_image_'+str(image_counter)+'.png')
             clear_image = clear_image.resize(image_resizer)
