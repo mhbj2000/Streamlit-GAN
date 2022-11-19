@@ -55,19 +55,23 @@ with tab1:
         st.markdown('<p class="subheader">Choose an Example</p>', unsafe_allow_html=True)
         model_selector = st.selectbox('Choose an Example',('Example 1', 'Example 2', 'Example 3'),label_visibility="collapsed")
         st.markdown('<p class="subheader">Intermediate Image Number</p>', unsafe_allow_html=True)
-        rain_counter = st.slider('Intermediate Image Number', 0,5,label_visibility="collapsed")
+        rain_counter = st.slider('Intermediate Image Number', 0,6,label_visibility="collapsed")            
         if model_selector == 'Example 1':
-            true_counter = rain_counter + 40
+            if rain_counter == 0:
+                rain_timelapse_picture = Image.open('IntermediatePic/Real/Real_image_0.png')
+            else:
+                pass
+            true_counter = rain_counter + 39 #making changes RIGHT HERERERERERERE
             rain_timelapse_picture = Image.open('IntermediatePic/RainFake/Fake4/False_image_'+str(true_counter)+'.png')
             rain_timelapse = open('Time-lapse/RainTimelapse/Timelapse4.mp4', 'rb')
             video_bytes = rain_timelapse.read()
         elif model_selector == 'Example 2':
-            true_counter = rain_counter + 160
+            true_counter = rain_counter + 159
             rain_timelapse_picture = Image.open('IntermediatePic/RainFake/Fake16/False_image_'+str(true_counter)+'.png')
             rain_timelapse = open('Time-lapse/RainTimelapse/Timelapse16.mp4', 'rb')
             video_bytes = rain_timelapse.read()
         elif model_selector == 'Example 3':
-            true_counter = rain_counter + 170
+            true_counter = rain_counter + 169
             rain_timelapse_picture = Image.open('IntermediatePic/RainFake/Fake17/False_image_'+str(true_counter)+'.png')
             rain_timelapse = open('Time-lapse/RainTimelapse/Timelapse17.mp4', 'rb')
             video_bytes = rain_timelapse.read()
