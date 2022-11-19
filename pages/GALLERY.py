@@ -17,6 +17,7 @@ with st.container():
   def picGen(current_model,current_iteration):
     current_iteration = current_iteration
     image_list =[]
+    
     if current_iteration == 0:
       for i in range(0,20):
         current_image = Image.open('IntermediatePic/Real/Real_image_'+ str(i) + '.png')
@@ -24,22 +25,14 @@ with st.container():
         image_list.append(current_image)
       return image_list
         
-    else:
-      
+    else:     
       for i in range(0,20):
         current_image = Image.open('IntermediatePic/'+str(current_model)+'Fake/Fake'+ str(i)+'/False_image_'+str(current_iteration)+'.png')
         current_image = current_image.resize((500,500))
         image_list.append(current_image)
         current_iteration = current_iteration + 10
       return image_list
-      
-
-    #for i in range(0,20):
-      #current_image = Image.open('IntermediatePic/'+str(current_model)+'Fake/Fake'+ str(i)+'/False_image_'+str(current_iteration)+'.png')
-      #current_image = current_image.resize((500,500))
-      #image_list.append(current_image)
-      #current_iteration = current_iteration + 10
-    #return image_list
+    
   picGen(current_model,current_iteration)
 
 with st.container():
