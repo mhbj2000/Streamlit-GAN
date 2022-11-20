@@ -93,11 +93,14 @@ with tab1:
         image_counter = st.slider('Example Image Display Slider',1,5,1,key = 'clear_image slider',label_visibility ='visible')
         clear_or_rainy = st.selectbox('Choose a Dataset',('Clear Image Dataset','Rainy Image Dataset','Foggy Image Dataset'))
         if clear_or_rainy == 'Clear Image Dataset':
+            pass
             #st.write('Total Length of Clear Dataset: 1013 Images')
             #st.markdown('<p class="main-text">Total Length of Clear Dataset: 1013 Images <br>', unsafe_allow_html=True) 
         elif clear_or_rainy == 'Rainy Image Dataset':
+            pass
             #st.write('Total Length of Rainy Dataset: 1054 Images')
         elif clear_or_rainy == 'Foggy Image Dataset':
+            pass
             #st.write('Total Length of Foggy Dataset: 1008 Images')
  
     with col1:
