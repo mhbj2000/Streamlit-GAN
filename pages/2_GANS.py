@@ -69,6 +69,7 @@ with tab1:
         st.markdown('<p class="main-text">Clear to Fog Model</p>', unsafe_allow_html=True)
         st.markdown('<p class="main-subtext">Trained using the Clear and Foggy Dataset.</p>', unsafe_allow_html=True)
         st.write('---')
+        st.markdown('##')
         #st.write('The total length of the clear image dataset = 1013 images  \n')
         #st.write('The total length of the rainy image dataset = 1054 images  \n')
         #st.write('The total time to train the clear to rainy model was: 10:30hours')
