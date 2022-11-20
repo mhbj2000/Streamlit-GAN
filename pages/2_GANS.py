@@ -20,7 +20,7 @@ with st.container():
     st.markdown("""
     <style>
     .main-subtext {
-        font-size:16px !important;
+        font-size:20px !important;
         text-align: left;
         line-height: 2.0;
         font-weight: bold;
@@ -64,9 +64,7 @@ with tab1:
     col1,col2 = st.columns(2)
     with col2:
         #st.subheader('Image Slider')
-        st.markdown('<p class="main-text">Clear to Rain Model Trained with the Respective Datasets <br>\
-        The Clear to Foggy GAN Model was trained using the Clear and Foggy Image Dataset<br> \
-        Time to Train: 10.5 hrs approx.</p>', unsafe_allow_html=True)
+        st.markdown('<p class="main-text">Clear to Rain Model</>p', unsafe_allow_html=True)
         st.markdown('<p class="main-subtext">Trained using the Clear and Rainy Dataset.</p>', unsafe_allow_html=True)
         #st.write('The total length of the clear image dataset = 1013 images  \n')
         #st.write('The total length of the rainy image dataset = 1054 images  \n')
