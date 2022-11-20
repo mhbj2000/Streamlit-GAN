@@ -48,7 +48,7 @@ with st.container():
 tab1,tab2,tab3 =st.tabs(['GAN Model Training','Clear To Rain Model Visualizer', 'Clear to Fog Model',])
 # ---- GAN Rain Visualizer | Row 1 ----         
 with tab1:
-    image_resizer = (400,425)
+    image_resizer = (500,425)
     col1,col2 = st.columns(2)
     with col2:
         #st.subheader('Image Slider')
@@ -90,7 +90,6 @@ with tab1:
             st.image(foggy_image,'Provided by CityScape')
             
             
-        st.write('---')
         
             
                                       
@@ -150,7 +149,7 @@ with tab2:
       
     with col3:
         st.markdown('<p class="headers">Intermediate Images</p>', unsafe_allow_html=True)
-        #image_resizer = (400,425)
+        image_resizer = (400,425)
         rain_timelapse_picture = rain_timelapse_picture.resize(image_resizer)
         st.image(rain_timelapse_picture)
         
