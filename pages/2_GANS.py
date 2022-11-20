@@ -23,7 +23,6 @@ with st.container():
         font-size:20px !important;
         text-align: center;
         line-height: 2.0;
-        font-weight: bold;
     }
     </style>
     """, unsafe_allow_html=True)
