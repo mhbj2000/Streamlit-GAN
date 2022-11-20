@@ -93,7 +93,7 @@ with tab1:
         #st.write('The Clear to Foggy GAN Model was trained using the Clear and Foggy Image Dataset  \n')
         #st.write('Time to Train: 10.5 hrs approx.')
         image_counter = st.slider('Example Image Display Slider',1,5,1,key = 'clear_image slider',label_visibility ='visible')
-        clear_or_rainy = st.selectbox('Choose a Dataset',('Clear Image Dataset','Rainy Image Dataset','Foggy Image Dataset'))
+        #clear_or_rainy = st.selectbox('Choose a Dataset',('Clear Image Dataset','Rainy Image Dataset','Foggy Image Dataset'))
         if clear_or_rainy == 'Clear Image Dataset':
             pass
             #st.write('Total Length of Clear Dataset: 1013 Images')
@@ -106,6 +106,7 @@ with tab1:
             #st.write('Total Length of Foggy Dataset: 1008 Images')
  
     with col1:
+        clear_or_rainy = st.selectbox('Choose a Dataset',('Clear Image Dataset','Rainy Image Dataset','Foggy Image Dataset'))
         #st.subheader('Sample of Clear Image Dataset')
         if clear_or_rainy == 'Clear Image Dataset':
             clear_image = Image.open('IntermediatePic/Clear Images/Clear_image_'+str(image_counter)+'.png')
@@ -123,7 +124,7 @@ with tab1:
             st.image(foggy_image,'Provided by CityScape')
             st.markdown('<p class="image-caption-text">Total Length of Foggy Dataset 1008 Images</p>', unsafe_allow_html=True)
             
-            
+        clear_or_rainy = st.selectbox('Choose a Dataset',('Clear Image Dataset','Rainy Image Dataset','Foggy Image Dataset'))    
         
             
                                       
