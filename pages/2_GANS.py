@@ -60,11 +60,6 @@ with st.container():
     """, unsafe_allow_html=True)
     
 
-#with st.container():
-    #col1, col2, col3,= st.columns(3)
-    #with col2:
-        #st.header('GAN MODEL VISUALIZER')
-
 
 tab1,tab2,tab3 =st.tabs(['GAN Model Training','Clear To Rain Model Visualizer', 'Clear to Fog Model',])
 # ---- GAN Rain Visualizer | Row 1 ----         
@@ -76,41 +71,19 @@ with tab1:
     image_resizer = (700,425)
     col1,col2 = st.columns(2)
     with col2:
-        #st.subheader('Image Slider')
-        #image_counter = st.slider('Example Image Display Slider',1,5,1,key = 'clear_image slider',label_visibility ='visible')
+        image_counter = st.slider('Example Image Display Slider',1,5,1,key = 'clear_image slider',label_visibility ='visible')
         st.markdown('<p class="main-text">Clear to Rain Model</p>', unsafe_allow_html=True)
         st.markdown('<p class="main-subtext">Trained using the Clear and Rainy Dataset.</p>', unsafe_allow_html=True)
         st.markdown('<p class="main-subtext">Time to Train: 10.5 hrs approx.</p>', unsafe_allow_html=True)
-        st.write('---')
-        image_counter = st.slider('Example Image Display Slider',1,5,1,key = 'clear_image slider',label_visibility ='visible')
         st.write('---')
         st.markdown('<p class="main-text">Clear to Fog Model</p>', unsafe_allow_html=True)
         st.markdown('<p class="main-subtext">Trained using the Clear and Foggy Dataset.</p>', unsafe_allow_html=True)
         st.markdown('<p class="main-subtext">Time to Train: 10.5 hrs approx.</p>', unsafe_allow_html=True)
         st.write('---')
-        st.markdown('##')
-        #st.write('The total length of the clear image dataset = 1013 images  \n')
-        #st.write('The total length of the rainy image dataset = 1054 images  \n')
-        #st.write('The total time to train the clear to rainy model was: 10:30hours')
-        #st.write('The Clear to Rain GAN Model was trained using the Clear and Rainy Image Dataset  \n')
-        #st.write('The Clear to Foggy GAN Model was trained using the Clear and Foggy Image Dataset  \n')
-        #st.write('Time to Train: 10.5 hrs approx.')
-        #image_counter = st.slider('Example Image Display Slider',1,5,1,key = 'clear_image slider',label_visibility ='visible')
-        #clear_or_rainy = st.selectbox('Choose a Dataset',('Clear Image Dataset','Rainy Image Dataset','Foggy Image Dataset'))
-        #if clear_or_rainy == 'Clear Image Dataset':
-            #pass
-            #st.write('Total Length of Clear Dataset: 1013 Images')
-            #st.markdown('<p class="main-text">Total Length of Clear Dataset: 1013 Images <br>', unsafe_allow_html=True) 
-        #elif clear_or_rainy == 'Rainy Image Dataset':
-            #pass
-            #st.write('Total Length of Rainy Dataset: 1054 Images')
-        #elif clear_or_rainy == 'Foggy Image Dataset':
-            #pass
-            #st.write('Total Length of Foggy Dataset: 1008 Images')
- 
+        #st.markdown('##')
+
     with col1:
         clear_or_rainy = st.selectbox('Choose a Dataset',('Clear Image Dataset','Rainy Image Dataset','Foggy Image Dataset'))
-        #st.subheader('Sample of Clear Image Dataset')
         if clear_or_rainy == 'Clear Image Dataset':
             clear_image = Image.open('IntermediatePic/Clear Images/Clear_image_'+str(image_counter)+'.png')
             clear_image = clear_image.resize(image_resizer)
