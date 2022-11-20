@@ -52,13 +52,13 @@ with tab1:
     col1,col2 = st.columns(2)
     with col2:
         #st.subheader('Image Slider')
-        #st.markdown('<p class="main-text">Length of Clear Dataset: 1013 Images <br>Length of Rainy Dataset: 1054 Images <br> Time to Train Rain Model: 10:30 Hours</p>', unsafe_allow_html=True)
+        st.markdown('<p class="main-text">The Clear to Rain GAN Model was trained using the Clear and Rainy Image Dataset <br>The Clear to Foggy GAN Model was trained using the Clear and Foggy Image Dataset<br> Time to Train: 10.5 hrs approx.</p>', unsafe_allow_html=True)
         #st.write('The total length of the clear image dataset = 1013 images  \n')
         #st.write('The total length of the rainy image dataset = 1054 images  \n')
         #st.write('The total time to train the clear to rainy model was: 10:30hours')
-        st.write('The Clear to Rain GAN Model was trained using the Clear and Rainy Image Dataset  \n')
-        st.write('The Clear to Foggy GAN Model was trained using the Clear and Foggy Image Dataset  \n')
-        st.write('Time to Train: 10.5 hrs approx.')
+        #st.write('The Clear to Rain GAN Model was trained using the Clear and Rainy Image Dataset  \n')
+        #st.write('The Clear to Foggy GAN Model was trained using the Clear and Foggy Image Dataset  \n')
+        #st.write('Time to Train: 10.5 hrs approx.')
         image_counter = st.slider('Sample Image Display Slider',1,5,1,key = 'clear_image slider',label_visibility ='visible')
         clear_or_rainy = st.selectbox('Choose an option',('Clear Image Dataset','Rainy Image Dataset','Foggy Image Dataset'))
         if clear_or_rainy == 'Clear Image Dataset':
