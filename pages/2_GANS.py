@@ -21,7 +21,7 @@ with st.container():
     <style>
     .main-subtext {
         font-size:20px !important;
-        text-align: left;
+        text-align: center;
         line-height: 2.0;
         font-weight: bold;
     }
@@ -66,6 +66,10 @@ with tab1:
         #st.subheader('Image Slider')
         st.markdown('<p class="main-text">Clear to Rain Model</p>', unsafe_allow_html=True)
         st.markdown('<p class="main-subtext">Trained using the Clear and Rainy Dataset.</p>', unsafe_allow_html=True)
+        st.write('---')
+        st.markdown('<p class="main-text">Clear to Fog Model</p>', unsafe_allow_html=True)
+        st.markdown('<p class="main-subtext">Trained using the Clear and Foggy Dataset.</p>', unsafe_allow_html=True)
+        st.write('---')
         #st.write('The total length of the clear image dataset = 1013 images  \n')
         #st.write('The total length of the rainy image dataset = 1054 images  \n')
         #st.write('The total time to train the clear to rainy model was: 10:30hours')
