@@ -19,6 +19,18 @@ with st.container():
     
     st.markdown("""
     <style>
+    .main-subtext {
+        font-size:16px !important;
+        text-align: left;
+        line-height: 2.0;
+        font-weight: bold;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+    
+    
+    st.markdown("""
+    <style>
     .subheader {
         font-size:26px !important;
         text-align: center;
@@ -55,6 +67,7 @@ with tab1:
         st.markdown('<p class="main-text">Clear to Rain Model Trained with the Respective Datasets <br>\
         The Clear to Foggy GAN Model was trained using the Clear and Foggy Image Dataset<br> \
         Time to Train: 10.5 hrs approx.</p>', unsafe_allow_html=True)
+        st.markdown('<p class="main-subtext">Trained using the Clear and Rainy Dataset.</p>', unsafe_allow_html=True)
         #st.write('The total length of the clear image dataset = 1013 images  \n')
         #st.write('The total length of the rainy image dataset = 1054 images  \n')
         #st.write('The total time to train the clear to rainy model was: 10:30hours')
