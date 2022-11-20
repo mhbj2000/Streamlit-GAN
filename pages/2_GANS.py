@@ -65,7 +65,7 @@ with tab1:
         clear_or_rainy = st.selectbox('Choose an option',('Clear Image Dataset','Rainy Image Dataset','Foggy Image Dataset'))
         if clear_or_rainy == 'Clear Image Dataset':
             #st.write('Total Length of Clear Dataset: 1013 Images')
-            st.markdown('<p class="main-text">Total Length of Clear Dataset <br>', unsafe_allow_html=True) 
+            st.markdown('<p class="main-text">Total Length of Clear Dataset: 1013 Images <br>', unsafe_allow_html=True) 
         elif clear_or_rainy == 'Rainy Image Dataset':
             st.write('Total Length of Rainy Dataset: 1054 Images')
         elif clear_or_rainy == 'Foggy Image Dataset':
