@@ -71,7 +71,8 @@ with tab1:
     image_resizer = (700,425)
     col1,col2 = st.columns(2)
     with col2:
-        image_counter = st.slider('Example Image Display Slider',1,5,1,key = 'clear_image slider',label_visibility ='visible')
+        st.markdown('<p class="main-text">Example Image Display Slider</p>', unsafe_allow_html=True)
+        image_counter = st.slider('Example Image Display Slider',1,5,1,key = 'clear_image slider',label_visibility ='collapsed')
         st.markdown('<p class="main-text">Clear to Rain Model</p>', unsafe_allow_html=True)
         st.markdown('<p class="main-subtext">Trained using the Clear and Rainy Dataset.</p>', unsafe_allow_html=True)
         st.markdown('<p class="main-subtext">Time to Train: 10.5 hrs approx.</p>', unsafe_allow_html=True)
@@ -83,7 +84,8 @@ with tab1:
         #st.markdown('##')
 
     with col1:
-        clear_or_rainy = st.selectbox('Choose a Dataset',('Clear Image Dataset','Rainy Image Dataset','Foggy Image Dataset'))
+        st.markdown('<p class="main-text">Choose a Dataset</p>', unsafe_allow_html=True)
+        clear_or_rainy = st.selectbox('Choose a Dataset',('Clear Image Dataset','Rainy Image Dataset','Foggy Image Dataset'),label_visibility = 'collapsed')
         if clear_or_rainy == 'Clear Image Dataset':
             clear_image = Image.open('IntermediatePic/Clear Images/Clear_image_'+str(image_counter)+'.png')
             clear_image = clear_image.resize(image_resizer)
