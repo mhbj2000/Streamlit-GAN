@@ -77,6 +77,7 @@ with tab1:
     col1,col2 = st.columns(2)
     with col2:
         #st.subheader('Image Slider')
+        image_counter = st.slider('Example Image Display Slider',1,5,1,key = 'clear_image slider',label_visibility ='visible')
         st.markdown('<p class="main-text">Clear to Rain Model</p>', unsafe_allow_html=True)
         st.markdown('<p class="main-subtext">Trained using the Clear and Rainy Dataset.</p>', unsafe_allow_html=True)
         st.markdown('<p class="main-subtext">Time to Train: 10.5 hrs approx.</p>', unsafe_allow_html=True)
@@ -92,7 +93,7 @@ with tab1:
         #st.write('The Clear to Rain GAN Model was trained using the Clear and Rainy Image Dataset  \n')
         #st.write('The Clear to Foggy GAN Model was trained using the Clear and Foggy Image Dataset  \n')
         #st.write('Time to Train: 10.5 hrs approx.')
-        image_counter = st.slider('Example Image Display Slider',1,5,1,key = 'clear_image slider',label_visibility ='visible')
+        #image_counter = st.slider('Example Image Display Slider',1,5,1,key = 'clear_image slider',label_visibility ='visible')
         #clear_or_rainy = st.selectbox('Choose a Dataset',('Clear Image Dataset','Rainy Image Dataset','Foggy Image Dataset'))
         #if clear_or_rainy == 'Clear Image Dataset':
             #pass
@@ -123,8 +124,7 @@ with tab1:
             foggy_image = foggy_image.resize(image_resizer)
             st.image(foggy_image,'Provided by CityScape')
             st.markdown('<p class="image-caption-text">Total Length of Foggy Dataset 1008 Images</p>', unsafe_allow_html=True)
-            
-        clear_or_rainy = st.selectbox('Choose a Dataset',('Clear Image Dataset','Rainy Image Dataset','Foggy Image Dataset'))    
+             
         
             
                                       
