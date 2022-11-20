@@ -82,7 +82,8 @@ with tab1:
     with st.container():
         col1, col2, col3,= st.columns(3)
         with col2:
-            st.header('GAN Model Training')
+            pass
+            #st.header('GAN Model Training')
     image_resizer = (700,425)
     col1,col2 = st.columns(2)
     with col2:
