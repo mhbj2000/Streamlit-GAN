@@ -77,10 +77,12 @@ with tab1:
     col1,col2 = st.columns(2)
     with col2:
         #st.subheader('Image Slider')
-        image_counter = st.slider('Example Image Display Slider',1,5,1,key = 'clear_image slider',label_visibility ='visible')
+        #image_counter = st.slider('Example Image Display Slider',1,5,1,key = 'clear_image slider',label_visibility ='visible')
         st.markdown('<p class="main-text">Clear to Rain Model</p>', unsafe_allow_html=True)
         st.markdown('<p class="main-subtext">Trained using the Clear and Rainy Dataset.</p>', unsafe_allow_html=True)
         st.markdown('<p class="main-subtext">Time to Train: 10.5 hrs approx.</p>', unsafe_allow_html=True)
+        st.write('---')
+        image_counter = st.slider('Example Image Display Slider',1,5,1,key = 'clear_image slider',label_visibility ='visible')
         st.write('---')
         st.markdown('<p class="main-text">Clear to Fog Model</p>', unsafe_allow_html=True)
         st.markdown('<p class="main-subtext">Trained using the Clear and Foggy Dataset.</p>', unsafe_allow_html=True)
