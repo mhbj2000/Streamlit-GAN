@@ -52,7 +52,7 @@ with tab1:
     col1,col2 = st.columns(2)
     with col2:
         #st.subheader('Image Slider')
-        st.markdown('<p class="main-text">The Clear to Rain GAN Model was trained using the Clear and Rainy Image Dataset <br>\
+        st.markdown('<p class="main-text">Clear to Rain Model Trained with the Respective Datasets <br>\
         The Clear to Foggy GAN Model was trained using the Clear and Foggy Image Dataset<br> \
         Time to Train: 10.5 hrs approx.</p>', unsafe_allow_html=True)
         #st.write('The total length of the clear image dataset = 1013 images  \n')
