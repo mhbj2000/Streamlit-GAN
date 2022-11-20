@@ -95,6 +95,7 @@ with tab1:
             clear_image = Image.open('IntermediatePic/Clear Images/Clear_image_'+str(image_counter)+'.png')
             clear_image = clear_image.resize(image_resizer)
             st.image(clear_image,'Provided by CityScape')
+            st.markdown('<p class="main-subtext">Total Length of Clear Dataset 1013 Images</p>', unsafe_allow_html=True)
         elif clear_or_rainy == 'Rainy Image Dataset':
             rainy_image = Image.open('IntermediatePic/Rainy Images/rainy_image_'+str(image_counter)+'.png')
             rainy_image = rainy_image.resize(image_resizer)
