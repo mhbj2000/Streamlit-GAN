@@ -10,7 +10,7 @@ with st.container():
     <style>
     .main-text {
         font-size:26px !important;
-        text-align: left;
+        text-align: center;
         line-height: 2.0;
         font-weight: bold;
     }
@@ -64,7 +64,7 @@ with tab1:
     col1,col2 = st.columns(2)
     with col2:
         #st.subheader('Image Slider')
-        st.markdown('<p class="main-text">Clear to Rain Model</>p', unsafe_allow_html=True)
+        st.markdown('<p class="main-text">Clear to Rain Model</p>', unsafe_allow_html=True)
         st.markdown('<p class="main-subtext">Trained using the Clear and Rainy Dataset.</p>', unsafe_allow_html=True)
         #st.write('The total length of the clear image dataset = 1013 images  \n')
         #st.write('The total length of the rainy image dataset = 1054 images  \n')
