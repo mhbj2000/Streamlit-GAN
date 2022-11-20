@@ -92,8 +92,8 @@ with tab1:
         #st.write('The Clear to Rain GAN Model was trained using the Clear and Rainy Image Dataset  \n')
         #st.write('The Clear to Foggy GAN Model was trained using the Clear and Foggy Image Dataset  \n')
         #st.write('Time to Train: 10.5 hrs approx.')
-        image_counter = st.sidebar.slider('Example Image Display Slider',1,5,1,key = 'clear_image slider',label_visibility ='visible')
-        clear_or_rainy = st.sidebar.selectbox('Choose a Dataset',('Clear Image Dataset','Rainy Image Dataset','Foggy Image Dataset'))
+        image_counter = st.slider('Example Image Display Slider',1,5,1,key = 'clear_image slider',label_visibility ='visible')
+        clear_or_rainy = st.selectbox('Choose a Dataset',('Clear Image Dataset','Rainy Image Dataset','Foggy Image Dataset'))
         if clear_or_rainy == 'Clear Image Dataset':
             pass
             #st.write('Total Length of Clear Dataset: 1013 Images')
