@@ -86,8 +86,8 @@ with tab1:
         #st.write('The Clear to Rain GAN Model was trained using the Clear and Rainy Image Dataset  \n')
         #st.write('The Clear to Foggy GAN Model was trained using the Clear and Foggy Image Dataset  \n')
         #st.write('Time to Train: 10.5 hrs approx.')
-        image_counter = st.slider('Sample Image Display Slider',1,5,1,key = 'clear_image slider',label_visibility ='visible')
-        clear_or_rainy = st.selectbox('Choose an option',('Clear Image Dataset','Rainy Image Dataset','Foggy Image Dataset'))
+        image_counter = st.slider('Example Image Display Slider',1,5,1,key = 'clear_image slider',label_visibility ='visible')
+        clear_or_rainy = st.selectbox('Choose a Dataset',('Clear Image Dataset','Rainy Image Dataset','Foggy Image Dataset'))
         if clear_or_rainy == 'Clear Image Dataset':
             #st.write('Total Length of Clear Dataset: 1013 Images')
             st.markdown('<p class="main-text">Total Length of Clear Dataset: 1013 Images <br>', unsafe_allow_html=True) 
@@ -95,9 +95,6 @@ with tab1:
             st.write('Total Length of Rainy Dataset: 1054 Images')
         elif clear_or_rainy == 'Foggy Image Dataset':
             st.write('Total Length of Foggy Dataset: 1008 Images')
-            
-        #for i in range(12):
-            #st.markdown('#')
  
     with col1:
         #st.subheader('Sample of Clear Image Dataset')
@@ -110,10 +107,12 @@ with tab1:
             rainy_image = Image.open('IntermediatePic/Rainy Images/rainy_image_'+str(image_counter)+'.png')
             rainy_image = rainy_image.resize(image_resizer)
             st.image(rainy_image,'Provided by CityScape')
+            st.markdown('<p class="image-caption-text">Total Length of Rainy Dataset 1054 Images</p>', unsafe_allow_html=True)
         elif clear_or_rainy == 'Foggy Image Dataset':
             foggy_image = Image.open('IntermediatePic/Foggy Images/foggy_image_'+str(image_counter)+'.png')
             foggy_image = foggy_image.resize(image_resizer)
             st.image(foggy_image,'Provided by CityScape')
+            st.markdown('<p class="image-caption-text">Total Length of Foggy Dataset 1008 Images</p>', unsafe_allow_html=True)
             
             
         
