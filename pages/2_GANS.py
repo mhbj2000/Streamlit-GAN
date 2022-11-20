@@ -10,7 +10,7 @@ with st.container():
     <style>
     .main-text {
         font-size:26px !important;
-        text-align: center;
+        text-align: left;
         line-height: 2.0;
         font-weight: bold;
     }
@@ -21,7 +21,7 @@ with st.container():
     <style>
     .main-subtext {
         font-size:20px !important;
-        text-align: center;
+        text-align: left;
         line-height: 2.0;
     }
     </style>
