@@ -137,6 +137,11 @@ with tab1:
 with tab2:
     tab_container = st.container()
     #selectbox here
+    col1,col2 = st.columns(2)
+    with col2:
+        st.markdown('<p class="subheader">Choose an Example</p>', unsafe_allow_html=True)
+        model_selector = st.selectbox('Choose an Example',('Example 1', 'Example 2', 'Example 3'),label_visibility='collapsed')
+        
     my_col1,my_col2,my_col3 = st.columns(3)
     #with my_col1:
         #model_selector = st.selectbox('Choose an Example',('Example 1', 'Example 2', 'Example 3'),label_visibility='collapsed')
@@ -154,7 +159,7 @@ with tab2:
             
     #with tab_container:
         
-    col1,col2 = st.columns(2)
+    #col1,col2 = st.columns(2)
     with col2:                 
         st.markdown('<p class="subheader">Choose an Example</p>', unsafe_allow_html=True)
         model_selector = st.selectbox('Choose an Example',('Example 1', 'Example 2', 'Example 3'),label_visibility='collapsed')
