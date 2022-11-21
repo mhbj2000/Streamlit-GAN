@@ -121,8 +121,6 @@ with tab1:
         
   
 with tab2:
-    tab_container = st.container()
-    #selectbox here
     col1,col2 = st.columns(2)
     with col2:
         st.markdown('<p class="subheader">Choose an Example</p>', unsafe_allow_html=True)
@@ -142,7 +140,6 @@ with tab2:
         elif model_selector == 'Example 2':
             if rain_counter == 0:
                 rain_timelapse_picture = Image.open('IntermediatePic/Real/Real_image_16.png')
-                pass
             else:
                 true_counter = rain_counter + 159
                 rain_timelapse_picture = Image.open('IntermediatePic/RainFake/Fake16/False_image_'+str(true_counter)+'.png')
@@ -151,24 +148,21 @@ with tab2:
         elif model_selector == 'Example 3':
             if rain_counter == 0:
                 rain_timelapse_picture = Image.open('IntermediatePic/Real/Real_image_17.png')
-                pass
             else:
                 true_counter = rain_counter + 169
                 rain_timelapse_picture = Image.open('IntermediatePic/RainFake/Fake17/False_image_'+str(true_counter)+'.png')
             rain_timelapse = open('Time-lapse/RainTimelapse/Timelapse17.mp4', 'rb')
             video_bytes = rain_timelapse.read()
             
-        #st.markdown('<p class="main-text">Length of Clear Dataset: 1013 Images <br>Length of Rainy Dataset: 1054 Images <br> Time to Train Rain Model: 10:30 Hours</p>', unsafe_allow_html=True)
- 
     with col1:
-        #st.markdown('<p class="headers">Timelapse</p>', unsafe_allow_html=True)
+        #Displays Video
         st.video(video_bytes)
       
     with col2:
-            
-            #st.markdown('<p class="headers">Intermediate Images</p>', unsafe_allow_html=True)
+        #Resizes Image
         image_resizer = (400,400)
         rain_timelapse_picture = rain_timelapse_picture.resize(image_resizer)
+        #Displays Image
         st.image(rain_timelapse_picture)
         
 # ---- GAN Visualizer Row 2 ----       
@@ -186,8 +180,6 @@ with tab3:
             else:
                 true_counter = fog_counter + 39
                 fog_timelapse_picture = Image.open('IntermediatePic/FogFake/Fake4/False_image_'+str(true_counter)+'.png')
-            #true_counter = fog_counter + 40
-            #fog_timelapse_picture = Image.open('IntermediatePic/FogFake/Fake4/False_image_'+str(true_counter)+'.png')
             fog_timelapse = open('Time-lapse/FogTimelapse/Timelapse4.mp4', 'rb')
             video_bytes = fog_timelapse.read()
         elif model_selector == 'Example 2':
@@ -205,9 +197,7 @@ with tab3:
                 true_counter = fog_counter + 169
                 fog_timelapse_picture = Image.open('IntermediatePic/FogFake/Fake17/False_image_'+str(true_counter)+'.png')
             fog_timelapse = open('Time-lapse/FogTimelapse/Timelapse17.mp4', 'rb')
-            video_bytes = fog_timelapse.read()
-        #st.markdown('<p class="main-text">Length of Clear Dataset: 1013 Images <br>Length of Fog Dataset: 1008 Images <br> Time to Train Fog Model: 10:30 Hours</p>', unsafe_allow_html=True)
-        
+            video_bytes = fog_timelapse.read()        
     with col1:
         st.markdown('<p class="headers">Timelapse</p>', unsafe_allow_html=True)
         st.video(video_bytes)
