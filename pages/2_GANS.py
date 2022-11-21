@@ -119,21 +119,7 @@ with tab1:
             st.markdown('<p class="image-caption-text">Total Length of Foggy Dataset 1008 Images</p>', unsafe_allow_html=True)
              
         
-            
-                                      
-        #st.subheader('Clear Image Dataset: 1013 Images')
-        #clear_image = Image.open('IntermediatePic/Clear Images/Clear_image_'+str(image_counter)+'.png')
-        #clear_image = clear_image.resize(image_resizer)
-        #st.image(clear_image,'Provided by CityScape')
-    #with col3:
-        #st.markdown('<p class="main-text">Length of Clear Dataset: 1013 Images <br>Length of Rainy Dataset: 1054 Images <br> Time to Train Rain Model: 10:30 Hours</p>', unsafe_allow_html=True)
-        #for i in range(12):
-            #st.markdown('#')
-        #st.subheader('Sample of Rainy Image Dataset')
-        #st.subheader('Rainy Image Dataset: 1054 Images')
-        #rainy_image = Image.open('IntermediatePic/Rainy Images/rainy_image_'+str(image_counter)+'.png')
-        #rainy_image = rainy_image.resize(image_resizer)
-        #st.image(rainy_image,'Provided by CityScape')  
+  
 with tab2:
     tab_container = st.container()
     #selectbox here
@@ -175,7 +161,7 @@ with tab2:
         #st.markdown('<p class="main-text">Length of Clear Dataset: 1013 Images <br>Length of Rainy Dataset: 1054 Images <br> Time to Train Rain Model: 10:30 Hours</p>', unsafe_allow_html=True)
  
     with col1:
-            #st.markdown('<p class="headers">Timelapse</p>', unsafe_allow_html=True)
+        #st.markdown('<p class="headers">Timelapse</p>', unsafe_allow_html=True)
         st.video(video_bytes)
       
     with col2:
