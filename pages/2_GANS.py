@@ -190,16 +190,16 @@ with tab2:
             
         #st.markdown('<p class="main-text">Length of Clear Dataset: 1013 Images <br>Length of Rainy Dataset: 1054 Images <br> Time to Train Rain Model: 10:30 Hours</p>', unsafe_allow_html=True)
  
-        with col1:
+    with col1:
             #st.markdown('<p class="headers">Timelapse</p>', unsafe_allow_html=True)
-            st.video(video_bytes)
+        st.video(video_bytes)
       
-        with col2:
+    with col2:
             
             #st.markdown('<p class="headers">Intermediate Images</p>', unsafe_allow_html=True)
-            image_resizer = (400,400)
-            rain_timelapse_picture = rain_timelapse_picture.resize(image_resizer)
-            st.image(rain_timelapse_picture)
+        image_resizer = (400,400)
+        rain_timelapse_picture = rain_timelapse_picture.resize(image_resizer)
+        st.image(rain_timelapse_picture)
         
 # ---- GAN Visualizer Row 2 ----       
 with tab3:
