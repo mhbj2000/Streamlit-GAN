@@ -141,6 +141,7 @@ with tab2:
     with my_col1:
         st.markdown('<p class="subheader">Choose an Example</p>', unsafe_allow_html=True)
         model_selector = st.selectbox('Choose an Example',('Example 1', 'Example 2', 'Example 3'),label_visibility='collapsed')
+    with my_col2:    
         st.markdown('<p class="subheader">Image Iterations</p>', unsafe_allow_html=True)
         rain_counter = st.slider('Intermediate Image Number', 0,6,label_visibility="collapsed")  
     with tab_container:
@@ -187,7 +188,7 @@ with tab2:
       
         with col2:
             st.markdown('<p class="headers">Intermediate Images</p>', unsafe_allow_html=True)
-            image_resizer = (400,425)
+            image_resizer = (700,700)
             rain_timelapse_picture = rain_timelapse_picture.resize(image_resizer)
             st.image(rain_timelapse_picture)
         
