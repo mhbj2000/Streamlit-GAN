@@ -152,7 +152,7 @@ with tab2:
             #st.markdown('<p class="subheader">Image Iterations</p>', unsafe_allow_html=True)
             #rain_counter = st.slider('Intermediate Image Number', 0,6,label_visibility="collapsed")
             
-    with tab_container:
+    #with tab_container:
         
     col1,col2 = st.columns(2)
     with col2:                 
