@@ -138,7 +138,7 @@ with tab2:
     tab_container = st.container()
     #selectbox here
     my_col1,my_col2,my_col3 = st.columns(3)
-    with my_col1:
+    #with my_col1:
         #model_selector = st.selectbox('Choose an Example',('Example 1', 'Example 2', 'Example 3'),label_visibility='collapsed')
     with my_col3:
         rain_counter = st.slider('Intermediate Image Number', 0,6,label_visibility="collapsed")
