@@ -137,14 +137,20 @@ with tab1:
 with tab2:
     tab_container = st.container()
     #selectbox here
-    my_col1,my_col2 = st.columns(2)
+    my_col1,my_col2,my_col3 = st.columns(3)
+    with my_col1:
+        model_selector = st.selectbox('Choose an Example',('Example 1', 'Example 2', 'Example 3'),label_visibility='collapsed')
+    with my_col3:
+        rain_counter = st.slider('Intermediate Image Number', 0,6,label_visibility="collapsed")
+        
     #with tab_container:
         #with my_col1:
             #st.markdown('<p class="subheader">Choose an Example</p>', unsafe_allow_html=True)
             #model_selector = st.selectbox('Choose an Example',('Example 1', 'Example 2', 'Example 3'),label_visibility='collapsed')
         #with my_col2:    
             #st.markdown('<p class="subheader">Image Iterations</p>', unsafe_allow_html=True)
-            #rain_counter = st.slider('Intermediate Image Number', 0,6,label_visibility="collapsed")  
+            #rain_counter = st.slider('Intermediate Image Number', 0,6,label_visibility="collapsed")
+            
     with tab_container:
         
         col1,col2 = st.columns(2)
@@ -154,17 +160,6 @@ with tab2:
             st.markdown('<p class="subheader">Image Iterations</p>', unsafe_allow_html=True)
             rain_counter = st.slider('Intermediate Image Number', 0,6,label_visibility="collapsed") 
         with col1:
-            #st.markdown('<p class="subheader">Choose an Example</p>', unsafe_allow_html=True)
-            #model_selector = st.selectbox('Choose an Example',('Example 1', 'Example 2', 'Example 3'),label_visibility='collapsed')
-            
-            #rain_counter = st.slider('Intermediate Image Number', 0,6,label_visibility="collapsed") 
-            #st.markdown('#')
-            #CONTROLS FOR THE MODEL
-            #st.markdown('<p class="headers">Controls and Metrics</p>', unsafe_allow_html=True)
-            #st.markdown('<p class="subheader">Choose an Example</p>', unsafe_allow_html=True)
-            #model_selector = st.selectbox('Choose an Example',('Example 1', 'Example 2', 'Example 3'),label_visibility='collapsed')
-            #st.markdown('<p class="subheader">Image Iterations</p>', unsafe_allow_html=True)
-            #rain_counter = st.slider('Intermediate Image Number', 0,6,label_visibility="collapsed")            
             if model_selector == 'Example 1':
                 if rain_counter == 0:
                     rain_timelapse_picture = Image.open('IntermediatePic/Real/Real_image_4.png')
