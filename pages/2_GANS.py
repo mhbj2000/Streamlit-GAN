@@ -154,39 +154,39 @@ with tab2:
             
     with tab_container:
         
-        col1,col2 = st.columns(2)
-        with col2:                 
-            st.markdown('<p class="subheader">Choose an Example</p>', unsafe_allow_html=True)
-            model_selector = st.selectbox('Choose an Example',('Example 1', 'Example 2', 'Example 3'),label_visibility='collapsed')
-            st.markdown('<p class="subheader">Image Iterations</p>', unsafe_allow_html=True)
-            #rain_counter = st.slider('Intermediate Image Number', 0,6,label_visibility="collapsed") 
-        with col1:
-            if model_selector == 'Example 1':
-                if rain_counter == 0:
-                    rain_timelapse_picture = Image.open('IntermediatePic/Real/Real_image_4.png')
-                else:
-                    true_counter = rain_counter + 39
-                    rain_timelapse_picture = Image.open('IntermediatePic/RainFake/Fake4/False_image_'+str(true_counter)+'.png')
-                rain_timelapse = open('Time-lapse/RainTimelapse/Timelapse4.mp4', 'rb')
-                video_bytes = rain_timelapse.read()
-            elif model_selector == 'Example 2':
-                if rain_counter == 0:
-                    rain_timelapse_picture = Image.open('IntermediatePic/Real/Real_image_16.png')
-                    pass
-                else:
-                    true_counter = rain_counter + 159
-                    rain_timelapse_picture = Image.open('IntermediatePic/RainFake/Fake16/False_image_'+str(true_counter)+'.png')
-                rain_timelapse = open('Time-lapse/RainTimelapse/Timelapse16.mp4', 'rb')
-                video_bytes = rain_timelapse.read()
-            elif model_selector == 'Example 3':
-                if rain_counter == 0:
-                    rain_timelapse_picture = Image.open('IntermediatePic/Real/Real_image_17.png')
-                    pass
-                else:
-                    true_counter = rain_counter + 169
-                    rain_timelapse_picture = Image.open('IntermediatePic/RainFake/Fake17/False_image_'+str(true_counter)+'.png')
-                rain_timelapse = open('Time-lapse/RainTimelapse/Timelapse17.mp4', 'rb')
-                video_bytes = rain_timelapse.read()
+    col1,col2 = st.columns(2)
+    with col2:                 
+        st.markdown('<p class="subheader">Choose an Example</p>', unsafe_allow_html=True)
+        model_selector = st.selectbox('Choose an Example',('Example 1', 'Example 2', 'Example 3'),label_visibility='collapsed')
+        st.markdown('<p class="subheader">Image Iterations</p>', unsafe_allow_html=True)
+        #rain_counter = st.slider('Intermediate Image Number', 0,6,label_visibility="collapsed") 
+    with col1:
+        if model_selector == 'Example 1':
+            if rain_counter == 0:
+                rain_timelapse_picture = Image.open('IntermediatePic/Real/Real_image_4.png')
+            else:
+                true_counter = rain_counter + 39
+                rain_timelapse_picture = Image.open('IntermediatePic/RainFake/Fake4/False_image_'+str(true_counter)+'.png')
+            rain_timelapse = open('Time-lapse/RainTimelapse/Timelapse4.mp4', 'rb')
+            video_bytes = rain_timelapse.read()
+        elif model_selector == 'Example 2':
+            if rain_counter == 0:
+                rain_timelapse_picture = Image.open('IntermediatePic/Real/Real_image_16.png')
+                pass
+            else:
+                true_counter = rain_counter + 159
+                rain_timelapse_picture = Image.open('IntermediatePic/RainFake/Fake16/False_image_'+str(true_counter)+'.png')
+            rain_timelapse = open('Time-lapse/RainTimelapse/Timelapse16.mp4', 'rb')
+            video_bytes = rain_timelapse.read()
+        elif model_selector == 'Example 3':
+            if rain_counter == 0:
+                rain_timelapse_picture = Image.open('IntermediatePic/Real/Real_image_17.png')
+                pass
+            else:
+                true_counter = rain_counter + 169
+                rain_timelapse_picture = Image.open('IntermediatePic/RainFake/Fake17/False_image_'+str(true_counter)+'.png')
+            rain_timelapse = open('Time-lapse/RainTimelapse/Timelapse17.mp4', 'rb')
+            video_bytes = rain_timelapse.read()
             
         #st.markdown('<p class="main-text">Length of Clear Dataset: 1013 Images <br>Length of Rainy Dataset: 1054 Images <br> Time to Train Rain Model: 10:30 Hours</p>', unsafe_allow_html=True)
  
