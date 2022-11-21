@@ -154,7 +154,7 @@ with tab2:
         with col1:
             st.markdown('<p class="subheader">Choose an Example</p>', unsafe_allow_html=True)
             model_selector = st.selectbox('Choose an Example',('Example 1', 'Example 2', 'Example 3'),label_visibility='collapsed')
-            st.markdown('##')
+            st.markdown('#')
             #CONTROLS FOR THE MODEL
             #st.markdown('<p class="headers">Controls and Metrics</p>', unsafe_allow_html=True)
             #st.markdown('<p class="subheader">Choose an Example</p>', unsafe_allow_html=True)
