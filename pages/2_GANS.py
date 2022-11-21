@@ -201,7 +201,7 @@ with tab2:
         with col2:
             
             #st.markdown('<p class="headers">Intermediate Images</p>', unsafe_allow_html=True)
-            image_resizer = (700,700)
+            image_resizer = (350,350)
             rain_timelapse_picture = rain_timelapse_picture.resize(image_resizer)
             st.image(rain_timelapse_picture)
         
