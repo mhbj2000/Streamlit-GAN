@@ -148,15 +148,11 @@ with tab2:
     with tab_container:
         
         col1,col2 = st.columns(2)
-        with col2:
-            test_column1,test_column2,test_column3 = st.columns(3)
-            with test_column2:
-                rain_counter = st.slider('Intermediate Image Number', 0,6,label_visibility="collapsed")
-                    
+        with col2:                 
             st.markdown('<p class="subheader">Choose an Example</p>', unsafe_allow_html=True)
             model_selector = st.selectbox('Choose an Example',('Example 1', 'Example 2', 'Example 3'),label_visibility='collapsed')
             st.markdown('<p class="subheader">Image Iterations</p>', unsafe_allow_html=True)
-            #rain_counter = st.slider('Intermediate Image Number', 0,6,label_visibility="collapsed") 
+            rain_counter = st.slider('Intermediate Image Number', 0,6,label_visibility="collapsed") 
         with col1:
             #st.markdown('<p class="subheader">Choose an Example</p>', unsafe_allow_html=True)
             #model_selector = st.selectbox('Choose an Example',('Example 1', 'Example 2', 'Example 3'),label_visibility='collapsed')
