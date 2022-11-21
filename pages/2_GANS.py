@@ -96,7 +96,7 @@ with tab1:
         st.markdown('<p class="main-text">Clear to Fog Model</p>', unsafe_allow_html=True)
         st.markdown('<p class="main-subtext">Trained using the Clear and Foggy Dataset.</p>', unsafe_allow_html=True)
         st.markdown('<p class="main-subtext">Time to Train: 10.5 hrs approx.</p>', unsafe_allow_html=True)
-        st.write('---')
+        #st.write('---')
         #st.markdown('##')
 
     with col1:
