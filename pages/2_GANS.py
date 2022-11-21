@@ -211,7 +211,7 @@ with tab3:
     with col2: #CONTROLS FOR THE MODEL
         #st.markdown('<p class="headers">Controls and Metrics</p>', unsafe_allow_html=True)
         st.markdown('<p class="subheader">Choose an Example</p>', unsafe_allow_html=True)
-        model_selector = st.sidebar.selectbox('Choose an Example',('Example 1', 'Example 2', 'Example 3'), key = '2nd selectbox',label_visibility="collapsed")
+        model_selector = st.selectbox('Choose an Example',('Example 1', 'Example 2', 'Example 3'), key = '2nd selectbox',label_visibility="collapsed")
         st.markdown('<p class="subheader">Image Iterations</p>', unsafe_allow_html=True)
         fog_counter = st.slider('Intermediate Image Number', 0,6, key = '2nd slider',label_visibility="collapsed")
         if model_selector == 'Example 1':
