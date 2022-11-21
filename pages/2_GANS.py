@@ -149,6 +149,7 @@ with tab2:
         
         col1,col2 = st.columns(2)
         with col2:
+            st.markdown('<p class="subheader">Image Iterations</p>', unsafe_allow_html=True)
             rain_counter = st.slider('Intermediate Image Number', 0,6,label_visibility="collapsed") 
         with col1:
             st.markdown('<p class="subheader">Choose an Example</p>', unsafe_allow_html=True)
@@ -189,12 +190,12 @@ with tab2:
         #st.markdown('<p class="main-text">Length of Clear Dataset: 1013 Images <br>Length of Rainy Dataset: 1054 Images <br> Time to Train Rain Model: 10:30 Hours</p>', unsafe_allow_html=True)
  
         with col1:
-            st.markdown('<p class="headers">Timelapse</p>', unsafe_allow_html=True)
+            #st.markdown('<p class="headers">Timelapse</p>', unsafe_allow_html=True)
             st.video(video_bytes)
       
         with col2:
-            st.markdown('<p class="subheader">Image Iterations</p>', unsafe_allow_html=True)
-            st.markdown('<p class="headers">Intermediate Images</p>', unsafe_allow_html=True)
+            
+            #st.markdown('<p class="headers">Intermediate Images</p>', unsafe_allow_html=True)
             image_resizer = (700,700)
             rain_timelapse_picture = rain_timelapse_picture.resize(image_resizer)
             st.image(rain_timelapse_picture)
