@@ -140,7 +140,7 @@ with tab2:
         #st.markdown('<p class="headers">Controls and Metrics</p>', unsafe_allow_html=True)
         st.markdown('<p class="subheader">Choose an Example</p>', unsafe_allow_html=True)
         model_selector = st.selectbox('Choose an Example',('Example 1', 'Example 2', 'Example 3'),label_visibility='collapsed')
-        st.markdown('<p class="subheader">Iterations</p>', unsafe_allow_html=True)
+        st.markdown('<p class="subheader">Image Iterations</p>', unsafe_allow_html=True)
         rain_counter = st.slider('Intermediate Image Number', 0,6,label_visibility="collapsed")            
         if model_selector == 'Example 1':
             if rain_counter == 0:
