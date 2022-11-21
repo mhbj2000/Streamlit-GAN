@@ -149,7 +149,7 @@ with tab2:
         
         col1,col2 = st.columns(2)
         with col2:
-            test_column1,test_column2,test_column3 = st.columns(3):
+            test_column1,test_column2,test_column3 = st.columns(3)
                 with test_column2:
                     rain_counter = st.slider('Intermediate Image Number', 0,6,label_visibility="collapsed")
                     
