@@ -135,18 +135,22 @@ with tab1:
         #rainy_image = rainy_image.resize(image_resizer)
         #st.image(rainy_image,'Provided by CityScape')  
 with tab2:
-    widget_container = st.container()
+    tab_container = st.container()
     #selectbox here
-    model_selector = st.selectbox('Choose an Example',('Example 1', 'Example 2', 'Example 3'),label_visibility='collapsed')
-    rain_counter = st.slider('Intermediate Image Number', 0,6,label_visibility="collapsed")  
-    with widget_container:
+    my_col1,my_col2 = st.columns(2)
+    with my_col1:
+        st.markdown('<p class="subheader">Choose an Example</p>', unsafe_allow_html=True)
+        model_selector = st.selectbox('Choose an Example',('Example 1', 'Example 2', 'Example 3'),label_visibility='collapsed')
+        st.markdown('<p class="subheader">Image Iterations</p>', unsafe_allow_html=True)
+        rain_counter = st.slider('Intermediate Image Number', 0,6,label_visibility="collapsed")  
+    with tab_container:
         
-        col1,col2,col3 = st.columns(3)
-        with col2: #CONTROLS FOR THE MODEL
+        col1,col2 = st.columns(2)
+        with col1: #CONTROLS FOR THE MODEL
             #st.markdown('<p class="headers">Controls and Metrics</p>', unsafe_allow_html=True)
-            st.markdown('<p class="subheader">Choose an Example</p>', unsafe_allow_html=True)
+            #st.markdown('<p class="subheader">Choose an Example</p>', unsafe_allow_html=True)
             #model_selector = st.selectbox('Choose an Example',('Example 1', 'Example 2', 'Example 3'),label_visibility='collapsed')
-            st.markdown('<p class="subheader">Image Iterations</p>', unsafe_allow_html=True)
+            #st.markdown('<p class="subheader">Image Iterations</p>', unsafe_allow_html=True)
             #rain_counter = st.slider('Intermediate Image Number', 0,6,label_visibility="collapsed")            
             if model_selector == 'Example 1':
                 if rain_counter == 0:
@@ -181,7 +185,7 @@ with tab2:
             st.markdown('<p class="headers">Timelapse</p>', unsafe_allow_html=True)
             st.video(video_bytes)
       
-        with col3:
+        with col2:
             st.markdown('<p class="headers">Intermediate Images</p>', unsafe_allow_html=True)
             image_resizer = (400,425)
             rain_timelapse_picture = rain_timelapse_picture.resize(image_resizer)
