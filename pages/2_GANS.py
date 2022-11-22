@@ -79,11 +79,6 @@ with st.container():
 tab1,tab2,tab3 =st.tabs(['GAN Model Training','Clear To Rain Model Visualizer', 'Clear to Fog Model',])
 # ---- GAN Rain Visualizer | Row 1 ----         
 with tab1:
-    with st.container():
-        col1, col2, col3,= st.columns(3)
-        with col2:
-            pass
-            #st.header('GAN Model Training')
     image_resizer = (700,425)
     col1,col2 = st.columns(2)
     with col2:
