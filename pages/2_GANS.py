@@ -165,7 +165,7 @@ with tab2:
       
     with col2:
         #---Resizes Image---
-        image_resizer = (600,600)
+        image_resizer = (400,400)
         rain_timelapse_picture = rain_timelapse_picture.resize(image_resizer)
         #---Displays Image---
         st.image(rain_timelapse_picture)
@@ -209,7 +209,7 @@ with tab3:
     with col2:
         #---Display image, resize, and label---
         #st.markdown('<p class="headers">Intermediate Images</p>', unsafe_allow_html=True)
-        image_resizer = (400,400)
+        image_resizer = (600,600)
         fog_timelapse_picture = fog_timelapse_picture.resize(image_resizer)
         st.image(fog_timelapse_picture)        
         
