@@ -77,11 +77,14 @@ with st.container():
 
 
 tab1,tab2,tab3 =st.tabs(['GAN Model Training','Clear To Rain Model Visualizer', 'Clear to Fog Model',])
-# ---- GAN Rain Visualizer | Row 1 ----         
+# ---- GAN Model Trainer Tab ----         
 with tab1:
+    #intialize image resizer
     image_resizer = (700,425)
+    #intialize columns for layout
     col1,col2 = st.columns(2)
-    with col2:
+    with col2: 
+        #Displays all the Metrics and also intializes the slider
         st.markdown('<p class="widget_font">Image Display Slider</p>', unsafe_allow_html=True)
         image_counter = st.slider('Example Image Display Slider',1,5,1,key = 'clear_image slider',label_visibility ='collapsed')
         st.markdown('<p class="main-text">Clear to Rain Model</p>', unsafe_allow_html=True)
@@ -91,8 +94,6 @@ with tab1:
         st.markdown('<p class="main-text">Clear to Fog Model</p>', unsafe_allow_html=True)
         st.markdown('<p class="main-subtext">Trained using the Clear and Foggy Dataset.</p>', unsafe_allow_html=True)
         st.markdown('<p class="main-subtext">Time to Train: 10.5 hrs approx.</p>', unsafe_allow_html=True)
-        #st.write('---')
-        #st.markdown('##')
 
     with col1:
         st.markdown('<p class="widget_font">Choose a Dataset</p>', unsafe_allow_html=True)
@@ -101,17 +102,17 @@ with tab1:
             clear_image = Image.open('IntermediatePic/Clear Images/Clear_image_'+str(image_counter)+'.png')
             clear_image = clear_image.resize(image_resizer)
             st.image(clear_image,'Provided by CityScape')
-            st.markdown('<p class="image-caption-text">Total Length of Clear Dataset 1013 Images</p>', unsafe_allow_html=True)
+            st.markdown('<p class="image-caption-text">Total Length of Clear Dataset: 1013 Images</p>', unsafe_allow_html=True)
         elif clear_or_rainy == 'Rainy Image Dataset':
             rainy_image = Image.open('IntermediatePic/Rainy Images/rainy_image_'+str(image_counter)+'.png')
             rainy_image = rainy_image.resize(image_resizer)
             st.image(rainy_image,'Provided by CityScape')
-            st.markdown('<p class="image-caption-text">Total Length of Rainy Dataset 1054 Images</p>', unsafe_allow_html=True)
+            st.markdown('<p class="image-caption-text">Total Length of Rainy Dataset: 1054 Images</p>', unsafe_allow_html=True)
         elif clear_or_rainy == 'Foggy Image Dataset':
             foggy_image = Image.open('IntermediatePic/Foggy Images/foggy_image_'+str(image_counter)+'.png')
             foggy_image = foggy_image.resize(image_resizer)
             st.image(foggy_image,'Provided by CityScape')
-            st.markdown('<p class="image-caption-text">Total Length of Foggy Dataset 1008 Images</p>', unsafe_allow_html=True)
+            st.markdown('<p class="image-caption-text">Total Length of Foggy Dataset: 1008 Images</p>', unsafe_allow_html=True)
              
         
   
@@ -119,45 +120,53 @@ with tab2:
     col1,col2 = st.columns(2)
     with col2:
         st.markdown('<p class="subheader">Choose an Example</p>', unsafe_allow_html=True)
+        #---Sets selectbox = to one of 3 strings---
         model_selector = st.selectbox('Choose an Example',('Example 1', 'Example 2', 'Example 3'),label_visibility='collapsed')
         st.markdown('<p class="subheader">Image Iterations</p>', unsafe_allow_html=True)
+        #--- Sets rain_counter to a number 0-6---
         rain_counter = st.slider('Intermediate Image Number', 0,6,label_visibility="collapsed")
         
     with col1:
         if model_selector == 'Example 1':
             if rain_counter == 0:
+                #---opens the original image before it was ran through the GAN---
                 rain_timelapse_picture = Image.open('IntermediatePic/Real/Real_image_4.png')
             else:
+                #--- adds to the counter so it can pull the correct photo from the folder---
                 true_counter = rain_counter + 39
                 rain_timelapse_picture = Image.open('IntermediatePic/RainFake/Fake4/False_image_'+str(true_counter)+'.png')
             rain_timelapse = open('Time-lapse/RainTimelapse/Timelapse4.mp4', 'rb')
             video_bytes = rain_timelapse.read()
         elif model_selector == 'Example 2':
+            #---opens the original image before it was ran through the GAN---
             if rain_counter == 0:
                 rain_timelapse_picture = Image.open('IntermediatePic/Real/Real_image_16.png')
             else:
+                #--- adds to the counter so it can pull the correct photo from the folder---
                 true_counter = rain_counter + 159
                 rain_timelapse_picture = Image.open('IntermediatePic/RainFake/Fake16/False_image_'+str(true_counter)+'.png')
             rain_timelapse = open('Time-lapse/RainTimelapse/Timelapse16.mp4', 'rb')
             video_bytes = rain_timelapse.read()
         elif model_selector == 'Example 3':
             if rain_counter == 0:
+                #---opens the original image before it was ran through the GAN---
                 rain_timelapse_picture = Image.open('IntermediatePic/Real/Real_image_17.png')
             else:
+                #--- adds to the counter so it can pull the correct photo from the folder---
                 true_counter = rain_counter + 169
                 rain_timelapse_picture = Image.open('IntermediatePic/RainFake/Fake17/False_image_'+str(true_counter)+'.png')
             rain_timelapse = open('Time-lapse/RainTimelapse/Timelapse17.mp4', 'rb')
             video_bytes = rain_timelapse.read()
             
     with col1:
-        #Displays Video
+        #---Displays Video---
         st.video(video_bytes)
       
     with col2:
-        #Resizes Image
+        #---Resizes Image---
         image_resizer = (400,400)
         rain_timelapse_picture = rain_timelapse_picture.resize(image_resizer)
-        #Displays Image
+        #---Displays Image---
         st.image(rain_timelapse_picture)
         
 # ---- GAN Visualizer Row 2 ----       
