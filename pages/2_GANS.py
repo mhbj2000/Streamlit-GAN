@@ -165,7 +165,7 @@ with tab2:
       
     with col2:
         #---Resizes Image---
-        image_resizer = (400,400)
+        image_resizer = (600,600)
         rain_timelapse_picture = rain_timelapse_picture.resize(image_resizer)
         #---Displays Image---
         st.image(rain_timelapse_picture)
