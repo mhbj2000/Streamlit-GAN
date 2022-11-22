@@ -67,7 +67,7 @@ with st.container():
     <style>
     .headers {
         font-size:32px !important;
-        text-align: center;
+        text-align: left;
         line-height: 2.0;
     }
     </style>
