@@ -208,7 +208,7 @@ with tab3:
         st.video(video_bytes)
     with col2:
         #---Display image, resize, and label---
-        st.markdown('<p class="headers">Intermediate Images</p>', unsafe_allow_html=True)
+        st.markdown('<p class="headers">           Intermediate Images</p>', unsafe_allow_html=True)
         image_resizer = (400,400)
         fog_timelapse_picture = fog_timelapse_picture.resize(image_resizer)
         st.image(fog_timelapse_picture)        
