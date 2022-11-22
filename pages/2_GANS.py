@@ -76,7 +76,7 @@ with st.container():
     
 
 
-tab1,tab2,tab3 =st.tabs(['GAN Model Training','Clear To Rain Model Visualizer', 'Clear to Fog Model',])
+tab1,tab2,tab3 =st.tabs(['GAN Model Training','Clear To Rainy Model Visualizer', 'Clear to Foggy Model Visualizer',])
 # ---- GAN Model Trainer Tab ----         
 with tab1:
     #intialize image resizer
@@ -96,7 +96,9 @@ with tab1:
         st.markdown('<p class="main-subtext">Time to Train: 10.5 hrs approx.</p>', unsafe_allow_html=True)
 
     with col1:
+        #Displays set of images based on the selectbox and slider variables
         st.markdown('<p class="widget_font">Choose a Dataset</p>', unsafe_allow_html=True)
+        #intialized selectbox
         clear_or_rainy = st.selectbox('Choose a Dataset',('Clear Image Dataset','Rainy Image Dataset','Foggy Image Dataset'),label_visibility = 'collapsed')
         if clear_or_rainy == 'Clear Image Dataset':
             clear_image = Image.open('IntermediatePic/Clear Images/Clear_image_'+str(image_counter)+'.png')
@@ -115,7 +117,7 @@ with tab1:
             st.markdown('<p class="image-caption-text">Total Length of Foggy Dataset: 1008 Images</p>', unsafe_allow_html=True)
              
         
-  
+#--- Clear to Rainy Model Tab  
 with tab2:
     col1,col2 = st.columns(2)
     with col2:
@@ -169,7 +171,7 @@ with tab2:
         #---Displays Image---
         st.image(rain_timelapse_picture)
         
-# ---- GAN Visualizer Row 2 ----       
+# ---- Clear to Fog Model tab ----       
 with tab3:
     col1,col2 = st.columns(2)
     with col2: #CONTROLS FOR THE MODEL
@@ -202,9 +204,11 @@ with tab3:
             fog_timelapse = open('Time-lapse/FogTimelapse/Timelapse17.mp4', 'rb')
             video_bytes = fog_timelapse.read()        
     with col1:
+        #---Display video and label it---
         st.markdown('<p class="headers">Timelapse</p>', unsafe_allow_html=True)
         st.video(video_bytes)
     with col2:
+        #---Display image, resize, and label---
         st.markdown('<p class="headers">Intermediate Images</p>', unsafe_allow_html=True)
         image_resizer = (400,400)
         fog_timelapse_picture = fog_timelapse_picture.resize(image_resizer)
