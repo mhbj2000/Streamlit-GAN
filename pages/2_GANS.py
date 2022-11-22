@@ -101,17 +101,17 @@ with tab1:
         if clear_or_rainy == 'Clear Image Dataset':
             clear_image = Image.open('IntermediatePic/Clear Images/Clear_image_'+str(image_counter)+'.png')
             clear_image = clear_image.resize(image_resizer)
-            st.image(clear_image,'Provided by CityScape')
+            st.image(clear_image,'Provided by CityScapes')
             st.markdown('<p class="image-caption-text">Total Length of Clear Dataset: 1013 Images</p>', unsafe_allow_html=True)
         elif clear_or_rainy == 'Rainy Image Dataset':
             rainy_image = Image.open('IntermediatePic/Rainy Images/rainy_image_'+str(image_counter)+'.png')
             rainy_image = rainy_image.resize(image_resizer)
-            st.image(rainy_image,'Provided by CityScape')
+            st.image(rainy_image,'Provided by CityScapes')
             st.markdown('<p class="image-caption-text">Total Length of Rainy Dataset: 1054 Images</p>', unsafe_allow_html=True)
         elif clear_or_rainy == 'Foggy Image Dataset':
             foggy_image = Image.open('IntermediatePic/Foggy Images/foggy_image_'+str(image_counter)+'.png')
             foggy_image = foggy_image.resize(image_resizer)
-            st.image(foggy_image,'Provided by CityScape')
+            st.image(foggy_image,'Provided by CityScapes')
             st.markdown('<p class="image-caption-text">Total Length of Foggy Dataset: 1008 Images</p>', unsafe_allow_html=True)
              
         
