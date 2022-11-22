@@ -209,7 +209,7 @@ with tab3:
     with col2:
         #---Display image, resize, and label---
         #st.markdown('<p class="headers">Intermediate Images</p>', unsafe_allow_html=True)
-        image_resizer = (495,495)
+        image_resizer = (496,496)
         fog_timelapse_picture = fog_timelapse_picture.resize(image_resizer)
         st.image(fog_timelapse_picture)        
         
