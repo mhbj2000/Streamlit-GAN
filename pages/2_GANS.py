@@ -161,11 +161,12 @@ with tab2:
             
     with col1:
         #---Displays Video---
+        st.markdown('<p class="headers">Timelapse</p>', unsafe_allow_html=True)
         st.video(video_bytes)
       
     with col2:
         #---Resizes Image---
-        image_resizer = (400,400)
+        image_resizer = (497,497)
         rain_timelapse_picture = rain_timelapse_picture.resize(image_resizer)
         #---Displays Image---
         st.image(rain_timelapse_picture)
