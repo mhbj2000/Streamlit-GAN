@@ -49,8 +49,6 @@ with st.container():
         # since every picture has 9 different iterations if we add 10 we can get to the same iteration of the next image
         current_iteration = current_iteration + 10
       return image_list
-  #call the function so we can fill up the image list  
-  #picGen(current_model,current_iteration)
   
 #image container
 with st.container():
