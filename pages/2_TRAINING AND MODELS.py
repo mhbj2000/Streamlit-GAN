@@ -3,6 +3,12 @@ from PIL import Image
 import streamlit.components.v1 as components
 import random
 
+
+
+#important improvements to be made
+#Function for example_selector
+#Function for the tab layout
+
 st.set_page_config(page_title="GANS Demonstration", layout="wide")
 with st.container():
     #HTML FONT BUILDER
@@ -74,7 +80,7 @@ with st.container():
     """, unsafe_allow_html=True)
     
 
-
+#intializing tabs
 tab1,tab2,tab3 =st.tabs(['GAN Model Training','Clear To Rainy Model Visualizer', 'Clear to Foggy Model Visualizer',])
 # ---- GAN Model Trainer Tab ----         
 with tab1:
@@ -116,7 +122,7 @@ with tab1:
             st.markdown('<p class="image-caption-text">Total Length of Foggy Dataset: 1008 Images</p>', unsafe_allow_html=True)
              
         
-#--- Clear to Rainy Model Tab  
+#--- Clear to Rainy Model Tab---
 with tab2:
     col1,col2 = st.columns(2)
     with col2:
@@ -174,19 +180,26 @@ with tab2:
 # ---- Clear to Fog Model tab ----       
 with tab3:
     col1,col2 = st.columns(2)
-    with col2: #CONTROLS FOR THE MODEL
+    with col2: 
         st.markdown('<p class="subheader">Choose an Example</p>', unsafe_allow_html=True)
+        #---Sets selectbox = to one of 3 strings---
+        #should prolly change variable name to example_selector
         model_selector = st.selectbox('Choose an Example',('Example 1', 'Example 2', 'Example 3'), key = '2nd selectbox',label_visibility="collapsed")
         st.markdown('<p class="subheader">Image Iterations</p>', unsafe_allow_html=True)
+        # intialize slider its value is int(0-6)
         fog_counter = st.slider('Intermediate Image Number', 0,6, key = '2nd slider',label_visibility="collapsed")
         if model_selector == 'Example 1':
             if fog_counter == 0:
+                #opens original image
                 fog_timelapse_picture = Image.open('IntermediatePic/Real/Real_image_4.png')
             else:
                 true_counter = fog_counter + 39
+                #opens a intermediate image
                 fog_timelapse_picture = Image.open('IntermediatePic/FogFake/Fake4/False_image_'+str(true_counter)+'.png')
+            #opens timelapse
             fog_timelapse = open('Time-lapse/FogTimelapse/Timelapse4.mp4', 'rb')
             video_bytes = fog_timelapse.read()
+        #same is as above
         elif model_selector == 'Example 2':
             if fog_counter == 0:
                 fog_timelapse_picture = Image.open('IntermediatePic/Real/Real_image_16.png')
@@ -195,6 +208,7 @@ with tab3:
                 fog_timelapse_picture = Image.open('IntermediatePic/FogFake/Fake16/False_image_'+str(true_counter)+'.png')
             fog_timelapse = open('Time-lapse/FogTimelapse/Timelapse16.mp4', 'rb')
             video_bytes = fog_timelapse.read()
+        #same as above
         elif model_selector == 'Example 3':
             if fog_counter == 0:
                 fog_timelapse_picture = Image.open('IntermediatePic/Real/Real_image_17.png')
