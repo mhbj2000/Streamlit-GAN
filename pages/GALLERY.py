@@ -50,7 +50,7 @@ with st.container():
         current_iteration = current_iteration + 10
       return image_list
   #call the function so we can fill up the image list  
-  picGen(current_model,current_iteration)
+  #picGen(current_model,current_iteration)
   
 #image container
 with st.container():
