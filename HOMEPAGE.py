@@ -1,7 +1,7 @@
 import streamlit as st
 from PIL import Image
 import base64
-st.caching.clear_cache()
+st.runtime.legacy_caching.clear_cache()
 
 st.set_page_config(page_title="GANS", layout="wide")
 
