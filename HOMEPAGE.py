@@ -2,6 +2,28 @@ import streamlit as st
 from PIL import Image
 import base64
 
+def load_General():
+    engine = sa.create_engine("mssql+pyodbc:///?odbc_connect={}".format(params))
+    con=engine.connect()
+    general_query_raw='''string'''
+    General_raw=pd.read_sql(general_query_raw,con)
+    
+    general_query_cleansed='''string'''
+    General_cleansed=pd.read_sql(general_query_cleansed,con)
+    return General_raw, General_cleansed
+
+
+@st.cache(allow_output_mutation=True,suppress_st_warning=True)
+def load_Role():
+    engine = sa.create_engine("mssql+pyodbc:///?odbc_connect={}".format(params))
+    con=engine.connect()
+    role_query_raw='''string'''
+    Role_raw=pd.read_sql(role_query_raw,con)
+    
+    role_query_cleansed='''string'''
+    Role_cleansed=pd.read_sql(role_query_cleansed,con)  
+    return Role_raw,Role_cleansed
+
 load_general = st.empty()
 load_role = st.empty()
 
