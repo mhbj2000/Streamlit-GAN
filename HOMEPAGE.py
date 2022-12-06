@@ -2,6 +2,12 @@ import streamlit as st
 from PIL import Image
 import base64
 
+load_general = st.empty()
+load_role = st.empty()
+
+load_general = load_General()
+load_role = load_Role()
+
 st.set_page_config(page_title="GANS", layout="wide")
 
 #content of main_page
